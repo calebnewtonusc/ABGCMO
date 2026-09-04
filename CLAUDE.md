@@ -187,6 +187,31 @@ But the content does not cross-post.
 
 ---
 
+## RULE ONE: read the skill file before you answer
+
+**Consulting the routing table below is not the same as loading the skill.** Read
+the actual `SKILL.md`, and the `data/` or `cases/` file it points at, before
+writing your answer.
+
+This is not optional politeness. A measured probe on 2026-09-04 found that in a
+single-turn session the agent frequently answers growth questions from this file
+alone, never opening the skill. The difference is large and specific:
+
+| | Without reading the skill | After reading it |
+|---|---|---|
+| `events-conferences` #2 | 0/5 assertions | hit every one |
+
+The answer without the file was *reasonable strategic advice*. The answer with it
+carried the ~80/20 recruiting split, the Mercor $71 prize precedent, and the
+attend-before-you-sponsor rule — the things someone installed this repo to get.
+Generic good judgment is what they already had.
+
+**So: route, then actually open the file.** If the routing table points at
+`skills/x-growth`, read `skills/x-growth/SKILL.md` and the rows it cites in
+`data/algorithm-weights.md` before you write anything. Cite the specific numbers
+and the named case. If you find yourself producing advice that could have been
+written without this repo, you skipped the step.
+
 ## Skill routing
 
 | The user is asking about | Load |

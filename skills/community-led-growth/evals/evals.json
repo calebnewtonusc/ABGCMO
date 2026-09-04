@@ -1,3 +1,33 @@
-{"skill_name":"community-led-growth","evals":[
-{"id":1,"prompt":"We're launching a Discord to build community around our product. What should we do first?","expected_output":"Should first ask the precondition question: what is there to get good at? A product with no learning curve generates no community, because expertise scarcity is what creates demand for guides and templates. Should warn that communities do not grow because a server exists. Should recommend finding people already evangelizing unpaid, and the Ben Lang method of twenty one-hour conversations.","assertions":["Asks what there is to become expert at","States that no learning curve means no community","Warns that having a server is not a growth strategy","Recommends finding existing unpaid evangelists","Cites the Ben Lang twenty-conversations method","Sets a realistic measurement horizon of 6-12 months"],"files":[]},
-{"id":2,"prompt":"How much should we pay our ambassadors?","expected_output":"Should recommend paying in exclusivity rather than cash: early feature access, founder AMAs, small event budgets. Should cite Notion's program, where perks cost roughly nothing and filtered for true believers, and where the most valued benefit was direct team access. Should note paid creators do it for money and fans do it because it is true, and select for credibility over follower count.","assertions":["Recommends non-cash compensation","Cites Notion's ambassador perks","Notes that exclusivity filters for true believers","Names direct team access as the highest-value perk","Recommends selecting for credibility over follower count","Notes Notion hired no PMs until 2020 because the community did that work"],"files":[]}]}
+{
+  "skill_name": "community-led-growth",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We're launching a Discord to build community around our product. What should we do first?",
+      "expected_output": "Should first ask the precondition question: what is there to get good at? A product with no learning curve generates no community, because expertise scarcity is what creates demand for guides and templates. Should warn that communities do not grow because a server exists. Should recommend finding people already evangelizing unpaid, and the Ben Lang method of twenty one-hour conversations.",
+      "assertions": [
+        "Identifies what there is to become expert at, or states plainly that no learning curve means no community",
+        "States that no learning curve means no community",
+        "Warns that having a server is not a growth strategy",
+        "Recommends finding existing unpaid evangelists",
+        "Cites the Ben Lang twenty-conversations method",
+        "Sets a realistic measurement horizon of 6-12 months"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "How much should we pay our ambassadors?",
+      "expected_output": "Should recommend paying in exclusivity rather than cash: early feature access, founder AMAs, small event budgets. Should cite Notion's program, where perks cost roughly nothing and filtered for true believers, and where the most valued benefit was direct team access. Should note paid creators do it for money and fans do it because it is true, and select for credibility over follower count.",
+      "assertions": [
+        "Recommends non-cash compensation",
+        "Cites Notion's ambassador perks",
+        "Notes that exclusivity filters for true believers",
+        "Names direct team access as the highest-value perk",
+        "Recommends selecting for credibility over follower count",
+        "Notes Notion hired no PMs until 2020 because the community did that work"
+      ],
+      "files": []
+    }
+  ]
+}

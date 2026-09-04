@@ -1,3 +1,33 @@
-{"skill_name":"pr-earned-media","evals":[
-{"id":1,"prompt":"Write me a press release announcing our new product launch.","expected_output":"Should push back that 'we launched' is not a story and journalists publish stories their readers finish. Should ask what original data or surprising finding exists, noting original data is the most attainable earned media for a technical founder. Should redirect to niche newsletters and podcasts before tier-one press.","assertions":["States that a launch is not a story","Asks for original data or a surprising finding","Notes original data is the most attainable angle","Recommends niche newsletters first","Warns tier-one press is unrealistic without a hook","Does not simply write the press release as asked"],"files":[]},
-{"id":2,"prompt":"I'm going to email 200 journalists about our launch tomorrow.","expected_output":"Should warn that mass pitches are visible and get the sender filtered permanently. Should recommend reading three recent pieces per target and referencing one specifically, pitching a small number of well-matched outlets, having assets ready, and responding within the hour. Should note PR is a relationship built over months, not a launch-day blast.","assertions":["Warns that mass pitches get the sender filtered","Recommends reading recent work and referencing it specifically","Recommends a small targeted list over volume","Mentions having assets ready in advance","Reframes PR as a relationship built over months","Notes never asking to review a piece pre-publication"],"files":[]}]}
+{
+  "skill_name": "pr-earned-media",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write me a press release announcing our new product launch.",
+      "expected_output": "Should push back that 'we launched' is not a story and journalists publish stories their readers finish. Should ask what original data or surprising finding exists, noting original data is the most attainable earned media for a technical founder. Should redirect to niche newsletters and podcasts before tier-one press.",
+      "assertions": [
+        "States that a launch is not a story",
+        "Requires original data or a surprising finding as the angle, and says a launch alone is not one",
+        "Notes original data is the most attainable angle",
+        "Recommends niche newsletters first",
+        "Warns tier-one press is unrealistic without a hook",
+        "Does not simply write the press release as asked"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I'm going to email 200 journalists about our launch tomorrow.",
+      "expected_output": "Should warn that mass pitches are visible and get the sender filtered permanently. Should recommend reading three recent pieces per target and referencing one specifically, pitching a small number of well-matched outlets, having assets ready, and responding within the hour. Should note PR is a relationship built over months, not a launch-day blast.",
+      "assertions": [
+        "Warns that mass pitches get the sender filtered",
+        "Recommends reading recent work and referencing it specifically",
+        "Recommends a small targeted list over volume",
+        "Mentions having assets ready in advance",
+        "Reframes PR as a relationship built over months",
+        "Notes never asking to review a piece pre-publication"
+      ],
+      "files": []
+    }
+  ]
+}

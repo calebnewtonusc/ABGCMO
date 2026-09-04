@@ -4,9 +4,9 @@ An adversarial audit of this repo, run 2026-09-03, one day after it shipped.
 Every defect found is listed. Fixed items say what changed; unfixed items stay on
 the list rather than quietly disappearing.
 
-**On the count.** The brief was "1000 reasons this repo sucks." I found **189 real
-defects**. Padding to 1000 would mean inventing 811 fake ones, which is exactly
-the behavior this repo exists to argue against. 189 is the honest number, and the
+**On the count.** The brief was "1000 reasons this repo sucks." I found **195 real
+defects**. Padding to 1000 would mean inventing 805 fake ones, which is exactly
+the behavior this repo exists to argue against. 195 is the honest number, and the
 first eleven are severe enough that the count is not the point.
 
 ---
@@ -280,3 +280,73 @@ links, which was correct, and the links were added.
 3. **Not submitted to any registry or awesome-list.** The repo ignores its own
    advice, which is the most embarrassing item on this list.
 4. **Peer review.** One author. Corrections are the only mechanism.
+
+---
+
+## Round 2: three more defects, all found by running the thing
+
+Measurement found what review could not. Final count: **195**.
+
+**193. Eval assertions tested fact recall, not judgment — and 14 of them
+contradicted the repo's own top rule.**
+
+`events-conferences` #2 scored 0/5 on an answer that was strategically correct:
+it named the binding constraint, recommended against sponsoring, and gave the one
+scenario where sponsoring works. It scored zero because it did not recite the
+80/20 recruiting split or the Mercor precedent.
+
+Worse, 14 assertions across the suite demanded the agent **ask a question** —
+"Asks whether the company is hiring," "Requests the actual baseline." After Rule
+Zero (defect 191) told the agent to answer rather than interrogate, the repo was
+being graded down for following its own doctrine.
+
+→ **Fixed.** All 14 rewritten to test that the model *surfaced and reasoned about*
+the variable rather than stopping to ask. 48 assertions demanding a specific case
+citation were reviewed and kept, since citing a named case is genuine doctrine.
+
+**194. Skill files were frequently not being read at all.**
+
+The largest finding of the whole audit. In a single-turn session the agent often
+answers growth questions from `CLAUDE.md` alone and never opens the routed
+`SKILL.md`. A direct probe made this unambiguous:
+
+| Prompt | Result |
+|---|---|
+| Plain question | 0/5 assertions. Generic strategic advice. |
+| Same question + "tell me which files you read" | Read 11 files. Hit every assertion: the 80/20 split, Mercor's $71, attend-before-sponsor. |
+
+The unaided answer was *reasonable*. It was also indistinguishable from what the
+model would say without this repo installed — which means it delivered none of the
+value someone installed it for.
+
+→ **Fixed.** `CLAUDE.md` now carries **Rule One: read the skill file before you
+answer**, with the measured before/after as the justification, and the test:
+*if you produced advice that could have been written without this repo, you
+skipped the step.*
+
+**195. The harness scored API errors as legitimate zeros.**
+
+Mid-run the Claude quota was exhausted. Every subsequent call returned the string
+`"You're out of extra usage · resets 3:50am"`, and the grader dutifully scored it
+**0/5** — indistinguishable in the output from a genuinely bad answer.
+
+**8 of 18 runs in the v2 A/B were silently corrupted before this was caught.**
+
+→ **Fixed.** `tools/run_evals.py` raises `QuotaExhausted` on any refusal signature
+(quota, rate limit, empty response, timeout, overload) and **aborts the run,
+keeping partial results**, rather than recording a zero. Verified by simulating a
+quota response.
+
+**Run 1 was audited for the same contamination and had none** — all 24 runs
+returned real answers, so the published +23.6pp result stands. The v2 run was
+discarded.
+
+### The pattern in round 2
+
+Round 1's defects came from trusting summaries instead of primary sources. Round
+2's came from **not running the thing.** Every one of 193, 194, and 195 was
+invisible to reading the repo and obvious within minutes of executing it.
+
+194 in particular means the repo's measured +23.6pp was achieved with the skills
+mostly *unread* — the delta came from doctrine alone. What the skills add on top
+is unmeasured, and by the one probe available, substantial.

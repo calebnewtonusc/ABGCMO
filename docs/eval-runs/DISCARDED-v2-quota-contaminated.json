@@ -1,0 +1,193 @@
+{
+  "summary": {
+    "partial": true,
+    "completed": 9,
+    "of": 12,
+    "arms": [
+      "treatment",
+      "control"
+    ]
+  },
+  "results": [
+    {
+      "skill": "marketplace-listings",
+      "id": 1,
+      "prompt": "I published my Claude Code plugin. How do I get people to find it?",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 4,
+        "total": 6,
+        "pct": 66.7,
+        "answer": "**Assuming Chewbacca, since that's the one you've been positioning.** Your constraint isn't awareness, it's discoverability: 5 stars, no registry listing, and no posting history anywhere. Nobody can find something that isn't where they look.\n\n**The one move that matters most: get into the directories.**\n\nobra/superpowers inflected on getting into the Anthropic marketplace, not on content. The awesome-lists for Claude Code (`hesreallyhim/awesome-claude-code` at 36.8k stars, `affaan-m/everything-claude-code` at 141k stars) are where people actually browse for plugins. Smaller focused directories like those convert at 14-23% vs Product Hunt's 3.1% (reported). Submit to all of them this week.\n\n**After that, in order:**\n\n1. **README as landing page.** You have 15 seconds. One sentence that says what it does (\"Claude Code kit that controls your Mac, reads your calendar, transcribes YouTube, and drives your apps\"), a demo GIF in the first screenful, a copy-pasteable install in under 200 words. Right now the README speaks plumbing (hooks, subagents, MCP servers). Your audience doesn't know those words.\n\n2. **X, 2x/week, findings not features.** Post the discovery, repo in the reply. The bypass-permissions three-switch thing and the no-MCP YouTube transcript reading are both genuinely useful findings that land with Claude Code users. \"Here's something I figured out\" beats \"here's my repo\" every time.\n\n3. **Lead with the macOS wedge.** Every other kit is skills and prompts. Almost none of them can read your screen, click buttons, or drive apps. That's the thing nobody else has, so that's what the first GIF shows and the first post demonstrates.\n\n**What won't work:** \"my Claude Code kit\" as the pitch. There are 24k+ repos with Claude Code plugin definitions. You need a narrower claim. The macOS angle or the \"no Terminal needed\" angle are both real differentiators.\n\n**Stopping rule you already set:** under 20 stars after 30 days means the positioning is wrong, not that you need to post more. That's the right instinct. If the directories don't move the number, the problem is upstream in how Chewbacca describes itself, not downstream in volume.",
+        "grade": "1: PASS\n2: PASS\n3: FAIL\n4: FAIL\n5: PASS\n6: PASS\nSCORE: 4/6"
+      },
+      "control": {
+        "passed": 0,
+        "total": 6,
+        "pct": 0.0,
+        "answer": "Lord Jesus, Caleb built something and put it out there, and now comes the part where other people need to find it. Give him clarity on where to spend his energy so the right builders actually see it. Amen.\n\nWhich plugin did you publish? Chewbacca, or something separate? That changes the answer: a kit with setup.sh and macOS tooling has a different distribution surface than a single-purpose plugin someone installs in one line.\n\nEither way, here's what actually works for Claude Code ecosystem stuff right now:\n\n**Where people are looking**\n- The [Claude Code plugins directory](https://github.com/anthropics/claude-code-plugins) if there is one, or the community lists that aggregate them\n- X/Twitter search for \"claude code plugin\" and \"claude code kit\", that's where builders discover things right now\n- The Claude Code Discord channels\n\n**What gets shared**\n- A short demo showing one concrete thing the plugin does that saves real time. Not a feature list, a before/after\n- Posts that show a finding or a result, with the repo linked in the reply (this matches the strategy you already set: post findings, repo in the reply)\n\n**What doesn't work**\n- README-only marketing. Nobody reads a README until they've already decided to try it\n- \"I built a thing\" posts with no hook. The hook is what it does for the reader, not that you shipped it\n\nYou already laid out three lanes (GitHub/X for the tool, LinkedIn for you, never cross-post). That's right. The macOS wedge is genuinely differentiated since most plugins don't touch the OS layer.\n\nWhat specifically did you publish? I can give you sharper advice once I know the exact thing.",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\n6: FAIL\nSCORE: 0/6"
+      }
+    },
+    {
+      "skill": "creator-partnerships",
+      "id": 2,
+      "prompt": "How do we find creators to work with? We make a note-taking app for students, 12,000 users.",
+      "n_assertions": 5,
+      "treatment": {
+        "passed": 2,
+        "total": 5,
+        "pct": 40.0,
+        "answer": "Lord Jesus, thank you for giving Caleb a mind that sees through the noise to what actually works. Guide this conversation so the advice lands where it matters, not where it sounds impressive. Amen.\n\nAssuming post-PMF (12k users is real usage, not a vanity number) and that \"creators\" means people who make content your users already watch, not influencers you pay to read a script.\n\n**Your constraint is probably not awareness, it's activation.** At 12k users on a student note-taking app, the people who would use it are already findable. The question is whether a creator partnership gets them to try it and stick, or just drives a signup spike that churns. Before chasing creators, check your day-7 retention on organic signups. If it's under 40%, a creator campaign amplifies the leak.\n\n**The creator fit for a student tool is narrow.** The partnerships that work for student productivity apps share one trait: the creator is already teaching the workflow your product enables. Not \"productivity influencer who reviews tools\" but \"the person whose study method video has your app as the obvious next step.\"\n\nWhere to actually find them:\n\n**1. Search YouTube and TikTok for your users' actual problem, not your product category.** \"How I study for organic chemistry\" not \"best note-taking apps.\" The creators in those results have the audience you want, and most of them have never been pitched by a software company. Their audiences are small (5k to 50k), engaged, and trust the method, not the brand.\n\n**2. Check who your existing power users follow.** Survey your top-decile users (by session count or notes created) and ask two questions: \"Who do you watch for study advice?\" and \"Would you show someone how you use [your app]?\" The first gives you a target list. The second gives you UGC that is more credible than any paid placement.\n\n**3. Look at who is already mentioning you.** Search your app name on YouTube, TikTok, Reddit, and Twitter. Creators who made a video about you unprompted are the highest-signal partners because they chose you before money was involved. Even a 2k-subscriber channel that genuinely uses your product will convert better than a 200k channel reading a brief.\n\n**What the partnership should look like:**\n\nGive them something their audience wants that only your product can deliver. A template pack, a method, a shared notebook format. Not a discount code. The Notion play that worked was \"here is my exact dashboard, duplicate it in one click,\" which made the creator's content more valuable and made the product the delivery mechanism. Superhuman's version was giving creators early access so the product became a status signal (reported, not measured).\n\n**What won't work:**\n\nPaying a large creator to do a 60-second integration. Student audiences are ad-skeptical and the CAC on a free or cheap product doesn't support it. Engagement pods or fake testimonials. Sending free product to people who don't take notes.\n\n**Stopping rule:** Run three creator partnerships for 30 days each. If none of them produce signups that retain at or above your organic baseline by day 7, the problem is upstream of distribution: either the onboarding from that channel is broken, or the creators' audiences aren't your users.\n\nIf your retention is already strong and you want me to build a specific outreach system or a scoring rubric for which creators to approach first, say the word.",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: PASS\n5: PASS\nSCORE: 2/5"
+      },
+      "control": {
+        "passed": 2,
+        "total": 5,
+        "pct": 40.0,
+        "answer": "Lord Jesus, thank you for giving Caleb a mind that thinks about growth and distribution, not just building. Give him clarity on this one, and let the answer be practical, not theoretical. Amen.\n\nA few paths that actually work at 12k users:\n\n**Start with your own users who already create content.** Pull your power users (highest session count, most notes created, most shares) and check their socials. At 12k you probably have 5-15 people already posting study content on TikTok, YouTube, or Instagram. They convert better than cold outreach because they already believe in the product.\n\n**Studytok / Studygram micro-creators (1k-50k followers).** The sweet spot. They're accessible, they actually reply to DMs, and their audiences are your exact market. Search hashtags like #studywithme, #notetaking, #studytok, filter by recent posts and engagement rate (not follower count). A creator with 3k followers and 15% engagement beats one with 100k and 2%.\n\n**The offer that works at your stage:**\n- Free premium access (costs you nothing)\n- \"We'll feature your content in our app\" (social proof for them)\n- Small flat fee ($50-200/video) if you have budget, never rev share at this size\n\n**Outreach that gets replies:**\n- Reference a specific video of theirs\n- Show them a note made in your app that relates to their content\n- Keep it to 3 sentences max\n\n**Where NOT to waste time:**\n- Creator marketplaces and agencies (they're built for brands spending $5k+)\n- Big creators (50k+) who won't move the needle relative to cost\n- Affiliate programs before you have product-market fit locked\n\n**The highest-leverage move** is building a share/export feature that makes notes look good on social (branded template, clean formatting, one-tap to Instagram story). Then your 12k users become the creator channel without you recruiting anyone.\n\nWhat's the app? I can get more specific if I know the product.",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: PASS\n5: PASS\nSCORE: 2/5"
+      }
+    },
+    {
+      "skill": "partnerships",
+      "id": 2,
+      "prompt": "We built 30 integrations but nobody uses them. B2B SaaS, 150 customers, $40k MRR.",
+      "n_assertions": 5,
+      "treatment": {
+        "passed": 0,
+        "total": 5,
+        "pct": 0.0,
+        "answer": "Jesus, thank you for giving Caleb the mind to build things that actually help people, and for putting questions like this one in front of him so he can sharpen the way he thinks about growth. Give him clarity tonight. Amen.\n\nThirty integrations with no usage is an inventory problem, not a distribution problem. Building more or promoting them harder will not fix it.\n\n**The diagnosis:** at $40k MRR with 150 customers you have real revenue and real retention, so this is post-PMF. The constraint is not awareness (people are paying you) and it is not acquisition (150 accounts is enough signal). The constraint is **activation on the integrations specifically**. People bought your core product, not the integrations. The integrations are sitting in a menu nobody opens.\n\n**What is actually happening**, almost certainly: you built integrations based on what customers *said* they wanted in a survey or feature request, not based on what they were already doing. Stated preference and revealed preference diverge hard in B2B. The integrations that would get used are the ones that eliminate a manual step your users already perform every week, and you probably built a bunch that sound good on a features page but do not map to a real workflow.\n\n**What to do:**\n\n1. **Instrument which integrations get clicked, configured, and then actually fire a sync.** You probably have click data but not completion data. The drop-off between \"clicks the integration page\" and \"completes setup\" tells you whether this is a discovery problem or a setup-friction problem. If nobody even clicks, it is positioning. If they click and bail, it is onboarding friction or \"I thought it did something else.\"\n\n2. **Pick the 3 integrations with the highest setup completion rate and kill the marketing on the other 27.** Thirty integrations on a features page is noise. Three that work, with a case study each showing the before/after workflow, will outperform the wall of logos.\n\n3. **Make the top 3 part of onboarding, not a settings page.** \"You use Salesforce? Here is how this connects\" during the first session, triggered by detecting their stack or asking one question. Integrations discovered post-onboarding have single-digit activation rates (reported, Segment's 2023 integration usage study). Integrations surfaced during setup convert 4 to 6x higher.\n\n4. **Talk to 5 customers who activated an integration and 5 who did not.** Not a survey. Fifteen-minute calls. The ones who activated will tell you what workflow they were trying to fix. The ones who did not will tell you they did not know it existed, or they tried and it broke, or it did not do what they expected. That split determines whether you have a discovery, friction, or expectation problem.\n\n**What would change this answer:** if usage is actually happening but you are measuring the wrong event (configured but not firing vs. firing but not tracked), then this is an instrumentation gap, not an activation gap. If the 150 customers are heavily churning and the integrations were supposed to fix retention, then the core product has a value problem the integrations cannot paper over, and the $40k MRR is the number to worry about, not the integration adoption.\n\n**Stopping rule:** if after surfacing the top 3 in onboarding for 60 days, activation on those 3 has not moved past 15% of new accounts, the integrations are not solving a problem your users actually have. Cut them from the roadmap and redirect the engineering time to the core product.",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\nSCORE: 0/5"
+      },
+      "control": {
+        "passed": 0,
+        "total": 5,
+        "pct": 0.0,
+        "answer": "Jesus, when the work piles up and the traction doesn't follow, that's the loneliest feeling in building. Give Caleb wisdom right now to see the signal in the noise, and the guts to cut what needs cutting. Amen.\n\nClassic integration graveyard. 30 integrations, 150 customers means you built for the average customer instead of the best ones. Here's what I'd do:\n\n**Find the 3 that matter.** Pull usage data on every integration: DAU, API calls, or whatever proxy you have. I'd bet 3-5 integrations carry 80%+ of actual usage. The other 25 are resume lines, not product.\n\n**Talk to churned customers and power users, not the middle.** Churned customers tell you what was missing. Power users tell you what's working. The middle just says \"it's fine.\"\n\n**The real problem probably isn't integrations at all.** 30 integrations says the team kept building connectors instead of making the core workflow sticky. Integrations are distribution, not retention. If people connect Slack but never come back, the problem is what happens after the connection.\n\n**Questions that would change my advice:**\n\n- What's your churn rate? $40k MRR with 150 customers is ~$267/mo ARPU, which is low for B2B. Are you losing customers or just not expanding them?\n- Which 3 integrations do your best customers (highest NRR) actually use?\n- What does the user do in the first 10 minutes after connecting an integration?\n- Is this your product or a client's?\n\nThe move is almost certainly: deprecate 20+ integrations, go deep on the 3-5 that correlate with retention, and spend the engineering time you free up on the core loop instead.",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\n\nSCORE: 0/5"
+      }
+    },
+    {
+      "skill": "brand",
+      "id": 1,
+      "prompt": "We need a rebrand for our B2B scheduling SaaS. New logo, new colors, new website. We have 400 paying customers and flat growth for 6 months.",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 3,
+        "total": 6,
+        "pct": 50.0,
+        "answer": "Lord Jesus, thank You for Caleb's willingness to think carefully about real problems instead of reaching for surface-level fixes. Give him clarity here to see what's actually going on before anything gets redesigned. Amen.\n\nFlat growth for six months with 400 paying customers is not a brand problem. A rebrand will cost months and change nothing about the growth curve, because the growth curve is not caused by the logo or the colors.\n\n**The constraint is almost certainly not awareness.** You have 400 paying customers, which means people can find you and will pay. Flat growth means one of three things:\n\n1. **Churn equals acquisition.** You're adding customers but losing them at the same rate. If monthly churn is above 3-4%, you have a retention problem, and a rebrand makes that worse by confusing existing users while fixing nothing about why people leave.\n\n2. **Your acquisition channel saturated.** Whatever got you to 400 has a ceiling, and you haven't opened the next channel. A rebrand doesn't open a new channel. Identifying which channel actually fits your product's spread mechanism does.\n\n3. **Activation is broken.** People sign up and never get to the moment where the product becomes worth paying for. This is an onboarding problem, not a visual identity problem.\n\n**What to do instead of rebranding:**\n\nLook at your numbers. What's your monthly churn rate? What percentage of signups reach the activation event (first scheduled meeting, first integration, whatever \"aha\" looks like)? Where are new signups coming from, and has that source gone flat?\n\nThe answer to \"which of these three\" tells you what to fix. A rebrand addresses none of them. The case ledger is full of companies (Notion is the famous one) that \"rebranded\" successfully, but what they actually changed was positioning, not colors. Notion went from \"Xcode for the web\" to \"notes app\" and the product didn't change at all.\n\nIf the real issue turns out to be positioning (\"people don't understand what we are\"), that's a messaging and category problem I can help with through `skills/positioning`. If it's churn or activation, those are different fixes entirely.\n\n**What would change this answer:** if your existing customers actively say the product looks untrustworthy or outdated and that's blocking referrals or enterprise deals, then visual polish has ROI. But that's a targeted design upgrade to build trust, not a full rebrand, and it's still not the first thing to fix.",
+        "grade": "1: PASS\n2: FAIL\n3: FAIL\n4: PASS\n5: PASS\n6: FAIL\nSCORE: 3/6"
+      },
+      "control": {
+        "passed": 0,
+        "total": 6,
+        "pct": 0.0,
+        "answer": "Lord Jesus, thank You for giving Caleb clarity about what matters and what doesn't. Be with him as he figures out whether this is the right thing to spend time on tonight, and give him discernment about where his energy goes this week. Amen.\n\nI don't have any B2B scheduling SaaS in your projects or client work. Whose product is this? BMA client, something for a friend, or something else?\n\nThat context changes everything about how I'd approach it: whether I'm building a real site or mocking one up, what stack to use, and how much of the \"rebrand\" is strategy versus just shipping assets.",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\n6: FAIL\nSCORE: 0/6"
+      }
+    },
+    {
+      "skill": "b2b2c",
+      "id": 1,
+      "prompt": "A large platform wants to bundle our product to their 500,000 customers. This would be 80% of our revenue. Should we do it?",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 0,
+        "total": 6,
+        "pct": 0.0,
+        "answer": "Lord Jesus, thank You for giving Caleb the mind to think about these questions before the pressure of a real offer forces a fast answer. Give him clarity on where dependence belongs and where it becomes a trap. Amen.\n\n**Assuming this is a pre-scale startup with under $1M ARR and no existing distribution deal of this size.**\n\nNo. Not at those terms. 80% revenue concentration in one partner is not a distribution deal, it's an acquisition without the check.\n\n**The actual constraint this creates:**\n\nThe platform becomes your customer, not the 500,000 users. Your roadmap, pricing, packaging, and support priorities now serve one account. When they ask you to delay a feature for their integration timeline, you will say yes because you cannot afford to say no. When they renegotiate terms in year two, you will accept because replacing 80% of revenue takes longer than your runway.\n\n**What the case ledger says:**\n\nEvery bundling deal in `cases/` that worked long-term had one of two structures:\n\n1. **The product kept its own relationship with the end user** (Stripe inside platforms, Twilio inside apps). The platform is a channel, not the customer. Users know your name, log into your dashboard, and would notice if you disappeared.\n\n2. **The bundled revenue never exceeded 30-40% of total.** Above that, the power asymmetry kills your ability to walk away, which kills your ability to negotiate, which kills your margins on a predictable schedule.\n\nZynga built 80% of revenue on Facebook's platform. Facebook changed the rules. Zynga lost half its market cap in a year. That is the canonical case, and it is not unique.\n\n**What to do instead:**\n\n- Take the deal, but cap it. Negotiate terms where the bundled channel is one of three or four, not the only one. If they want exclusivity, the price is a minimum revenue guarantee that covers your downside when they change terms.\n- Keep the direct relationship with end users. Your brand, your login, your billing page. If the platform wants white-label, charge a premium that funds building your own channel in parallel.\n- Set a stopping rule: if bundled revenue exceeds 50% of total for two consecutive quarters, you are behind on building your own distribution and that is an emergency.\n\n**What would change this answer:**\n\nIf you are running out of money and this deal is the difference between surviving and not, take it and use the runway to diversify. A bad dependency is better than death. But name it honestly as a survival move, not a growth strategy, because the work to undo the dependency starts the day you sign.\n\nIf the platform is offering equity or an acquisition alongside the bundle, that is a different conversation entirely.",
+        "grade": "You're out of extra usage \u00b7 resets 3:50am (America/Los_Angeles)"
+      },
+      "control": {
+        "passed": 0,
+        "total": 6,
+        "pct": 0.0,
+        "answer": "You're out of extra usage \u00b7 resets 3:50am (America/Los_Angeles)",
+        "grade": "You're out of extra usage \u00b7 resets 3:50am (America/Los_Angeles)"
+      }
+    },
+    {
+      "skill": "positioning",
+      "id": 2,
+      "prompt": "Should we create a new category for our product? We do AI-powered async standups.",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 0,
+        "total": 6,
+        "pct": 0.0,
+        "answer": "You're out of extra usage \u00b7 resets 3:50am (America/Los_Angeles)",
+        "grade": "You're out of extra usage \u00b7 resets 3:50am (America/Los_Angeles)"
+      },
+      "control": {
+        "passed": 0,
+        "total": 6,
+        "pct": 0.0,
+        "answer": "You're out of extra usage \u00b7 resets 3:50am (America/Los_Angeles)",
+        "grade": "You're out of extra usage \u00b7 resets 3:50am (America/Los_Angeles)"
+      }
+    },
+    {
+      "skill": "international-expansion",
+      "id": 2,
+      "prompt": "We have a lot of users in Brazil but no localization. What should we do first?",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 0,
+        "total": 6,
+        "pct": 0.0,
+        "answer": "You're out of extra usage \u00b7 resets 3:50am (America/Los_Angeles)",
+        "grade": "You're out of extra usage \u00b7 resets 3:50am (America/Los_Angeles)"
+      },
+      "control": {
+        "passed": 0,
+        "total": 6,
+        "pct": 0.0,
+        "answer": "You're out of extra usage \u00b7 resets 3:50am (America/Los_Angeles)",
+        "grade": "You're out of extra usage \u00b7 resets 3:50am (America/Los_Angeles)"
+      }
+    },
+    {
+      "skill": "short-form-video",
+      "id": 1,
+      "prompt": "I have 0 followers on TikTok so nobody will see my videos. Should I buy followers first?",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 0,
+        "total": 6,
+        "pct": 0.0,
+        "answer": "You're out of extra usage \u00b7 resets 3:50am (America/Los_Angeles)",
+        "grade": "You're out of extra usage \u00b7 resets 3:50am (America/Los_Angeles)"
+      },
+      "control": {
+        "passed": 0,
+        "total": 6,
+        "pct": 0.0,
+        "answer": "You're out of extra usage \u00b7 resets 3:50am (America/Los_Angeles)",
+        "grade": "You're out of extra usage \u00b7 resets 3:50am (America/Los_Angeles)"
+      }
+    },
+    {
+      "skill": "events-conferences",
+      "id": 2,
+      "prompt": "We want to sponsor a hackathon to get our name out there. We're a 3-person dev tools startup, 200 users, not currently hiring.",
+      "n_assertions": 5,
+      "treatment": {
+        "passed": 0,
+        "total": 5,
+        "pct": 0.0,
+        "answer": "You're out of extra usage \u00b7 resets 3:50am (America/Los_Angeles)",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\nSCORE: 0/5"
+      },
+      "control": {
+        "passed": 1,
+        "total": 5,
+        "pct": 20.0,
+        "answer": "Lord Jesus, thank you for the way you wire Caleb's brain to think about growth as building something real for real people. Be in this strategy work, keep it honest and concrete, and let the right doors open at the right time. Amen.\n\nHere's what actually works at your stage (3 people, 200 users, not hiring):\n\n**Pick the right hackathon.** You want 50-200 participants who match your ICP, not a 2,000-person general hackathon where you're one of 40 logos on a banner. Niche > scale. University hackathons are cheap ($500-2k), developer community ones (local meetups, framework-specific) are even cheaper.\n\n**Sponsor tier doesn't matter. Presence does.** The cheapest tier that gets you:\n- A table where your team can talk to people\n- A slot to give a 2-minute lightning talk or demo\n- Your tool as a \"sponsored challenge\" category (this is the big one)\n\n**The sponsored challenge is the whole play.** \"Best project using [your tool]\" with a prize ($200-500 in credit, a nice mechanical keyboard, whatever). This gets 10-30 teams to actually integrate your product over a weekend. That's 10-30 teams who now have muscle memory with your tool and a project in their GitHub using it.\n\n**What to skip:**\n- Logo-only tiers (zero ROI at your size)\n- Swag beyond stickers (expensive, nobody remembers)\n- Hiring-focused pitches (you said you're not hiring, and it reads as inauthentic)\n\n**Budget reality:** $1-3k for a good university hackathon sponsorship with a challenge track. $500 for the prize. $200 for stickers. Under $4k total and your tool is in 20+ repos by Monday.\n\n**After the event:** Follow up with every team that used your tool. Offer extended trials. Feature their projects in your docs or blog. That content compounds.\n\nWant help writing the challenge brief or picking hackathons to target?",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: PASS\nSCORE: 1/5"
+      }
+    }
+  ]
+}

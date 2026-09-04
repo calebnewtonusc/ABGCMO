@@ -20,7 +20,7 @@
       "prompt": "how do i grow my open source CLI tool",
       "expected_output": "Should ask for the baseline before prescribing: current stars, forks, topics, license, who uses it. Should identify spread mechanism as single-player utility and state plainly that it will not go viral and referral mechanics would be wasted work. Should route to github-growth and name the free permanent items (topics, license, registries, awesome-lists). Should give ONE recommendation, not a channel list.",
       "assertions": [
-        "Requests the actual baseline rather than guessing",
+        "Names the baseline numbers needed and states its assumption about them rather than guessing silently",
         "Classifies spread mechanism as single-player utility",
         "States directly that the tool will not go viral",
         "Names free compounding placements: topics, license, registries",

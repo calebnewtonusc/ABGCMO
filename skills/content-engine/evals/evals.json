@@ -1,3 +1,33 @@
-{"skill_name":"content-engine","evals":[
-{"id":1,"prompt":"Write me a launch announcement post for my new library.","expected_output":"Should refuse the announcement format and explain that 'I built X' is an ad that asks for attention without offering anything. Should ask what specific hard-won undocumented finding came out of building it. Should note that if there is no finding, there may not be a post yet. Should place the link in the reply on X and nowhere in a LinkedIn post body.","assertions":["Refuses the plain announcement framing","Asks for the underlying finding","Says there may not be a post if no finding exists","Specifies link placement per platform","Offers hook options across different patterns","Applies the portability test"],"files":[]},
-{"id":2,"prompt":"I'll write one post and cross-post it to X, LinkedIn, and my newsletter to save time.","expected_output":"Should warn that verbatim duplication is associated with ~65% organic traffic decline after six months and that native means rewritten, not reformatted. Should give the pillar-atomize-distribute loop and describe what the same idea becomes on each platform. Should recommend canonical tags pointing at the user's own domain when syndicating.","assertions":["Warns against verbatim cross-posting","Cites the ~65% organic decline figure","Explains native means rewritten not reformatted","Maps the idea to each platform's native form","Recommends canonical URLs","Notes Medium strips canonical tags on manual paste"],"files":[]}]}
+{
+  "skill_name": "content-engine",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write me a launch announcement post for my new library.",
+      "expected_output": "Should refuse the announcement format and explain that 'I built X' is an ad that asks for attention without offering anything. Should ask what specific hard-won undocumented finding came out of building it. Should note that if there is no finding, there may not be a post yet. Should place the link in the reply on X and nowhere in a LinkedIn post body.",
+      "assertions": [
+        "Refuses the plain announcement framing",
+        "Requires a specific finding rather than an announcement, and says there may be no post if none exists",
+        "Says there may not be a post if no finding exists",
+        "Specifies link placement per platform",
+        "Offers hook options across different patterns",
+        "Applies the portability test"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I'll write one post and cross-post it to X, LinkedIn, and my newsletter to save time.",
+      "expected_output": "Should warn that verbatim duplication is associated with ~65% organic traffic decline after six months and that native means rewritten, not reformatted. Should give the pillar-atomize-distribute loop and describe what the same idea becomes on each platform. Should recommend canonical tags pointing at the user's own domain when syndicating.",
+      "assertions": [
+        "Warns against verbatim cross-posting",
+        "Cites the ~65% organic decline figure",
+        "Explains native means rewritten not reformatted",
+        "Maps the idea to each platform's native form",
+        "Recommends canonical URLs",
+        "Notes Medium strips canonical tags on manual paste"
+      ],
+      "files": []
+    }
+  ]
+}

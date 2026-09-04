@@ -6,7 +6,7 @@
       "prompt": "Should we buy a booth at a big industry conference? It's $25k.",
       "expected_output": "Should ask whether they have been to the event before and whether their buyer actually attends. Should warn booths convert badly for unknown companies because nobody is looking for them. Should recommend attending first and booking meetings in advance, noting value is in the hallway not the booth. Should propose measuring follow-up conversations rather than badge scans.",
       "assertions": [
-        "Asks whether they have attended before",
+        "Treats prior attendance as decisive and advises attending before buying a booth",
         "Warns booths convert poorly for unknown companies",
         "Recommends attending and booking meetings first",
         "States the value is in hallway conversations",
@@ -21,7 +21,7 @@
       "expected_output": "Should surface that roughly 80% of hackathon sponsorship value is typically recruiting and 20% brand, and ask whether they are hiring. If not hiring, should say the economics change substantially. Should note prizes need not be large, citing Mercor's ~$71 total, and recommend sponsoring before running your own.",
       "assertions": [
         "Raises the ~80% recruiting / 20% brand split",
-        "Asks whether the company is hiring",
+        "Ties the recommendation to whether the company is hiring, given the recruiting-weighted value",
         "States the economics change if not hiring",
         "Notes prizes need not be large, citing Mercor",
         "Recommends sponsoring before running your own event"

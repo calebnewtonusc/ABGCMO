@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "generated": "2026-09-04T08:25:00+00:00",
+    "n_evals": 2,
+    "arms": [
+      "treatment"
+    ],
+    "elapsed_min": 1.1,
+    "treatment": {
+      "passed": 4,
+      "total": 11,
+      "pct": 36.4
+    }
+  },
+  "results": [
+    {
+      "skill": "events-conferences",
+      "id": 1,
+      "prompt": "Should we buy a booth at a big industry conference? It's $25k.",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 4,
+        "total": 6,
+        "pct": 66.7,
+        "answer": "Lord Jesus, thank you for giving Caleb the kind of ambition that even considers a $25k bet on getting in front of people. Give him clarity on whether this is the right moment and the right room, and guard him from spending money that should go somewhere else right now. Amen.\n\n**Assuming this is for Amber or one of the BMA portfolio companies, pre-PMF, with no paid customers yet:** don't buy the booth.\n\n$25k on a conference booth is a scaling-stage move. It works when you already know your ICP, have a demo that closes in 10 minutes, and can staff the booth with people who can qualify leads on the spot. Before product-market fit, you're paying to broadcast a message you haven't validated to a room full of people you're not sure are your buyers.\n\n**What actually goes wrong at this stage:**\n\n- You optimize the booth instead of conversations. The $25k creates pressure to \"make it worth it,\" which pulls attention from the 3 to 5 real conversations that would actually move the company.\n- Conference attendees are in browse mode, not buy mode. The conversion rate on booth scans to qualified pipeline is brutal, typically under 2% even for established companies (reported, not measured).\n- You burn the brand impression. If the product isn't ready for a live demo under pressure, the first impression with 200 people is \"interesting but not ready,\" and you don't get a second one with most of them.\n\n**What to do instead:**\n\nAttend the conference as a participant for $500 to $2k. No booth. Walk the floor, get into the hallway conversations, host a dinner or a small side event for 15 people you actually want to talk to. The dinner costs $1k to $3k and puts you across a table from decision-makers instead of behind a counter waving at foot traffic. The Superhuman and Notion early teams both ran this play: curated dinners, not booths.\n\n**The one scenario where the booth makes sense:** you already have 5+ paying customers in the industry this conference serves, you have a repeatable demo, and you're trying to compress 6 months of outbound into 3 days. Then the booth is a pipeline accelerator, not a discovery tool.\n\nIf you're actually post-PMF with real revenue and I read this wrong, the answer flips. Tell me which company and what stage and I'll adjust.",
+        "grade": "1: FAIL\n2: PASS\n3: PASS\n4: PASS\n5: FAIL\n6: PASS\nSCORE: 4/6"
+      }
+    },
+    {
+      "skill": "events-conferences",
+      "id": 2,
+      "prompt": "We want to sponsor a hackathon to get our name out there. We're a 3-person dev tools startup, 200 users, not currently hiring.",
+      "n_assertions": 5,
+      "treatment": {
+        "passed": 0,
+        "total": 5,
+        "pct": 0.0,
+        "answer": "Jesus, thank you for giving Caleb a mind that sees through hype and asks the hard question before spending money. Guide this answer so it's honest about what works and what doesn't. Amen.\n\nAssuming you're pre-PMF with 200 users and limited budget: hackathon sponsorship is almost certainly the wrong move right now, and here's why.\n\n**The constraint isn't awareness, it's activation.** At 200 users you don't have a distribution problem, you have a \"do people who find it actually use it and come back\" problem. Sponsoring a hackathon puts your logo in front of people who will forget it by Monday. The conversion path from \"saw a banner at a hackathon\" to \"integrated a dev tool into my workflow\" is brutally long.\n\n**What hackathon sponsorship actually buys:**\n- Brand impressions among people building throwaway projects (reported: <2% of hackathon projects continue past the weekend)\n- A hiring funnel you don't need right now\n- A $2-5K+ spend that could fund six months of actual distribution work\n\n**What to do instead with that money and energy:**\n\n1. **Be a prize category, not a sponsor.** \"Best project using [your tool]\" costs a fraction of sponsorship, forces participants to actually try your product, and the winners become case studies. Several dev tools (Twilio, Cockroach Labs) traced early traction to this exact move.\n\n2. **Show up as builders, not as a booth.** Have your 3-person team enter the hackathon, build something with your own tool, and win or place. That's a story. A banner is not.\n\n3. **Put the budget into the community where your 200 users already live.** If they're on Discord, Reddit, or a specific Slack, that's where the next 200 come from. Sponsoring a hackathon is spray; going deep in one community is aim.\n\n**The one exception:** if the hackathon audience is precisely your ICP (e.g., you make a database tool and it's a data-focused hackathon with 500 attendees who match your user profile), and you do the prize-category play instead of a logo sponsorship, it can work. But \"a hackathon\" generically is almost never channel-market fit for a dev tool at your stage.\n\n**Stopping rule:** if you do it anyway and fewer than 10 attendees create an account during the event, the channel is dead for you. Don't try a second one hoping for different results.\n\nIf you're actually post-PMF with strong retention and looking to accelerate top-of-funnel, the answer changes. But at 200 users, fix the funnel before widening the opening.",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\nSCORE: 0/5"
+      }
+    }
+  ]
+}

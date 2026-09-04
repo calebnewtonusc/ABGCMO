@@ -36,15 +36,37 @@ def load_evals(skill=None):
     return out
 
 
+class QuotaExhausted(RuntimeError):
+    """The API refused the call. Never score this as a zero."""
+
+
+# Substrings that mean "the model never answered", as opposed to "answered badly".
+# Scoring these as 0 silently corrupts a run; on 2026-09-04 it corrupted 8 of 18.
+REFUSALS = (
+    'out of extra usage',
+    'usage limit reached',
+    'rate limit',
+    'Credit balance is too low',
+    'Invalid API key',
+    'overloaded_error',
+)
+
+
 def claude(prompt, cwd, timeout=300):
     try:
         r = subprocess.run(['claude', '-p', prompt], cwd=cwd, capture_output=True,
                            text=True, timeout=timeout)
-        return r.stdout.strip() or '[empty response]'
+        out = (r.stdout or '').strip()
+        err = (r.stderr or '').strip()
+        blob = out + ' ' + err
+        for sig in REFUSALS:
+            if sig.lower() in blob.lower():
+                raise QuotaExhausted(out or err or sig)
+        if not out:
+            raise QuotaExhausted('empty response')
+        return out
     except subprocess.TimeoutExpired:
-        return '[timeout]'
-    except Exception as e:
-        return f'[error: {e}]'
+        raise QuotaExhausted('timeout')
 
 
 def grade(answer, assertions, cwd):
@@ -84,22 +106,36 @@ def main():
 
     control_dir = tempfile.mkdtemp(prefix='abgcmo-control-')
     arms = ['treatment', 'control'] if a.arm == 'both' else [a.arm]
-    results, t0 = [], time.time()
+    results, t0, aborted = [], time.time(), False
 
-    print(f'{len(evals)} evals x {len(arms)} arm(s) = {len(evals)*len(arms)} runs\n')
+    print(f'{len(evals)} evals x {len(arms)} arm(s) = {len(evals)*len(arms)} runs\n', flush=True)
     for i, e in enumerate(evals, 1):
         row = {'skill': e['skill'], 'id': e['id'], 'prompt': e['prompt'],
                'n_assertions': len(e['assertions'])}
-        for arm in arms:
-            cwd = REPO if arm == 'treatment' else control_dir
-            ans = claude(e['prompt'], cwd)
-            p, t, raw = grade(ans, e['assertions'], control_dir)
-            row[arm] = {'passed': p, 'total': t, 'pct': round(100*p/t, 1) if t else 0,
-                        'answer': ans[:4000], 'grade': raw[:2000]}
-            print(f"  [{i}/{len(evals)}] {e['skill']} #{e['id']:<2} {arm:<9} {p}/{t}")
+        try:
+            for arm in arms:
+                cwd = REPO if arm == 'treatment' else control_dir
+                ans = claude(e['prompt'], cwd)
+                p, t, raw = grade(ans, e['assertions'], control_dir)
+                row[arm] = {'passed': p, 'total': t,
+                            'pct': round(100 * p / t, 1) if t else 0,
+                            'answer': ans[:4000], 'grade': raw[:2000]}
+                print(f"  [{i}/{len(evals)}] {e['skill']} #{e['id']:<2} "
+                      f"{arm:<9} {p}/{t}", flush=True)
+        except QuotaExhausted as ex:
+            print(f"\n  ABORTED at eval {i}/{len(evals)}: {ex}", flush=True)
+            print("  Partial results kept. An API refusal is NOT a score of zero.",
+                  flush=True)
+            aborted = True
+            break
         results.append(row)
+        os.makedirs(os.path.dirname(os.path.join(REPO, a.out)), exist_ok=True)
+        json.dump({'summary': {'partial': True, 'completed': len(results),
+                               'of': len(evals), 'arms': arms},
+                   'results': results},
+                  open(os.path.join(REPO, a.out), 'w'), indent=2)
 
-    summary = {'generated': datetime.now(timezone.utc).isoformat(timespec='seconds'),
+    summary = {'aborted': aborted, 'generated': datetime.now(timezone.utc).isoformat(timespec='seconds'),
                'n_evals': len(evals), 'arms': arms,
                'elapsed_min': round((time.time()-t0)/60, 1)}
     for arm in arms:

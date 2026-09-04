@@ -114,3 +114,70 @@ confirms the eval was the defect rather than the skill.
 
 None of these invalidate the direction. All of them mean the precision is lower
 than the decimal points suggest.
+
+---
+
+## Post-fix retests — 2026-09-04, treatment arm only
+
+After Rule Zero (defect 191) and the five under-specified prompts (defect 192)
+were fixed, the affected evals were re-run in the treatment arm. Single runs, so
+these are indicative, not conclusive.
+
+| Eval | Before | After | |
+|---|---|---|---|
+| `brand` #1 | 0/6 | **5/6** | eval prompt was the defect |
+| `brand` #2 | 1/6 | **4/6** | |
+| `creator-partnerships` #2 | 1/5 | **4/5** | |
+| `growth-loops` #2 | 0/6 | **2/6** | improved, still weak |
+| `events-conferences` #2 | 0/5 | 0/5 | **unchanged — a real skill failure** |
+| `partnerships` #2 | 1/5 | 0/5 | **got worse** |
+
+Four improved, one unchanged, one regressed. The regression and the flat result
+are reported because hiding them would make the other four meaningless.
+
+**What is genuinely established:** `brand` #1 going 0/6 → 5/6 with **no change to
+the skill itself**, only to the eval prompt, confirms defect 192. The eval was
+measuring the wrong thing.
+
+**What is not established:** whether Rule Zero improved the aggregate. Single-run
+per-eval scores moved several points on re-runs with no changes at all, so
+individual rows here are within noise. `partnerships` #2 going 1/5 → 0/5 is as
+likely to be variance as regression.
+
+**Open failure:** `events-conferences` #2 scored 0/5 both before and after both
+fixes. That is not a measurement artifact — the skill is not producing the
+behavior its assertions describe. Unresolved.
+
+## Reproducing
+
+```bash
+tools/run_evals.py --sample 12 --seed 7    # the run above
+tools/run_evals.py --skill events-conferences --arm treatment
+```
+
+The runner checkpoints after every eval, so a killed run keeps its partial
+results. An earlier v2 attempt was lost to session teardown before this was added.
+
+---
+
+## Run 2 — DISCARDED (quota contamination)
+
+A second A/B run with the same seed was attempted after the Rule Zero and prompt
+fixes. Partway through, the Claude quota was exhausted. Every subsequent call
+returned `"You're out of extra usage"`, which the grader scored as **0** —
+indistinguishable in the output from a genuinely poor answer.
+
+**8 of 18 completed runs were corrupted.** The file is kept as
+`DISCARDED-v2-quota-contaminated.json` rather than deleted, because a discarded
+result is evidence too.
+
+Run 1 was audited for the same failure and had **zero** contaminated runs, so the
++23.6pp result stands.
+
+→ The harness now raises `QuotaExhausted` on any refusal signature and **aborts,
+keeping partial results**, instead of recording zeros. See defect 195 in
+[AUDIT.md](../../AUDIT.md).
+
+**Still owed:** a clean post-fix A/B run. It requires quota that was not available
+at the time of writing. The pre-fix +23.6pp is the only aggregate number this repo
+currently stands behind.

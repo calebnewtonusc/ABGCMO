@@ -8,7 +8,7 @@
       "assertions": [
         "Applies the portability test and fails the description",
         "Applies the five-second category test",
-        "Asks what the user would do if this did not exist",
+        "Identifies the real alternative as what the user would do if this did not exist, including doing nothing",
         "Identifies the missing unique attribute",
         "Proposes a concrete rewrite naming a category",
         "Does not simply produce more marketing adjectives"
