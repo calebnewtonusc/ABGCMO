@@ -18,6 +18,16 @@ jobs:
       - name: Evidence tags and primary sources
         run: python3 tools/check_evidence.py
 
+  sources:
+    runs-on: ubuntu-latest
+    continue-on-error: true   # drift is a signal to update, not a broken build
+    steps:
+      - uses: actions/checkout@v4
+      - name: Re-verify primary sources against live artifacts
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/verify_sources.py
+
   links:
     runs-on: ubuntu-latest
     continue-on-error: true

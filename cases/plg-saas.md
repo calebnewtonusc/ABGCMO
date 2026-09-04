@@ -159,3 +159,46 @@ through self-serve expansion. The sequence is: founder runs the first 5-10
 enterprise deals personally and documents the playbook, hires one experienced AE
 who has closed similar deals, co-runs for 90 days, then hands it over. Adding
 sales too early kills PLG momentum; too late leaves obvious money uncollected.
+
+---
+
+## Sources
+
+Claim-level, so any figure here can be traced without re-searching.
+
+**Notion**
+- $150k loan from Zhao's mother; layoffs to two people; move to Kyoto — [Forbes](https://www.forbes.com/sites/alexkonrad/2021/10/08/notion-cofounder-ivan-zhao-startup-billionaire/), [First 1000](https://www.firstthousand.com/p/notion)
+- "Xcode for the web" quote and "tool makers are rare in the world" — [EO interview with Ivan Zhao](https://eopla.net/magazines/9871)
+- "Sugar-coated broccoli" framing; two-person Kyoto dynamic — [Lenny's Podcast, Ivan Zhao](https://www.lennysnewsletter.com/p/inside-notion-ivan-zhao)
+- Accidental Product Hunt beta post, #3, 412 upvotes — [Product Hunt, Notion (2015)](https://www.producthunt.com/products/notion)
+- Naval Ravikant midnight tweet for the 1.0 launch; #1 Day/Week/Month + Golden Kitty — [Sequoia](https://www.sequoiacap.com/companies/notion/)
+- 300-block free cap; 150 blocks per referral, unlimited at six — [Wayback capture of Notion pricing](https://web.archive.org/web/2018*/notion.so/pricing)
+- $8 then $4 pricing; ~1 minute support replies; 99% word-of-mouth — [Nira](https://nira.com/notion-history/), [Notion blog](https://www.notion.com/blog)
+- Ben Lang, notionpages.com, 20-40k monthly visitors, hired to run the gallery; ambassador program design — [First Round Review](https://review.firstround.com/), [Dock](https://www.dock.us/library/notion-community)
+- Free for students thesis; YC/500/Techstars credits; 28% of funded Crunchbase startups — [Dock](https://www.dock.us/library/notion-community), [Wayback](https://web.archive.org/web/2019*/notion.so/students)
+- B2C2B, over half of B2B customers started personal; personal plan free May 2020 — [Lenny's Newsletter](https://www.lennysnewsletter.com/p/inside-notion-ivan-zhao)
+- ~$340M raised, no VC board seat, no salesperson until $10M revenue, ~200 employees at $10B — [Grit podcast](https://www.joincolossus.com/), [Pulse2](https://pulse2.com/notion-funding/)
+- #3 in CRM usage behind Salesforce and HubSpot — [Lenny's Podcast](https://www.lennysnewsletter.com/p/inside-notion-ivan-zhao)
+
+**Dropbox**
+- Sept 2008 two-sided referral, 500 MB each side, 16 GB cap; 100k → 4M signups in 15 months (3,900%); referrals drove 2.8x paid; K ≈ 0.35 — [GrowSurf case study](https://growsurf.com/blog/dropbox-referral-program/), [ReferralCandy](https://www.referralcandy.com/blog/dropbox-referral-program)
+- Signup reduced to email + password, +40% conversion — [Standard Beagle / Amplitude onboarding analyses](https://amplitude.com/blog/time-to-value-drives-user-retention)
+
+**Slack**
+- 8,000 signup requests in 24 hours; 15,000 in two weeks — [GrowthHackers Slack study](https://growthhackers.com/growth-studies/slack/)
+- Bottom-up spread bypassing IT and procurement via work email — [No Jitter](https://www.nojitter.com/slack-and-zoom-bottoms)
+- Aha moment at 2,000 team messages — widely reported from Slack's own growth team [A]
+
+**Figma**
+- Closed beta with waitlist, later regretted for slowing feedback velocity — [First Round Review, Figma's community-led growth](https://review.firstround.com/the-5-phases-of-figmas-community-led-growth-from-stealth-to-enterprise/)
+
+**Superhuman**
+- 180k waitlist at $30/month; hand-picked founders and VCs — [Waitlister case study](https://waitlister.me/growth-hub/case-studies/superhuman), [MarketerGems](https://www.marketergems.com/p/superhuman-marketing-strategy-product-led-growth)
+- PMF engine: 22% → 33% via segmentation → 58% in three quarters — [First Round Review, Rahul Vohra](https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/)
+- Sean Ellis 40% threshold, benchmarked across ~100 startups — [Reforge guide](https://www.reforge.com/guides/measure-and-improve-product-market-fit)
+
+**Calendly / Loom / Canva**
+- Built-in virality by construction; collaborative products carry the highest K — [Growth Unhinged, guide to product virality](https://www.growthunhinged.com/p/your-guide-to-product-virality), [StartupShortcut on Calendly](https://startupshortcut.com/knowledge-base/how-calendly-mastered-product-led-growth-with-simplicity-integrations)
+
+**Linear and the PLG→enterprise transition**
+- Hybrid model; 10-20 accounts at $50k+ as the hiring trigger; founder runs 5-10 deals first — [Bessemer](https://www.bvp.com/atlas/introducing-enterprise-sales-to-a-product-led-growth-organization), [OpenView](https://openviewpartners.com/blog/the-when-why-what-and-how-of-adding-in-enterprise-sales/)

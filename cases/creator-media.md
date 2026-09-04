@@ -87,3 +87,22 @@ solves both. If they cannot, do not pretend a template gallery is a UGC economy.
   coordinated promo-swap week.
 - Growth is nonlinear: guest spots and swaps create spikes; consistent publishing
   and retention are what make the spikes stick.
+
+---
+
+## Sources
+
+**MrBeast**
+- Five years of low-view uploads 2012-2016 before finding the format; up to 20 thumbnail variations; thumbnails shot during filming; re-hooking every 20-40 seconds; dubbing into 40+ languages — [OutlierKit, data-backed breakdown](https://outlierkit.com/resources/mrbeast-growth-strategy/), [Forbes](https://www.forbes.com/sites/ianshepherd/2024/10/18/the-8-data-driven-secrets-behind-mrbeasts-youtube-empire/)
+
+**Morning Brew**
+- 100k → 1.7M subscribers in 18 months; ~30% of growth from referrals, up to 80% early; 4.5M today; CPA ~$0.25; social and SMS outperforming email referrals — [Tyler Denk (built the program)](https://medium.com/the-mission/how-morning-brews-referral-program-built-an-audience-of-1-5-million-subscribers-3315482c1aa5), [GrowSurf](https://growsurf.com/blog/how-morning-brew-grew-its-subscribers/), [SparkLoop](https://sparkloop.app/blog/the-secrets-behind-morning-brews-growth-to-2-million-newsletter-subscribers-6)
+
+**The Hustle**
+- Tiered branded rewards, per-issue referral link, visible tracking — [ReferralRock](https://referralrock.com/blog/newsletter-referral-program/)
+
+**Roblox and Fortnite**
+- Roblox 110M+ DAU; $1.5B+ creator payouts 2025 (+70% YoY); ~$2.2B across Roblox/Fortnite/Overwolf (+47%); Fortnite average payout ~35x Roblox's — [Naavik, State of UGC Games 2026](https://naavik.co/deep-dives/the-state-of-ugc-games-2026/), [App Economy Insights](https://www.appeconomyinsights.com/p/roblox-user-generated-gaming)
+
+**Podcasts**
+- 54% of listeners find shows through other podcasts; YouTube as top discovery surface — [Acast](https://www.acast.com/en/blog/the-ultimate-guide-to-growing-your-podcast-audience-in-2026), [Libsyn](https://libsyn.com/blog/how-to-promote-a-podcast-in-2026-practical-tactics-that-drive-discovery/)

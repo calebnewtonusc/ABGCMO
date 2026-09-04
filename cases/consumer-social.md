@@ -87,3 +87,22 @@ What that means practically: on these platforms, the *content* is the entire
 variable. There is no audience-size moat to climb first. Completion rate is the
 strongest signal on both; DM shares carry the most weight for unconnected reach
 on Instagram; likes are the weakest signal on both.
+
+---
+
+## Sources
+
+**Wordle**
+- 90 players in November 2021 → over 2,000,000 in January 2022 — [Smithsonian](https://www.smithsonianmag.com/smart-news/heres-why-the-word-game-wordle-went-viral-180979439/), [Puzzle Cottage history](https://puzzlecottage.com/wordle-history)
+- Spoiler-free emoji grid as the mechanism; one puzzle a day identical for everyone — [Smithsonian](https://www.smithsonianmag.com/smart-news/heres-why-the-word-game-wordle-went-viral-180979439/), [Concurate](https://concurate.com/how-wordle-went-viral/)
+
+**Spotify Wrapped**
+- ~2 billion annual impressions; MAU +11% YoY to 751M in the Wrapped period — [NoGood](https://nogood.io/blog/spotify-wrapped-marketing-strategy/), [Spotify Newsroom](https://newsroom.spotify.com/2025-12-03/2025-wrapped-user-experience/)
+- Copied across fitness, travel, finance, education, ecommerce — [Open Source CEO](https://www.opensourceceo.com/p/strategism-spotify-wrapped)
+
+**Duolingo**
+- TikTok 50k → 10M+ followers; DAU ~4.9M (2019) → 80M+ (late 2024); revenue ~$200M (2022) → $400M+ (2024); one campaign at 39% CTR — [Enrich Labs](https://www.enrichlabs.ai/case-study/duolingo-social-media-strategy), [Kings Digital](https://kings.digital/guide/duolingo-social-media-strategy-case-study/)
+- Streak mechanics, leagues, streak-revival campaign — [ContentGrip](https://www.contentgrip.com/duolingo-streak-revival-campaign/)
+
+**Platform mechanics (TikTok, Instagram)**
+- Interest graph not social graph; follower count not a direct ranking factor; completion rate dominant; DM shares heaviest for unconnected reach (Mosseri) — [Hootsuite TikTok](https://blog.hootsuite.com/tiktok-algorithm/), [Later Instagram](https://later.com/blog/how-instagram-algorithm-works/). All `[A]`/`[R]`; no primary source is published for either platform.

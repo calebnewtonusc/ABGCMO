@@ -46,3 +46,13 @@ Notion is the counter-example that proves it: they did **not** create a category
 They deliberately entered the well-understood "notes app" category, because that
 context made an unfamiliar product legible. The ambition stayed the same; the
 category label was chosen for comprehension.
+
+---
+
+## Sources
+
+- HubSpot owning "inbound marketing" as intellectual territory — [Markhub24 on the HubSpot playbook](https://www.markhub24.com/post/building-marketing-moats-through-community-and-content-the-hubspot-playbook)
+- Drift removing every lead-capture form from its own site in 2016 and declaring "conversational marketing"; the manifesto, book, podcast, and HYPERGROWTH conference — [Profit Snack, Drift's category creation playbook](https://profitsnack.com/p/drift-conversational-marketing-playbook), [Yeti Distro](https://yetidistro.com/drift-and-creating-new-categories)
+- "Define the category, set the buying criteria, be the leader on day one" — [G2 on category design](https://learn.g2.com/category-design-market-share)
+- Positioning inside an existing category as the cheaper default; the 10-step process — April Dunford, [*Obviously Awesome*](https://www.aprildunford.com/books), [quickstart guide](https://www.aprildunford.com/post/a-quickstart-guide-to-positioning)
+- Strategic narrative structure (name the enemy, promised land, magic gifts) — [Andy Raskin](https://medium.com/the-mission/the-greatest-sales-deck-ive-ever-seen-4f4ef3391ba0)

@@ -59,3 +59,19 @@ Ranked by durability rather than speed:
    trending ranks velocity.
 5. **Word of mouth from a genuinely better experience.** Not a channel you can
    run, but the only one that scales without you.
+
+---
+
+## Sources
+
+**Stripe**
+- "Seven lines of code" as a product decision; developer word of mouth as the primary channel for five years — [daily.dev on developer trust](https://business.daily.dev/resources/cracking-the-code-how-stripe-twilio-and-github-built-dev-trust/), [IdeaPlan case study](https://www.ideaplan.io/case-studies/stripe-api-first-platform)
+- The Collison installation ("give me your laptop") — [Paul Graham, *Do Things That Don't Scale*](http://paulgraham.com/ds.html) **[primary]**
+
+**Twilio**
+- Documentation-first GTM — [DevDocs](https://devdocs.work/post/stripe-twilio-achieving-growth-through-cutting-edge-documentation)
+- Docs driving 40-60% of a devtool's organic traffic — [SEO for developer tools](https://autoseobot.com/blog/seo-for-developer-tools.html) [A]
+
+**Cursor / Anysphere**
+- $100M ARR in 20 months, reportedly no marketing spend; $500M Jun-2025, $1B Nov-2025, $2B Feb-2026, ~$4B Jun-2026; 1M+ DAU; ~100 employees ~90% technical — [Contrary Research](https://research.contrary.com/company/cursor), [Dealroom](https://app.dealroom.co/news/note/cursor-reaches-300m-arr-tripling-in-just-four-months)
+- Free tier at 2,000 completions/month; contact options removed to deprioritize enterprise — [Contrary Research](https://research.contrary.com/company/cursor), [Aakash Gupta](https://www.news.aakashg.com/p/how-cursor-grows)

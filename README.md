@@ -38,6 +38,30 @@ traceable origin). Where those conflict, measured wins and it says so.
 mechanism that moved them rather than by industry, so a student launching a dev
 tool on campus gets Tinder's sorority tour, not another dev-tool case.
 
+## It can prove its own numbers
+
+No other repo in this space can do this. Run it yourself:
+
+```bash
+python3 tools/verify_sources.py
+```
+
+```
+[ok  ] x-heavy-ranker-weights          all 7 weights match
+[ok  ] x-algorithm-not-updated-2026    last push 2025-09-08, consistent with the repo
+[ok  ] claude-marketplace-submission   submission path still referenced
+[ok  ] starscout-tool-exists           repo live, 190 stars
+[ok  ] landscape-competitor-stars      19 rows within 10%
+
+5 checks, 0 drifted
+```
+
+It re-fetches the live primary artifacts and checks the numbers still hold. Only
+`[M] Measured` claims are checkable this way, because only those come from
+artifacts that can be re-fetched — which is exactly why `[R]` and `[A]` carry
+weaker tags. It runs in CI monthly, so drift surfaces without anyone remembering
+to look.
+
 ## Three things it will tell you that most guides get wrong
 
 - **The "Show HN" tag has no measurable effect.** The only controlled study
@@ -141,8 +165,11 @@ data/                   Algorithm mechanics, benchmarks, channel economics,
                         evidence tiers, and a verification log
 cases/                  59 organizations by mechanism, plus a failure ledger
 commands/               10 slash commands, 2 with worked example output
-tools/                  check_structure / check_claims / check_evidence, run-evals
-docs/                   Landscape, method, sources, examples
+tools/                  check_structure / check_claims / check_evidence
+                        verify_sources (re-fetches primary artifacts)
+                        run_evals.py (A/B harness with a control arm)
+docs/                   Landscape, method, sources, examples,
+                        eval-runs/ (measured results), dogfood/ (used on a real repo)
 AUDIT.md                189 defects found in this repo, and what was done about them
 ```
 

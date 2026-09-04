@@ -88,3 +88,18 @@ individuals; you are acquiring an already-assembled network in one action.
 
 The prerequisites: the network must already meet, someone in it must have
 standing, and the payoff must be visible in the room within minutes.
+
+---
+
+## Sources
+
+- ALS Ice Bucket Challenge raising $115M+; nomination-and-tag mechanic — [fundsforNGOs analysis](https://news.fundsforngos.org/2026/02/02/social-media-strategies-nonprofit-fundraising-success-stories-and-case-studies/)
+- charity: water storytelling, impact maps, and the 100% model — [Storly nonprofit case studies](https://storly.ai/nonprofit/10-inspiring-nonprofit-case-studies-that-drive-change)
+- The six-week research-first turnaround; donors wanting evidence of changed lives rather than statistics; volunteers leaving over underused skills, not time — [fundsforNGOs](https://news.fundsforngos.org/2026/02/10/nonprofit-fundraising-success-stories-techniques-that-made-a-difference/)
+- Megachurch vs. multiplication models; ~2 dozen US megachurches in 1990 → 1,300+ today; the divide-at-healthy-size pattern; multisite definition — [Outreach Magazine](https://outreachmagazine.com/features/megachurch/46547-trends-in-the-multisite-movement.html), [Asbury Center for Church Multiplication](https://asburychurchplanting.com/models-of-church-planting/), [Dave Kraft, *From Megachurch to Multiplication*](https://davekraft.org/wp-content/uploads/From-Megachurch-to-Multiplicaiton.pdf)
+- Tinder campus strategy — see `marketplaces.md` sources
+
+**Tier note.** Nonprofit case sourcing is the weakest in this ledger. Most
+available writing is by agencies marketing to nonprofits, so these are `[A]`. The
+mechanisms are consistent across sources; the specific dollar figures are not
+independently audited.

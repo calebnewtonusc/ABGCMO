@@ -61,3 +61,19 @@ The commodity is the model. What is not commodity:
    have the data to build.
 4. **Trust and safety posture.** After ClawHavoc this became a buying criterion,
    not a compliance chore.
+
+---
+
+## Sources
+
+- ChatGPT fastest to 100M WAU; 900M WAU, passing 1B Aug-2026 — [a16z Top 100 Gen AI Consumer Apps](https://a16z.com/100-gen-ai-apps-6/), [Instant Press AI statistics](https://www.instantpress.co/ai-statistics)
+- Midjourney falling from a top-10 staple to #46 as ChatGPT and Gemini integrated image generation — [a16z, 6th edition](https://a16z.com/100-gen-ai-apps-6/)
+- ElevenLabs on every edition since Sept 2023 on specialization — [a16z](https://a16z.com/100-gen-ai-apps-6/)
+- Gemini at ~34% of ChatGPT's web scale, 40% mobile — [a16z](https://a16z.com/100-gen-ai-apps-6/)
+- Cursor figures — see `developer-tools.md` sources
+- OpenClaw figures — see `open-source.md` sources
+- Mercor encoding the study-abroad matching signal — [VectorShift interview](https://vectorshift.ai/blog)
+
+**Tier note.** a16z's rankings are `[R]`: a large-sample analysis by an
+organization with real data access, published to support their own investment
+thesis. Directionally strong, and not disinterested.

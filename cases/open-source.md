@@ -117,3 +117,33 @@ your license posture before you are big enough for it to matter.
 **Timing:** commercialize once you have real adoption and a clear story about
 what is free, what is paid, and why the paid layer deserves trust. Commercial
 open source is under active pressure to prove that split is fair.
+
+---
+
+## Sources
+
+**OpenClaw**
+- 9k stars launch day, 25k in one day at peak, 60k by day three, 190k in two weeks, 2M repo visitors in a week — [GitHub Blog](https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/), [Developers Digest](https://www.developersdigest.tech/blog/openclaw-github-star-chart-vertical-line)
+- Local execution, messaging-app interface, 100+ community skills in two weeks — [GitHub Blog](https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/)
+- Rebrands creating abandoned-repo squatting and FOMO — [Hyperight](https://hyperight.com/openclaw-ai-assistant-rebrand/)
+- CVE-2026-25253 one-click RCE; 135,000+ exposed instances; ClawHavoc, 1,184 malicious skills = 20% of the marketplace — [Reco](https://www.reco.ai/blog/openclaw-the-ai-agent-security-crisis-unfolding-right-now), [Hive Security](https://hivesecurity.gitlab.io/blog/openclaw-ai-agent-security-crisis-2026/), [Admin By Request](https://www.adminbyrequest.com/en/blogs/openclaw-went-from-viral-ai-agent-to-security-crisis-in-three-weeks)
+
+**obra/superpowers**
+- ~30k stars by Jan 2026 → 265k+ by mid-2026 — [repo](https://github.com/obra/superpowers), star history
+- Anthropic official marketplace acceptance, 15 Jan 2026 — [Claude Code plugin docs](https://code.claude.com/docs/en/discover-plugins)
+- Submission pipeline, `claude plugin validate`, safety screening, commit-SHA pinning, version-mismatch as the top rejection cause — [anthropics/claude-plugins-community](https://github.com/anthropics/claude-plugins-community) **[M]**, [systemprompt.io guide](https://systemprompt.io/guides/publish-plugin-claude-marketplace)
+- 24,403 repos with Claude Code skill/plugin definitions by late June 2026 — [Fastio](https://fast.io/resources/awesome-claude-code-resources-2026/) [A]
+- `hesreallyhim/awesome-claude-code` 36.8k, `affaan-m/everything-claude-code` 141k — verified via GitHub API 2026-09-03 **[M]**
+
+**shadcn/ui**
+- Launched Jan 2023; #1 JS Rising Star that year; 100k stars Nov 2025; 115k+ within three years — [RedMonk](https://redmonk.com/kholterhoff/2025/04/22/ui-component-libraries-shadcn-ui-and-the-revenge-of-copypasta/), [ShadcnDeck](https://www.shadcndeck.com/blog/rise-of-shadcn-ui-2026)
+- Copy-paste ownership model; adoption as the default inside AI codegen tools — [RedMonk](https://redmonk.com/kholterhoff/2025/04/22/ui-component-libraries-shadcn-ui-and-the-revenge-of-copypasta/), [Growing Products](https://growingproducts.substack.com/p/shadcn-is-the-1-ui-library-on-github)
+
+**Vercel / Next.js, Supabase**
+- OSS-to-commercial flywheel — [Reverse-engineering Vercel's GTM](https://dev.to/michaelaiglobal/reverse-engineering-vercel-the-go-to-market-playbook-that-won-the-frontend-3n5o)
+
+**GitLab, MongoDB, HashiCorp, Docker**
+- GitLab ~$955M FY2026 revenue; seat pricing $29 Premium — [FourWeekMBA](https://fourweekmba.com/how-does-gitlab-make-money/)
+- MongoDB Atlas >half of revenue — [Motley Fool comparison](https://www.fool.com/coverage/better-buy/2026/07/01/gitlab-vs-mongodb-which-technology-stock-is-a-better-buy-in-2026/)
+- HashiCorp: Terraform 100M+ downloads, ~$14B at IPO, $212M GAAP FY Jan-2021 — [Medium analysis](https://medium.com/@takafumi.endo/how-hashicorp-became-one-of-the-most-valuable-oss-companies-e27e3a6e7ba0), [Forbes](https://www.forbes.com/sites/glennsolomon/2021/11/16/open-source-ipo-boom-what-gitlab-and-confluent-show-us-about-the-future-of-software/)
+- Elastic and Redis relicensing against cloud resale — [Open source monetization trends](https://blog.mean.ceo/open-source-monetization-trends-july-2026/)

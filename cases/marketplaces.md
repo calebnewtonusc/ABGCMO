@@ -105,3 +105,38 @@ Now roughly a **$2B revenue run rate**.
 where you have an unfair advantage rather than where everyone competes. Do it by
 hand until it breaks, because that tells you what to automate. And exclusivity is
 free — you can gate access before you can justify it.
+
+---
+
+## Sources
+
+**Theory**
+- Atomic networks, the hard side, network effects destructive at inception — Andrew Chen, [*The Cold Start Problem*](https://www.coldstart.com/), and [Sachin Rekhi's primer](https://www.sachinrekhi.com/p/andrew-chen-the-cold-start-problem)
+- Do things that don't scale; the Collison installation; containing the fire — [Paul Graham (2013)](http://paulgraham.com/ds.html), [YC Startup Library](https://www.ycombinator.com/library/L8-yc-s-group-partners-discuss-doing-things-that-don-t-scale)
+
+**Uber**
+- San Francisco first, replicable playbook, city-by-city expansion — [NFX marketplace expansion framework](https://www.nfx.com/post/marketplace-expansion-framework), [Lenny's Newsletter on marketplaces](https://www.lennysnewsletter.com/p/how-to-kickstart-and-scale-a-marketplace)
+
+**Airbnb**
+- Categorical density during events when hotels sold out; founders photographing apartments in New York — [Lenny's Newsletter](https://www.lennysnewsletter.com/p/how-to-kickstart-and-scale-a-marketplace), [Breadcrumb.vc](https://breadcrumb.vc/marketplaces-scalability-lessons-from-uber-and-airbnb-d461aded18a2)
+
+**DoorDash**
+- Deliberate suburb and mid-market launch strategy; founders delivering personally — [Aakash Gupta, marketplace growth strategies](https://www.aakashg.com/marketplace-growth-strategies/)
+
+**Tinder**
+- Whitney Wolfe, Kappa Kappa Gamma at SMU, sorority-to-fraternity demo tour; 5,000 → 15,000 users — [Entrepreneur](https://www.entrepreneur.com/growing-a-business/1-billion-matches-later-tinder-can-trace-its-to-the-moon/253165)
+- Download-to-enter parties; campus reps nationally — [The Bottleneck](https://www.thebottleneck.io/p/tinder), [Alexander Jarvis](https://www.alexanderjarvis.com/tinder-doing-things-that-dont-scale/)
+
+**Mercor**
+- Georgetown classmates as first clients; agency origin Jan 2022 — [The Hoya](https://thehoya.com/), [GlobeNewswire](https://www.globenewswire.com/)
+- IIT hackathon prizes totalling ~$71; local big-tech comparison ~$5/hour; Facebook ads for candidates — [1-to-100](https://www.1to100.co/), [20VC](https://www.thetwentyminutevc.com/)
+- Manual matching over WhatsApp, Google Sheets, PandaDoc; companies required to apply — [VectorShift interview with Brendan Foody](https://vectorshift.ai/blog)
+- Study-abroad signal discovered manually then encoded — [VectorShift](https://vectorshift.ai/blog)
+- Prod student founder community as GTM; Etched as an early customer — [Fortune](https://fortune.com/), [Sacra](https://sacra.com/)
+- OpenAI cold email to Shaun VanWeelden; 25 Math Olympiad winners in a day; largest data vendor within nine months — [SF Standard](https://sfstandard.com/)
+- ~$2B revenue run rate; $20B valuation talks — [Forbes, July 2026](https://www.forbes.com/)
+
+**Note on tier.** Most figures in this file are `[A]` or `[R]`: founder interviews
+and press, not audited data. Founders round, misremember, and tell the version that
+makes a clean story. Treat the *mechanisms* as reliable and the *numbers* as
+approximate.
