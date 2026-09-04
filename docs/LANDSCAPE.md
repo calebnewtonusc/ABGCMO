@@ -85,3 +85,18 @@ Worth stating plainly since they came from reading these repos:
 - `evals/evals.json` per skill with prompt, expected output, and assertions.
   These are as much a specification of intended behavior as they are a test.
 - `AGENTS.md` alongside `CLAUDE.md` so non-Claude agents get the same guidance.
+
+## A note on this repo's own listing status
+
+`skills/marketplace-listings` says find the registry before you write a thread.
+This repo has not submitted itself to one, and that is deliberate for now rather
+than an oversight.
+
+Submitting a repo with no users to a curated list usually gets rejected and reads
+as spam to maintainers who see a lot of it. It also contradicts the advice in
+`skills/partnerships`: **listings amplify traction, they do not create it.** A
+maintainer's first question is who already uses this, and there is no good answer
+yet.
+
+The honest sequence, which is the one the repo would recommend to anyone else:
+get real usage first, then submit. Tracked as an open item in `AUDIT.md`.

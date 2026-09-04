@@ -133,9 +133,11 @@ But the content does not cross-post.
 | The user is asking about | Load |
 |---|---|
 | Where to even start, what is broken | `skills/growth-diagnosis` |
+| Whether they have PMF, whether growth work is allowed | `skills/growth-diagnosis` |
 | How to describe the product, category, competitors | `skills/positioning` |
+| Who the competitors are, crowded markets, comparison pages | `skills/competitive-intelligence` |
 | Zero users, network effects, first 100 | `skills/cold-start` |
-| Why growth stalls, compounding vs. funnels | `skills/growth-loops` |
+| Why growth stalls, compounding vs. funnels, referrals | `skills/growth-loops` |
 | A specific launch | `skills/launch-day` |
 | Repos, stars, open source | `skills/github-growth` |
 | X / Twitter | `skills/x-growth` |
@@ -144,12 +146,30 @@ But the content does not cross-post.
 | Reddit, Hacker News | `skills/reddit-hn` |
 | Email lists, Substack, beehiiv | `skills/newsletter-growth` |
 | Search traffic, docs, AI citation | `skills/seo-geo` |
+| Registries, app stores, directories, plugin marketplaces | `skills/marketplace-listings` |
+| Press, journalists, podcasts, newsletters covering you | `skills/pr-earned-media` |
+| Conferences, hackathons, meetups, speaking, booths | `skills/events-conferences` |
+| Influencers, creators, ambassadors, sponsorships | `skills/creator-partnerships` |
+| Ads, CAC, ad budgets, scaling with money | `skills/paid-acquisition` |
+| Onboarding emails, drips, push, SMS, win-back | `skills/lifecycle-messaging` |
+| Integrations, co-marketing, resellers, platform plays | `skills/partnerships` |
 | First customers, outbound, closing | `skills/founder-led-sales` |
-| What to charge, tiers, free plans | `skills/pricing-packaging` |
+| What to charge, tiers, free plans, open core | `skills/pricing-packaging` |
 | Users sign up and leave | `skills/activation-retention` |
-| Ambassadors, Discord, contributors | `skills/community-led-growth` |
+| Renewals, expansion, upsell, NRR, churn in accounts | `skills/customer-success` |
+| Pipeline, forecasting, quotas, commission, CRM | `skills/revenue-ops` |
+| Ambassadors, Discord, contributors, evangelists | `skills/community-led-growth` |
 | What to actually write, hooks, threads | `skills/content-engine` |
+| Naming, voice, design as differentiation, "we feel generic" | `skills/brand` |
+| Mobile apps, games, B2C, direct-to-consumer | `skills/consumer-apps` |
+| New countries, localization, translation | `skills/international-expansion` |
+| Reaching users through another business, bottom-up enterprise | `skills/b2b2c` |
 | What to track, North Star, dashboards | `skills/metrics` |
 | "Should I do X" where X sounds shady | `skills/anti-patterns` |
 
-Reference data lives in `data/`. Worked examples live in `cases/`.
+Reference data lives in `data/`. Worked examples live in `cases/` — and
+`cases/failures.md` is the correction to all of them, documenting where these
+mechanics did not work.
+
+Nine skills ship reference templates in `skills/<name>/references/`. Reach for
+those when the user needs to *do* the thing rather than understand it.

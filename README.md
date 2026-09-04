@@ -2,8 +2,8 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
-  <img src="https://img.shields.io/badge/skills-19-6e56cf" alt="Skills">
-  <img src="https://img.shields.io/badge/evals-39-2f855a" alt="Evals">
+  <img src="https://img.shields.io/badge/skills-33-6e56cf" alt="Skills">
+  <img src="https://img.shields.io/badge/evals-67-2f855a" alt="Evals">
   <img src="https://img.shields.io/badge/case_studies-59-b7791f" alt="Cases">
 </p>
 
@@ -71,6 +71,37 @@ Skills follow the [Agent Skills spec](https://agentskills.io/specification.md), 
 they work in Claude Code, Codex, Cursor, and anything else reading
 `.agents/skills/`. `CLAUDE.md` and `AGENTS.md` carry the same doctrine.
 
+## What it looks like
+
+```
+$ claude
+
+> we have 2000 signups and 40 active users, how do we get more signups
+
+  I'm not going to answer that question as asked, because acquisition is the
+  wrong work here.
+
+  2% 30-day retention. The benchmark for SMB/prosumer is 2-4% monthly churn;
+  you're at ~50%. That places you pre-PMF, and every signup you add now leaves
+  faster than you can replace it.
+
+  Binding constraint: retention, not awareness. Traffic converts, people sign
+  up, people reach the product — they leave after.
+
+  Highest-leverage action this week: interview 10 of the 40 who stayed and 10
+  who left. Not a survey. You're looking for the one thing the 40 did in their
+  first session that the 1,960 didn't. At n=40 analytics won't find it.
+
+  Stopping rule: if 20 interviews surface no separating action, the problem is
+  PMF, not onboarding — narrow to the segment the 40 belong to and rebuild for
+  them. Superhuman went 22% → 33% on segmentation alone.
+
+  Worksheet: skills/activation-retention/references/aha-moment-worksheet.md
+```
+
+Full worked outputs: [`/growth-audit`](docs/examples/growth-audit.md) ·
+[`/position`](docs/examples/position.md)
+
 ## Use it
 
 Just describe the situation. The router in `CLAUDE.md` picks the skill.
@@ -94,30 +125,49 @@ Or run a command directly:
 | `/case <situation>` | Finds the case whose mechanism matches, and what is different |
 | `/teardown <company>` | Researches and writes a sourced growth teardown |
 | `/hook <work>` | Turns work into posts, finding the actual finding first |
+| `/competitors <target>` | Honest competitive analysis that outputs a decision, not a grid |
+| `/pmf <target>` | Measures PMF and says whether growth work is allowed yet |
+| `/loop <target>` | Designs a growth loop, or establishes the product does not have one |
+
+Worked example outputs: [`/growth-audit`](docs/examples/growth-audit.md) ·
+[`/position`](docs/examples/position.md)
 
 ## What is in it
 
 ```
 CLAUDE.md / AGENTS.md   Doctrine. Five rules and the skill router.
-skills/                 19 skills, each with evals
-data/                   Algorithm mechanics, benchmarks, channel economics, evidence tiers
-cases/                  60+ companies indexed by mechanism
-commands/               7 slash commands
-docs/                   The landscape, method, and sources
+skills/                 33 skills, each with evals; 9 carry reference templates
+data/                   Algorithm mechanics, benchmarks, channel economics,
+                        evidence tiers, and a verification log
+cases/                  59 organizations by mechanism, plus a failure ledger
+commands/               10 slash commands, 2 with worked example output
+tools/                  check_structure / check_claims / check_evidence, run-evals
+docs/                   Landscape, method, sources, examples
+AUDIT.md                189 defects found in this repo, and what was done about them
 ```
 
-**Skills:** growth-diagnosis · positioning · cold-start · growth-loops ·
-launch-day · github-growth · x-growth · linkedin-growth · short-form-video ·
-reddit-hn · newsletter-growth · seo-geo · founder-led-sales · pricing-packaging ·
-activation-retention · community-led-growth · content-engine · metrics ·
-anti-patterns
+**Skills (33).**
+
+| Group | Skills |
+|---|---|
+| **Strategy** | growth-diagnosis · positioning · cold-start · growth-loops · metrics · anti-patterns · competitive-intelligence |
+| **Platform** | github-growth · x-growth · linkedin-growth · short-form-video · reddit-hn · newsletter-growth · seo-geo · marketplace-listings |
+| **Execution** | launch-day · content-engine · community-led-growth · pr-earned-media · events-conferences · creator-partnerships · paid-acquisition · lifecycle-messaging · brand |
+| **Revenue** | founder-led-sales · pricing-packaging · activation-retention · customer-success · revenue-ops |
+| **Motion** | partnerships · consumer-apps · international-expansion · b2b2c |
 
 **Platforms with documented mechanics:** X · LinkedIn · GitHub · TikTok ·
 Instagram · YouTube · Reddit · Hacker News · Product Hunt · App stores
 
 **Cases span:** marketplaces · devtools · open source · PLG SaaS · consumer ·
 AI-native · creators and media · commerce · movements and nonprofits · category
-creation
+creation · **failures**
+
+That last one is the correction to everything else. [`cases/failures.md`](cases/failures.md)
+documents ten cases where a real mechanic did not work — Notion's near-bankruptcy
+under bad positioning, Figma publicly regretting its closed beta, Glossier's
+community ceiling, OpenClaw's security collapse, Midjourney being absorbed,
+airdrops buying mercenaries, and this repo's own audit.
 
 ## What this is not
 
@@ -130,19 +180,42 @@ for GTM ops automation use [Zapier's](https://github.com/zapier/gtm-cheat-codes)
 for PM craft use [lenny-skills](https://github.com/RefoundAI/lenny-skills).
 
 ABGCMO is the layer above those: deciding what to do, and whether the evidence
-supports it. Install it alongside them. Full survey in
-[docs/LANDSCAPE.md](docs/LANDSCAPE.md).
+supports it. Install it alongside them.
+
+| | ABGCMO | marketingskills | lenny-skills | ColdIQ | zapier/gtm |
+|---|---|---|---|---|---|
+| Focus | **Strategy + evidence** | Marketing execution | PM craft | Cold email + LI ads | GTM ops automation |
+| Skills | 33 | 49 | 86 | ~25 | ~20 |
+| Stars | new | 46.8k | 1.3k | 270 | 334 |
+| Evidence tiers on every number | **yes** | no | no | no | no |
+| Case ledger by mechanism | **59 + failures** | no | podcast-derived | no | no |
+| Refuses to answer when the question is wrong | **yes** | no | no | no | no |
+| Documents its own defects | **[189](AUDIT.md)** | no | no | no | no |
+| Open-source / GitHub growth | **yes** | no | no | no | no |
+| Ad creative, copy, CRO, SEO audits | no | **yes** | no | no | no |
+| Cold email infrastructure depth | partial | partial | no | **yes** | no |
+
+Full survey of 20 repos in [docs/LANDSCAPE.md](docs/LANDSCAPE.md).
 
 ## Audit
 
-This repo was adversarially audited one day after shipping. **189 defects found**,
+This repo was adversarially audited one day after shipping. **190 defects found**,
 including eleven severity-1 errors where it violated its own central rule — the
 flagship `[M] Measured` X data had been taken from a blog summary rather than the
 source code, which made three weights wrong and omitted the largest positive signal
 in the model entirely.
 
-All eleven are fixed. The rest, including the ones **not** fixed, are itemized in
-[AUDIT.md](AUDIT.md). `data/VERIFIED.md` records when each claim class was last
+**All 190 are now resolved or explicitly accepted**, with the accepted ones listed
+rather than quietly dropped. That work took the repo from 19 skills to 33, added
+`cases/failures.md` as the survivorship correction, and produced the first
+[eval baseline](docs/eval-runs/2026-09-04-baseline.md) — which immediately found
+defect 190: the refusal behavior transfers reliably, the citations do not. Full
+itemization in [AUDIT.md](AUDIT.md).
+
+**Still open and stated plainly:** claim-level footnoting in `cases/` is
+incomplete, 65 of 67 evals are unrun with no control arm, and this repo has not
+submitted itself to a single registry — which means it is currently ignoring its
+own `launch-day` advice. `data/VERIFIED.md` records when each claim class was last
 checked against a primary source and marks five of them **Unverified against
 primary**, which is their honest status.
 

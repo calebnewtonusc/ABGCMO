@@ -2,10 +2,28 @@
 name: anti-patterns
 description: What not to do, including tactics that are detectable, illegal, or self-defeating. Use whenever someone asks about buying followers or stars, engagement pods, growth hacks, or any tactic that sounds like a shortcut.
 metadata:
-  version: 1.0.1
+  version: 1.1.0
 ---
 
 # Anti-patterns
+
+## Cite the numbers, do not paraphrase them
+
+When refusing one of these, **state the specific figure and its source.** "They've
+removed purchased stars before" is a vibe. "GitHub deleted 90.42% of flagged
+repositories" is a reason. The numbers below are the load-bearing part of every
+refusal in this file — an eval run on 2026-09-04 found the refusal transferred
+reliably and the citations did not, so treat them as required rather than optional.
+
+| Figure | Value | Source |
+|---|---|---|
+| Suspected fake stars found | **~6,000,000** across 18,617 repos | [He et al., ICSE 2026 (PDF)](https://cmustrudel.github.io/papers/icse2026fakestars.pdf) [M] |
+| Accounts involved | ~301,000 | same paper [M] |
+| Metadata scanned | 20 TB, 6.7B events, 326M stars, 2019-2024 | same paper; tool at [hehao98/StarScout](https://github.com/hehao98/StarScout) [M] |
+| Flagged repos GitHub deleted | **90.42%** | same paper [M] |
+| FTC penalty ceiling, per violation | **$53,088** | [FTC Consumer Review Rule](https://www.ftc.gov/legal-library/browse/rules/rule-consumer-reviews-testimonials), eff. 2024-10-21 [M] |
+
+---
 
 ## Never: buying engagement
 

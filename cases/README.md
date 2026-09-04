@@ -16,6 +16,16 @@ situation, then say explicitly what is different about their case.
 | `commerce-brand.md` | Commerce and brand | Glossier, Gymshark, Shopify ecosystem |
 | `movements.md` | Non-commercial | ALS Ice Bucket, charity: water, church multiplication, campus organizing |
 | `category-creation.md` | Naming the market | HubSpot, Drift, Gong, Salesforce |
+| **`failures.md`** | **Things that did not work** | **Notion pre-2016, Figma's beta, Glossier's ceiling, OpenClaw, Midjourney, airdrops, Product Hunt, Show HN, fake stars, this repo** |
+
+## The survivorship correction
+
+Nine of these ten files are survivors. [`failures.md`](failures.md) is the
+correction: documented cases where a real mechanic did not work, stopped working,
+or caused harm — including inside companies that succeeded overall, and including
+this repo.
+
+Read it before concluding that a case study's playbook will work for you.
 
 ## The meta-finding
 

@@ -58,3 +58,19 @@ Adversarial audit. 187 defects found, 11 severity-1. See [AUDIT.md](AUDIT.md).
 | `x-growth` | 1.1.0 |
 | `anti-patterns` | 1.0.1 |
 | `growth-diagnosis`, `positioning`, `launch-day`, `github-growth`, `linkedin-growth`, `founder-led-sales`, `activation-retention`, `content-engine`, `metrics` | 1.1.0 |
+
+## 1.2.0 — 2026-09-04
+
+Every remaining item from AUDIT.md addressed. 19 → 33 skills, 39 → 67 evals.
+
+**New skills:** `competitive-intelligence` · `partnerships` · `pr-earned-media` ·
+`events-conferences` · `creator-partnerships` · `paid-acquisition` ·
+`lifecycle-messaging` · `customer-success` · `brand` · `consumer-apps` ·
+`international-expansion` · `b2b2c` · `revenue-ops` · `marketplace-listings` (all 1.0.0)
+
+**`anti-patterns` → 1.1.0.** The 2026-09-04 eval run found the refusal transferred
+reliably but the citations did not. Load-bearing figures moved out of prose into a
+table with sources on the line, and the skill now states citation is required.
+
+**Also:** `cases/failures.md`, three new commands, two worked example outputs,
+repo hygiene files, benchmarks sourced and dated, first eval baseline recorded.

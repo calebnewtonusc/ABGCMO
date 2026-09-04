@@ -3,6 +3,29 @@
 What "good" looks like. Use these to tell someone whether their number is a
 problem or normal. Tags per `evidence-tiers.md`.
 
+**All figures verified 2026-09-04.** Half-life for benchmark data is roughly 12
+months; platform mechanics rot faster. See `VERIFIED.md`.
+
+## Where these come from
+
+| Section | Primary source | Sample | Tag |
+|---|---|---|---|
+| Conversion, freemium, trials | [acceleroi PLG benchmarks](https://www.acceleroi.com/blog/benchmarks/saas-plg-free-to-paid-conversion-rate), [Flowjam PLG](https://www.flowjam.com/blog/product-led-growth-playbook-2025-no-fluff-guide-for-saas) | Vendor aggregates, sample not disclosed | [R] |
+| Landing pages | [Unbounce](https://unbounce.com/conversion-benchmark-report/) via [LanderLab](https://landerlab.io/blog/landing-page-conversion-rate) | 464M visits, 41k pages | [R] |
+| Retention and churn | [Koji](https://www.koji.so/blog/saas-churn-rate-benchmarks-2026), [ever-help](https://www.ever-help.com/blog/saas-retention-rate-benchmarks) | Vendor aggregates | [R] |
+| Activation and time-to-value | [Userpilot](https://userpilot.com/blog/aha-moment/), [Amplitude](https://amplitude.com/blog/time-to-value-drives-user-retention) | Product-analytics vendors | [A] |
+| Virality / K-factor | [LaunchList](https://getlaunchlist.com/blog/viral-coefficient-k-factor-guide), [Sam Shev](https://www.samshev.com/blog/math-behind-virality-k-factor-cycle-time) | Formula is definitional; benchmarks asserted | [A] |
+| Cold email | [Instantly 2026 Benchmark Report](https://instantly.ai/cold-email-benchmark-report-2026), [Amplemarket](https://www.amplemarket.com/blog/cold-email-benchmarks) | Platform-wide send data | [R] |
+| Paid acquisition | [Lighter Capital](https://www.lightercapital.com/blog/cac-payback-period), [culta CAC benchmarks](https://culta.ai/blog/cac-benchmarks-startups-2026) | Vendor aggregates | [R] |
+| Product-market fit | [Reforge / Sean Ellis 40% test](https://www.reforge.com/guides/measure-and-improve-product-market-fit), [First Round on Superhuman](https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/) | ~100 startups (Ellis) | [R] |
+| Realistic outcomes | Indie-founder surveys, no primary data | Unknown | [A] |
+
+**Caveat that applies to every `[R]` row here:** these are vendor benchmark
+reports. The companies publishing them sell software to the market they are
+measuring, and none disclose full methodology. They are the best available and
+they are not peer-reviewed. Segment-level variance is large and mostly unreported
+— a "median" across all B2B SaaS describes very few actual companies.
+
 ---
 
 ## Conversion and monetization

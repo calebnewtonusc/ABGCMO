@@ -12,6 +12,12 @@ is identical to `CLAUDE.md` — read that file first; it is the substance.
 - Also a Claude Code plugin marketplace via `.claude-plugin/marketplace.json`.
 - License: MIT.
 
+## Skill count
+
+33 skills across five groups: strategy, platform, execution, revenue, motion. The
+router table lives in `CLAUDE.md` and is the authority — read it before answering
+any growth question.
+
 ## Structure
 
 ```
@@ -20,7 +26,8 @@ ABGCMO/
 ├── CLAUDE.md / AGENTS.md   Doctrine + skill router (identical guidance)
 ├── skills/<name>/
 │   ├── SKILL.md            Required. YAML frontmatter + body.
-│   └── evals/evals.json    Behavior spec: prompt, expected_output, assertions
+│   ├── evals/evals.json    Behavior spec: prompt, expected_output, assertions
+│   └── references/         Optional. Templates and worksheets the user fills in.
 ├── data/                   Reference numbers, evidence-tagged
 ├── cases/                  Case ledger, indexed by mechanism
 ├── commands/               Slash commands

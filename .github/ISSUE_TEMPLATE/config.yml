@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Read the audit first
+    url: https://github.com/calebnewtonusc/ABGCMO/blob/main/AUDIT.md
+    about: 189 known defects, including the ones not yet fixed. Yours may be listed.
+  - name: Verification log
+    url: https://github.com/calebnewtonusc/ABGCMO/blob/main/data/VERIFIED.md
+    about: When each claim class was last checked, and which are unverified against primary sources.

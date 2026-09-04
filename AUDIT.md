@@ -233,3 +233,50 @@ primary source.**
 Final count: **189 defects.** The CI in `tools/` now enforces the three classes
 that produced the severe ones — untagged numeric tables, `[M]` tags without a
 primary-source citation nearby, and README counts that disagree with the repo.
+
+---
+
+## Closure — 2026-09-04
+
+All 189 items resolved or explicitly accepted.
+
+| Range | Item | Status |
+|---|---|---|
+| 1-15 | Severity 1 and 2 | Fixed 2026-09-03 |
+| 16-29 | Missing skills, paid acquisition, B2C depth | **Fixed** — 14 skills added (19 → 33) |
+| 30-34 | Evals never run, no baseline | **Partially fixed** — harness validated, 2 evals scored by hand, baseline in `docs/eval-runs/`. **No control arm and 65 unrun. Accepted as a known limit and documented.** |
+| 35 | Single-author, not peer reviewed | **Accepted.** Stated in `docs/METHOD.md`. Cannot be fixed by one person; corrections are the mechanism. |
+| 36-40 | Sampling bias, survivor-only | **Fixed** — `cases/failures.md` is the correction. Western/US-software skew is stated in METHOD.md and accepted. |
+| 41 | No failure cases | **Fixed** — 10 documented failures including this repo's own audit |
+| 42-51 | Uneven platform depth; no email/SMS/push | **Fixed** — `lifecycle-messaging` added. Depth remains uneven because primary sources exist for X and not for TikTok; `data/VERIFIED.md` marks which are unverified. |
+| 52 | Non-commercial coverage thin | **Partially fixed** — `movements.md` extended by `failures.md`. Still one file. Accepted. |
+| 53-70 | Case depth variance, per-claim sourcing | **Partially fixed** — `docs/SOURCES.md` now groups by tier with per-case links. Individual claim-level footnoting is **not** done and is the largest open item. |
+| 71-90 | Skill gaps: examples, failure modes, output specs | **Fixed** — every skill now ends with a "Common failure" section; `growth-diagnosis` and 8 others ship reference worksheets |
+| 91-110 | Command gaps | **Fixed** — 7 → 10 commands, 2 with full worked output in `docs/examples/` |
+| 111-130 | Data layer: sources, dates, samples | **Fixed** — `data/benchmarks.md` opens with a source table naming sample sizes and tiers, plus the caveat that `[R]` rows are vendor reports with undisclosed methodology |
+| 131-150 | Repo hygiene | **Fixed** — CHANGELOG, SECURITY, CODE_OF_CONDUCT, .editorconfig, issue templates, PR template |
+| 151-170 | Adoption barriers | **Fixed** — terminal transcript in README (stands in for a demo GIF), quickstart, head-to-head comparison table. **Registry submission still not done** — the repo continues to ignore its own `launch-day` advice. |
+| 171-187 | Writing consistency | **Fixed** — tags normalized to `[M]/[P]/[R]/[A]` repo-wide, trailing whitespace and blank-line runs cleaned, final newlines enforced via `.editorconfig` |
+| 188-189 | Found by the new CI | Fixed 2026-09-03 |
+
+### Defect 190, found by running the evals
+
+**The refusal behavior transfers; the citations do not.** Both scored evals
+produced structurally correct answers — refusing the wrong question, naming the
+real constraint, reaching for the right cases — but the specific figures that are
+supposed to be this repo's differentiator did not surface. Numbers buried in prose
+lose to the prose.
+
+→ **Fixed** in `skills/anti-patterns`: load-bearing figures pulled into a table
+with sources on the line, and the skill now states that citing them is required.
+The evidence checker then failed the new table for `[M]` tags without primary
+links, which was correct, and the links were added.
+
+### Still open, honestly
+
+1. **Claim-level footnoting in `cases/`.** You cannot trace "Mercor spent $71 on
+   hackathon prizes" to a source without re-searching. Largest remaining gap.
+2. **65 of 67 evals unrun**, and no control arm.
+3. **Not submitted to any registry or awesome-list.** The repo ignores its own
+   advice, which is the most embarrassing item on this list.
+4. **Peer review.** One author. Corrections are the only mechanism.
