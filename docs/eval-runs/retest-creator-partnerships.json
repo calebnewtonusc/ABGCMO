@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "generated": "2026-09-04T07:49:37+00:00",
+    "n_evals": 2,
+    "arms": [
+      "treatment"
+    ],
+    "elapsed_min": 2.0,
+    "treatment": {
+      "passed": 6,
+      "total": 11,
+      "pct": 54.5
+    }
+  },
+  "results": [
+    {
+      "skill": "creator-partnerships",
+      "id": 1,
+      "prompt": "We have $10k for influencer marketing. Should we get one creator with 500k followers or ten with 50k?",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 2,
+        "total": 6,
+        "pct": 33.3,
+        "answer": "Lord Jesus, thank you for giving Caleb a real budget decision to wrestle with instead of hypotheticals. Sharpen his thinking here so the money actually moves the needle and doesn't just buy vanity metrics. Amen.\n\nLet me pull the relevant skill for this.\n\n**Short answer: ten creators at $1k each, almost always.**\n\nHere's why, with the evidence tiered honestly:\n\n**The math on engagement rates favors micro-creators.** Accounts under 100k consistently show 2-5x the engagement rate of accounts over 500k (reported, multiple platform-published studies from Later, HypeAuditor, Influencer Marketing Hub, but none peer-reviewed). One 500k creator posting once gives you one shot. Ten 50k creators give you ten shots across ten different audience pockets, and the variance alone is worth it.\n\n**The real reason is audience-product fit, not reach.** A single large creator's audience is broad. Ten niche creators let you test which *specific* community actually converts. You learn something from each one. With the big creator, if it flops, you learned nothing except that it flopped, and you're out $10k.\n\n**When the one big creator IS the right call:**\n- You need a single moment of legitimacy (a launch, a fundraise, a credibility signal for a specific audience)\n- The creator's audience is almost perfectly your ICP, not just large\n- You're buying association with their brand, not clicks\n\n**What actually matters more than follower count:**\n\n1. **Does their audience overlap with your ICP?** Ten 50k fitness creators are worthless if you're selling dev tools.\n2. **What's the content format?** A dedicated video or tutorial converts 5-10x better than a story mention. Negotiate for the format, not just the post.\n3. **What's the call to action?** \"Link in bio\" is a graveyard. Unique discount codes or landing pages per creator so you can measure who actually drove signups.\n4. **Can you structure it as performance?** Even a small base + per-conversion bonus aligns incentives better than a flat fee.\n\n**The stopping rule:** if none of the ten creators drive measurable signups (not impressions, signups) within two weeks, the problem isn't the creator size. It's either the product, the offer, or the audience match. Pause and diagnose before spending more.\n\nWhat's the product? That changes which ten communities to target.",
+        "grade": "1: PASS\n2: FAIL\n3: FAIL\n4: FAIL\n5: PASS\n6: FAIL\nSCORE: 2/6"
+      }
+    },
+    {
+      "skill": "creator-partnerships",
+      "id": 2,
+      "prompt": "How do we find creators to work with? We make a note-taking app for students, 12,000 users.",
+      "n_assertions": 5,
+      "treatment": {
+        "passed": 4,
+        "total": 5,
+        "pct": 80.0,
+        "answer": "At 12,000 users you already have distribution most creator programs never get. The constraint isn't finding creators, it's finding the ones whose audience is exactly your buyer (students) and who already care about note-taking workflows.\n\n**Start with your own data, not a search.**\n\nCheck your referrer analytics and any social mentions. Notion's entire creator program started because they noticed 700,000 visits from one country, traced it to a single YouTube video. Someone may already be talking about you. If they are, that's your first partner, not someone you cold-pitch.\n\n**Where to source after that:**\n\n1. **YouTube and TikTok, search `[your category] + student`.** \"Best note-taking app for college,\" \"how I organize my notes,\" \"study with me.\" Look for creators with 2k to 50k followers who make this content organically. A 5,000-follower studytuber whose audience is 100% college students will outperform a 500k lifestyle creator, and cost maybe $200 vs. $5,000.\n\n2. **Your own user base.** Email your 12,000 users: \"Do you make content about studying or productivity? We want to feature you.\" You will find 10 to 30 people who already use the product and already post. Those are ambassadors, not hires.\n\n3. **Short-form is underpriced.** TikTok and Reels test every video on its own merit regardless of follower count. A creator with 1,000 followers can hit a million views on one post. So optimize for fit and cost, not audience size.\n\n**Structure:**\n\n- Flat fee + tracked link for anyone under 100k followers. Pure affiliate shifts all risk to them and they'll deprioritize you.\n- Buy usage rights so you can reuse their content as ads. Often worth more than the original post.\n- Never script them. Give the message, the constraints, and the facts. Let them make it theirs.\n- Start with 3 creators and one measurable goal (signups from their link) before scaling to 10.\n\n**The ambassador layer (costs almost nothing):**\n\nGive your best power users early feature access, a direct line to your team, and small perks. Notion's most valued ambassador benefit was access to the founders, not money. At 12,000 users you can pull 20 of the most vocal into a Discord or Slack and spend an hour with each one. Those 20 become your unpaid marketing team because they genuinely love the product.\n\n**What would change my answer:** if your retention is bad (users sign up and leave), creator partnerships will accelerate churn, not growth. Fix activation first. If retention is healthy, this is the right move and short-form studytube creators are your highest-ROI channel.",
+        "grade": "1: PASS\n2: PASS\n3: FAIL\n4: PASS\n5: PASS\nSCORE: 4/5"
+      }
+    }
+  ]
+}

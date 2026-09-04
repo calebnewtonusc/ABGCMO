@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "generated": "2026-09-04T07:47:35+00:00",
+    "n_evals": 2,
+    "arms": [
+      "treatment"
+    ],
+    "elapsed_min": 1.6,
+    "treatment": {
+      "passed": 2,
+      "total": 10,
+      "pct": 20.0
+    }
+  },
+  "results": [
+    {
+      "skill": "partnerships",
+      "id": 1,
+      "prompt": "We just launched last week. Should we start a partnership program?",
+      "n_assertions": 5,
+      "treatment": {
+        "passed": 2,
+        "total": 5,
+        "pct": 40.0,
+        "answer": "Lord Jesus, thank you for giving Caleb something real enough to launch. Guard him from the noise that follows a launch, the thousand \"you should also\" voices that pull focus from what actually needs to work first. Keep his eyes on the people using it, not the people who might. Amen.\n\nNo. Not yet.\n\n**Assuming this is a week-old product with early users and no retention data**, partnerships are premature and will cost you more than they return. Here's why:\n\nA partnership program is a distribution multiplier. Multiplying something that hasn't proven it retains users just distributes churn. You send partner-referred users into a product that hasn't nailed activation, they bounce, and now you've burned the partner's trust alongside the user's. That trust is a one-shot resource: most partners won't send a second cohort after the first one churns.\n\n**What to do instead in the first 30 days:**\n\n1. **Measure activation.** What percentage of signups do the core action within their first session? If that number is below 40%, the product has a hole that partnerships would pour users through.\n2. **Talk to the people who stayed.** The ones who came back on day 3 and day 7 without being reminded. What they say is your positioning, your activation fix, and your future partner pitch all at once.\n3. **Earn one organic integration, not a program.** Find the single tool your users already use alongside yours and build the connection. That's not a partnership program, it's a product decision. Dropbox didn't launch a \"partnership program\" with email clients; they made the shared-folder mechanic work so well that email became the distribution layer naturally.\n\n**When partnerships become correct:** after you have retention data showing users stick, activation showing new users \"get it\" within a session, and at least one channel already working that you understand well enough to explain why it works. At that point you know what a partner is actually sending users into, and you can make a credible promise about what their audience will experience.\n\nThe Superhuman case (`cases/superhuman.md`) is the closest analogue: they waited until their onboarding converted at a rate worth defending before letting anyone else's audience near it. The ones that partnered early and churned the referred users (cases/failures.md covers several) found it harder to re-approach those same partners later.\n\nIf you're actually post-PMF with proven retention and an activation rate you're confident in, the answer flips: start with one strategic integration partner, not a program, and build the program after you've learned from that single relationship what the partner actually needs from you.",
+        "grade": "1: PASS\n2: PASS\n3: FAIL\n4: FAIL\n5: FAIL\nSCORE: 2/5"
+      }
+    },
+    {
+      "skill": "partnerships",
+      "id": 2,
+      "prompt": "We built 30 integrations but nobody uses them. B2B SaaS, 150 customers, $40k MRR.",
+      "n_assertions": 5,
+      "treatment": {
+        "passed": 0,
+        "total": 5,
+        "pct": 0.0,
+        "answer": "Lord Jesus, thank You for this person who built something real, who did the hard work of shipping thirty integrations and earning 150 customers, and who has the honesty to say out loud that something isn't working. Give them clarity on what to fix and the courage to cut what isn't serving anyone. Amen.\n\nThirty integrations with no usage is an inventory problem, not a distribution problem. Building more integrations or marketing them harder will not fix it.\n\n**The diagnosis:** at $40k MRR with 150 customers you have paying users, so the product solves something. But the integrations are not the thing it solves. They were probably built on request (\"we need a Salesforce integration\") or speculatively (\"competitors have these\"). Either way, customers are paying for the core product and ignoring the shelf of connectors next to it.\n\n**What is actually wrong, in order of likelihood:**\n\n1. **The integrations don't activate.** Users connect them during onboarding and never return. That means the integration does a one-time sync but doesn't change their daily workflow. An integration that doesn't create a habit is furniture.\n\n2. **They solve setup, not outcome.** \"Connect your CRM\" is a feature. \"See which leads went cold this week without checking Salesforce\" is an outcome. If your integrations are framed as the former, nobody will discover value in them even if value exists.\n\n3. **You have 30 shallow ones instead of 3 deep ones.** The classic trap. Superhuman won on one integration (Gmail) done so well that it replaced the original. Thirty connectors that each do one sync are worth less than three that genuinely change how people work.\n\n**What to do:**\n\nPull usage data on all 30. You will almost certainly find that 3 to 5 get any traffic at all. Kill or freeze the other 25, today. Then pick the top 2 by actual usage, talk to 10 customers who connected them, and ask one question: \"What did you expect to happen after you turned this on?\" The gap between their answer and what actually happened is your product roadmap.\n\nDo not build integration 31. The constraint is activation and depth, not breadth.\n\n**What would change this answer:** if your 150 customers are on a self-serve plan and the integrations are gated behind an upgrade tier, then the problem might be pricing/packaging, not the integrations themselves. If customers are actively asking for integrations they can't find, the problem is discovery (and 30 is too many to browse). But \"nobody uses them\" almost always means the integrations exist as checkboxes on a comparison page rather than as workflow changes, and the fix is depth on a few, not volume.",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\nSCORE: 0/5"
+      }
+    }
+  ]
+}

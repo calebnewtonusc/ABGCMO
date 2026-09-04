@@ -1,3 +1,31 @@
-{"skill_name":"partnerships","evals":[
-{"id":1,"prompt":"We just launched last week. Should we start a partnership program?","expected_output":"Should say no and explain why: partnerships amplify traction rather than create it, and a partner's first question is who already uses this. Should recommend waiting until roughly 100 happy customers. Should offer the cheap alternatives available now: registry and awesome-list submissions, and co-marketing by genuinely promoting others first.","assertions":["Recommends against a partnership program at launch","Explains partnerships amplify rather than create traction","Notes the partner will ask who already uses it","Offers registry and directory listings as the available alternative","Mentions co-marketing by promoting others first"],"files":[]},
-{"id":2,"prompt":"We built 30 integrations but nobody uses them.","expected_output":"Should identify the missing piece as distribution, not the integrations. Should cite the Zapier pattern: ~2.6M organic visits/month from programmatic 'connect X to Y' pages, one page per integration matching how people search. Should note they built the asset and skipped the channel, and route to skills/seo-geo for the programmatic page build.","assertions":["Identifies missing distribution rather than missing integrations","Cites the Zapier programmatic page pattern","Recommends one page per integration","Notes the keyword pattern matches how people search","Routes to seo-geo"],"files":[]}]}
+{
+  "skill_name": "partnerships",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We just launched last week. Should we start a partnership program?",
+      "expected_output": "Should say no and explain why: partnerships amplify traction rather than create it, and a partner's first question is who already uses this. Should recommend waiting until roughly 100 happy customers. Should offer the cheap alternatives available now: registry and awesome-list submissions, and co-marketing by genuinely promoting others first.",
+      "assertions": [
+        "Recommends against a partnership program at launch",
+        "Explains partnerships amplify rather than create traction",
+        "Notes the partner will ask who already uses it",
+        "Offers registry and directory listings as the available alternative",
+        "Mentions co-marketing by promoting others first"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We built 30 integrations but nobody uses them. B2B SaaS, 150 customers, $40k MRR.",
+      "expected_output": "Should identify the missing piece as distribution, not the integrations. Should cite the Zapier pattern: ~2.6M organic visits/month from programmatic 'connect X to Y' pages, one page per integration matching how people search. Should note they built the asset and skipped the channel, and route to skills/seo-geo for the programmatic page build.",
+      "assertions": [
+        "Identifies missing distribution rather than missing integrations",
+        "Cites the Zapier programmatic page pattern",
+        "Recommends one page per integration",
+        "Notes the keyword pattern matches how people search",
+        "Routes to seo-geo"
+      ],
+      "files": []
+    }
+  ]
+}

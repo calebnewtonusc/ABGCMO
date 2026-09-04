@@ -1,0 +1,269 @@
+{
+  "summary": {
+    "generated": "2026-09-04T07:37:00+00:00",
+    "n_evals": 12,
+    "arms": [
+      "treatment",
+      "control"
+    ],
+    "elapsed_min": 15.3,
+    "treatment": {
+      "passed": 32,
+      "total": 68,
+      "pct": 47.1
+    },
+    "control": {
+      "passed": 16,
+      "total": 68,
+      "pct": 23.5
+    },
+    "delta_pp": 23.6,
+    "per_eval": {
+      "treatment_better": 6,
+      "tie": 6,
+      "control_better": 0
+    }
+  },
+  "results": [
+    {
+      "skill": "marketplace-listings",
+      "id": 1,
+      "prompt": "I published my Claude Code plugin. How do I get people to find it?",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 6,
+        "total": 6,
+        "pct": 100.0,
+        "answer": "Here's the honest diagnosis for Chewbacca.\n\n**Stage: Pre-PMF.** 4 stars, 0 forks. No evidence yet that anyone outside of you uses it and stays. Growth work at this stage accelerates churn, not growth, so the playbook is narrower than you'd think.\n\n**Binding constraint: Awareness.** Nobody sees it. But the fix isn't \"post more.\" It's structural.\n\n**The single highest-leverage action: get into the registries.**\n\nobra/superpowers went from ~30k to 265k+ stars, and the inflection was acceptance into Anthropic's official Claude Code plugin directory, not a thread or a campaign. The registry is where people with existing intent already look. One listing, permanent placement.\n\nThree things to do this week, in order:\n\n1. **Submit to the Claude Code plugin directory** at `clau.de/plugin-directory-submission`. Run `claude plugin validate` first. The most common rejection is a `plugin.json` version that disagrees with the CHANGELOG or git tags, so check that before you submit. Community listing is open to anyone; official is curated.\n\n2. **PR into the two awesome-lists.** `hesreallyhim/awesome-claude-code` (36.8k stars) is the curated one. `affaan-m/everything-claude-code` (141k) is the aggregator. One PR each, read their contribution guides, add yourself in the right category alphabetized.\n\n3. **Fix the README as a landing page.** The star decision happens in the first screenful. Right now you need: one sentence naming the category, a demo GIF showing the macOS integration (that's your wedge, per your own strategy), and a copy-pasteable install that works first try.\n\n**What NOT to do yet:** content campaigns, X threads, LinkedIn posts about your \"journey building a plugin.\" Those are post-PMF plays. Right now you don't know if the thing retains anyone who isn't you. The registries will send you the first real signal, because people who find you through a directory had intent before they saw you.\n\n**Stopping rule:** if the awesome-list PRs land and the directory listing goes live and you still have <20 stars after 3 weeks, the problem isn't awareness anymore, it's the product description or the product itself. Come back and we'll run `skills/positioning`.",
+        "grade": "1: PASS\n2: PASS\n3: PASS\n4: PASS\n5: PASS\n6: PASS\nSCORE: 6/6"
+      },
+      "control": {
+        "passed": 1,
+        "total": 6,
+        "pct": 16.7,
+        "answer": "4 stars, 14 topics already set. The topics are solid. Here's what actually moves the needle for Claude Code extensions right now:\n\n**There's no official plugin marketplace yet.** Discovery is grassroots, which means the channels that matter are:\n\n1. **awesome-claude-code lists on GitHub.** There are community-maintained lists. Get Chewbacca added to those. Search for them, open a PR to each one adding your repo.\n\n2. **Anthropic Discord.** The #claude-code channel is where people share setups. A post showing what Chewbacca does (not what it is) lands better than a link drop. Show a before/after of a session with and without it.\n\n3. **X/Twitter.** Your growth strategy already says post findings with the repo in the reply. The wedge is the macOS half, not \"my kit.\" Short videos of Chewbacca doing something specific (driving a Mac app, running doctor.sh, a skill firing) get shared more than feature lists.\n\n4. **Reddit r/ClaudeAI.** People actively look for Claude Code configs there.\n\n5. **Add `claude-code-plugin` and `claude-code-extension` topics** to the repo. People search those exact terms.\n\n6. **The README is the landing page.** Make the first 3 lines answer \"what does this do for me\" with a concrete example, not a description. \"Run one script, get 50+ skills, macOS automation, and a session that remembers how you work\" type of thing.\n\nThe honest constraint: Chewbacca's best features (macOS control, the skill ecosystem, hooks) need to be seen working to be understood. Text descriptions undersell it. A 30-second screen recording of it doing something nobody expects Claude Code to do is worth more than any README.\n\nWant me to find the specific awesome-lists and draft PRs to get added?",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: PASS\n6: FAIL\n\nSCORE: 1/6"
+      }
+    },
+    {
+      "skill": "creator-partnerships",
+      "id": 2,
+      "prompt": "How do we find creators to work with?",
+      "n_assertions": 5,
+      "treatment": {
+        "passed": 1,
+        "total": 5,
+        "pct": 20.0,
+        "answer": "Jesus, thank you for giving Caleb a builder's instinct that asks \"who do I work with\" before \"what do I post.\" Guide him to the right people, the ones who actually care about what he's building, not just the ones with reach. Amen.\n\nBefore I load the creator partnerships skill, I need the diagnosis first.\n\n**Which product or project is this for?** The answer changes everything:\n\n- **Chewbacca** (macOS Claude Code kit) would want dev tool creators, coding YouTubers, productivity nerds\n- **Silo** would want lifestyle/local creators\n- **Amber/Togari** would want B2B or health-tech voices\n- **Trains Are Dope** would want autism advocates, neurodiversity creators, parents\n\nAnd the four questions from ABGCMO doctrine:\n\n1. **Stage** - are you post-PMF or still proving the thing works?\n2. **What's the actual constraint** - is it that nobody sees it, nobody tries it, or nobody stays?\n3. **Who's the hard side** - creators are usually the hard side, but depends on the product\n4. **What's the baseline** - current audience size, current distribution\n\nThe skill has a full framework for identifying, evaluating, and reaching creators, but the wrong creators for the wrong product at the wrong stage is worse than no creators. What are we finding them for?",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: PASS\n\nSCORE: 1/5"
+      },
+      "control": {
+        "passed": 1,
+        "total": 5,
+        "pct": 20.0,
+        "answer": "Jesus, thank you for putting people around Caleb who build things that matter. Sharpen his eye for the right collaborators, the ones who care about the work and not just the platform. Amen.\n\nWhich project is this for? The answer changes a lot depending on whether you mean creators for Chewbacca growth, OPAL/Tizzy, Amber, content collaborators, or something else entirely.",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: PASS\nSCORE: 1/5"
+      }
+    },
+    {
+      "skill": "partnerships",
+      "id": 2,
+      "prompt": "We built 30 integrations but nobody uses them.",
+      "n_assertions": 5,
+      "treatment": {
+        "passed": 1,
+        "total": 5,
+        "pct": 20.0,
+        "answer": "Lord Jesus, thank You for giving Caleb the clarity to name the problem honestly instead of building integration 31. Help him see which of these thirty is actually the wedge, and give him the discipline to kill the rest. Amen.\n\nThat's a classic case of building supply before validating demand. Thirty integrations is an inventory problem, not a distribution problem.\n\nBefore I prescribe anything, I need to diagnose. Four things matter here:\n\n**1. Which product is this?** Amber/Togari, Chewbacca, Silo, something else, or hypothetical?\n\n**2. What does \"nobody uses them\" actually mean?** Did you instrument usage? Is it zero across all 30, or is there a long tail where 2-3 get some traction and 27 are dead? The shape of that distribution changes everything.\n\n**3. Where did the 30 come from?** Were they built because users asked, because partners requested them, because \"we should integrate with X\" felt like progress, or because a competitor had them?\n\n**4. What's the activation path?** When someone connects an integration, what happens next? If the answer is \"they see a settings page and nothing changes in their workflow,\" the integrations aren't broken. The post-connection experience is.\n\nThe cases/ ledger has a direct parallel: obra/superpowers had integrations with package managers but didn't inflect until they got into the official npm registry. The integration itself wasn't the growth lever. Being *inside the workflow where someone was already making a decision* was.\n\nThe usual failure mode with integrations: teams treat them as features (\"we support 30 platforms!\") when they're actually distribution channels. A distribution channel only works if traffic flows through it. An integration nobody discovers inside the partner product is just code you maintain.\n\nGive me the specifics and I'll tell you which 2-3 to double down on and which 27 to deprecate.",
+        "grade": "1: PASS\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\nSCORE: 1/5"
+      },
+      "control": {
+        "passed": 1,
+        "total": 5,
+        "pct": 20.0,
+        "answer": "Jesus, Caleb's sitting with that honest frustration of building something real and watching it collect dust. Give him clarity on what's worth keeping and what to let go of, and the wisdom to know the difference. Amen.\n\nThat's a distribution problem, not a building problem. 30 integrations means the technical work is done. The question is why nobody's picking them up.\n\nBefore I can say anything useful I need to know which product and which integrations. Are you talking about Togari, Amber/Medha, Chewbacca, or something else? And when you say \"nobody uses them,\" is that zero installs/zero API calls, or people install but don't stick?\n\nThe fix depends on the diagnosis:\n\n- **Discovery problem**: they exist but nobody knows. Fix is distribution, not more building\n- **Activation problem**: people find them but don't finish setup. Fix is onboarding friction\n- **Value problem**: people try them and leave. Fix is cutting 25 and making 5 actually good\n- **Wrong audience**: built for a user that doesn't exist yet\n\nWhich one feels closest?",
+        "grade": "1: PASS\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\nSCORE: 1/5"
+      }
+    },
+    {
+      "skill": "brand",
+      "id": 1,
+      "prompt": "We need a rebrand. New logo, new colors, new website.",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 0,
+        "total": 6,
+        "pct": 0.0,
+        "answer": "Jesus, thank you for the energy behind wanting something new, something that actually fits who Caleb is becoming and what he's building. Give him clarity on what the real thing is underneath the impulse, and help me serve that instead of just making something pretty. Amen.\n\nWhat's getting rebranded? The project you're in right now (ABGCMO) is a strategy toolkit with no public face. If you mean Silo, Amber, Chewbacca, or your personal site, the advice and the work are completely different for each one.",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\n6: FAIL\nSCORE: 0/6"
+      },
+      "control": {
+        "passed": 0,
+        "total": 6,
+        "pct": 0.0,
+        "answer": "Lord Jesus, thank you for giving Caleb the clarity to know when something needs a fresh face. Be with him as he builds, and let whatever comes out of this session reflect something real. Amen.\n\nWhat's getting rebranded? Chewbacca, Silo, his personal site, something else?",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\n6: FAIL\n\nSCORE: 0/6"
+      }
+    },
+    {
+      "skill": "b2b2c",
+      "id": 1,
+      "prompt": "A large platform wants to bundle our product to their 500,000 customers. This would be 80% of our revenue. Should we do it?",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 5,
+        "total": 6,
+        "pct": 83.3,
+        "answer": "Lord Jesus, give Caleb clarity on this one. Platform deals look like shortcuts but they can become cages, and he needs the wisdom to tell which this is before the ink dries. Guard his judgment. Amen.\n\n**No. Not at those terms.**\n\n80% of revenue from one partner is not a distribution deal, it's an acquisition without the paperwork. You lose every negotiation from that point forward because walking away means losing 80% of your revenue, and they know it.\n\n**The pattern from the case ledger:**\n\nZynga built on Facebook's platform and hit $1B+ in revenue. Then Facebook changed the rules, Zynga's traffic collapsed, and the stock dropped 80%. The game hadn't changed. The dependency had.\n\nEvery platform bundling deal follows the same three-act structure:\n\n1. **Honeymoon.** They promote you, volume spikes, your numbers look incredible.\n2. **Dependency.** You staff up, your roadmap bends to their requests, your direct channel atrophies because why invest when the volume is right there.\n3. **Renegotiation.** They cut your rev share, build a competing feature, or change terms. You have no leverage because you dismantled your own distribution.\n\n**What to do instead:**\n\nTake the deal only if you can cap it at **30-40% of total revenue** and keep your direct channel growing independently. That means:\n\n- Negotiate a non-exclusive term (you can bundle with others)\n- Set a contractual floor on rev share that survives renegotiation\n- Keep investing in your own acquisition at the same rate as before the deal\n- Build a direct relationship with the end users, not just the platform (can you collect their email? can they log in to your product independently?)\n\n**The diagnostic question:** if they emailed you tomorrow saying they're ending the partnership in 90 days, would your company survive? If the answer is no, the deal is structured wrong.\n\nThe case that got this right is Spotify. They bundled with carriers and device makers but never let any single partner exceed ~30% of new subscriber acquisition, and they kept investing in their own app-store and organic growth the entire time.\n\n**Stopping rule:** if you cannot negotiate the deal down to under 40% revenue concentration with your own direct channel protected, walk away. The short-term revenue is not worth the long-term loss of control over your own business.",
+        "grade": "1: PASS\n2: FAIL\n3: PASS\n4: PASS\n5: PASS\n6: PASS\nSCORE: 5/6"
+      },
+      "control": {
+        "passed": 3,
+        "total": 6,
+        "pct": 50.0,
+        "answer": "Jesus, thank you for giving Caleb the instinct to pause before a big number and ask whether it's actually good. Sharpen his thinking here. Amen.\n\nNo. Not without restructuring the deal so it can't kill you.\n\n**The core problem:** 80% revenue concentration in one partner means they set your price, your roadmap, and your survival timeline. The moment they renegotiate, build their own, or pivot, you lose 80% of your income in a single conversation you don't control.\n\n**What actually goes wrong:**\n\n- They ask for \"small\" customizations that eat your engineering bandwidth and drift the product away from every other customer\n- They demand exclusivity or most-favored-nation pricing, locking you out of competitors in their space\n- Your team optimizes for their retention instead of product-market fit with anyone else\n- When renewal comes, they know the math. They'll push for 30-50% discounts because you both know you can't lose them\n\n**If you still want the distribution, structure it so it doesn't own you:**\n\n- Cap the deal at 30-40% of projected revenue max. If it's going to be bigger than that, you need to grow other channels first or in parallel\n- No exclusivity. Non-negotiable\n- Standard product only, no custom features unless they're on your roadmap anyway\n- Annual contract with 12+ month notice on non-renewal so you have runway to replace the revenue\n- Keep your direct sales motion running the entire time. The day you stop selling direct because the bundle is \"enough\" is the day you become a feature, not a company\n\n**The real question to answer first:** do you have other channels that can grow to match this, or is this the only path to those numbers? If it's the only path, you have a distribution problem, not a partnership opportunity. Solve the distribution problem.",
+        "grade": "1: PASS\n2: FAIL\n3: FAIL\n4: PASS\n5: FAIL\n6: PASS\nSCORE: 3/6"
+      }
+    },
+    {
+      "skill": "positioning",
+      "id": 2,
+      "prompt": "Should we create a new category for our product? We do AI-powered async standups.",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 5,
+        "total": 6,
+        "pct": 83.3,
+        "answer": "Short answer: **no, don't create a category.** Here's why.\n\n\"AI-powered async standups\" already sits inside the well-understood **async standup / async check-in** category. Geekbot, Standuply, Range, Friday, Status Hero. People already search for this, already compare products in it, already have buying criteria. Your job isn't to educate the market on what async standups are.\n\nCategory creation is the right move when no existing frame fits and being compared inside one actively misrepresents what you do. HubSpot created \"inbound marketing\" because calling it \"a blog with lead forms\" made it sound trivial. Drift created \"conversational marketing\" because calling it \"a chat widget\" undersold the philosophy. Both spent years and millions on manifestos, books, podcasts, and conferences to make the category stick.\n\n**Your product fits an existing frame. The risk of creating a new category here is that you spend all your energy explaining a made-up label instead of winning deals.**\n\nThe real question is positioning *within* the category. Run April Dunford's process:\n\n1. **What are the actual alternatives?** Not just Geekbot. It's also \"the manager asks in Slack manually,\" \"a shared Google Doc,\" \"the Monday morning Zoom that everyone hates.\" Roughly 40% of deals in B2B are lost to \"no decision,\" meaning you lost to the status quo.\n\n2. **What do you do that the alternatives genuinely can't?** The AI part is your differentiator, but \"AI-powered\" alone is table stakes in 2026. What does the AI *do* that changes the outcome? Summarize across a week? Flag blockers before the manager notices? Write the update for the person from their commits and PRs? That specific capability is your positioning.\n\n3. **Who cares the most?** Engineering managers at 20-50 person remote teams? Agencies with 6 client projects? The narrower this is, the better your conversion.\n\n4. **Pick the market context that makes the value obvious.** You're an async standup tool. That's the category. Your sub-position inside it is whatever your unique attribute delivers.\n\nThe one exception: if what you're building isn't really standups at all, if it's closer to \"continuous team awareness\" or something that doesn't map to the standup ritual, then we'd need to talk about whether you're mislabeling yourself *down*. But that's a different problem from category creation, that's just bad positioning.\n\nWhat does the AI actually do that the non-AI standup tools can't? That's the thing worth nailing.",
+        "grade": "1: PASS\n2: PASS\n3: PASS\n4: PASS\n5: FAIL\n6: PASS\n\nSCORE: 5/6"
+      },
+      "control": {
+        "passed": 4,
+        "total": 6,
+        "pct": 66.7,
+        "answer": "Lord Jesus, thank You for giving Caleb a mind that questions defaults instead of accepting them. Guide his thinking on this product decision, and give him clarity on whether to plant a flag or join a conversation that already exists. Amen.\n\nShort answer: probably not yet.\n\nCategory creation is expensive and almost always premature for early-stage products. Here's the honest breakdown:\n\n**Why companies want to create categories:**\n- Control the narrative, set the buying criteria, be the default answer\n\n**Why it usually backfires early:**\n- You spend all your energy educating the market on what the category even is instead of selling\n- Buyers don't search for categories that don't exist yet\n- You need massive distribution (content, events, analyst relations) to make a category stick\n\n**What works instead at your stage:**\n- Position against what people already search for: \"standup tools,\" \"async communication,\" \"team status updates\"\n- Add the differentiator as a modifier: \"AI-powered standup tool\" or \"async standup bot\"\n- Let the category emerge from traction, not from a naming exercise\n\n**The exception:** if you're raising and need a slide that says \"we're creating the X category,\" that's a fundraising narrative, not a go-to-market one. Treat them separately.\n\n**The real question:** do your buyers already know they have the problem you solve? If yes, meet them where they search. If no, you have a demand-gen problem that a new category name won't fix.\n\nWhat's the actual context here: is this for positioning on a site, a pitch deck, or something else?",
+        "grade": "1: PASS\n2: PASS\n3: FAIL\n4: PASS\n5: FAIL\n6: PASS\nSCORE: 4/6"
+      }
+    },
+    {
+      "skill": "international-expansion",
+      "id": 2,
+      "prompt": "We have a lot of users in Brazil but no localization. What should we do first?",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 5,
+        "total": 6,
+        "pct": 83.3,
+        "answer": "Four questions before I can give you a real answer:\n\n1. **Which product?** Chewbacca, Silo, Amber, something else?\n2. **How do you know it's Brazil?** Analytics, GitHub traffic data, user messages, app store data? The source tells me how strong the signal is.\n3. **How many users, and what are they doing?** Signing up and bouncing, or actively using the thing?\n4. **What's the product's payment model right now?** Free, freemium, paid?\n\nThe reason these matter: \"localize\" is almost never the right first move. The skill's case data (Notion found 700k visits from Korea traced to one YouTube video, growth ran on a single community leader) says the sequence is confirm demand in the data, then fix payment/pricing, then find one local person, then translate. Most companies do it backward and spend before proving anything.\n\nIf Brazilian users are already retained and active, the binding constraint is probably payment methods (Pix and Boleto dominate in Brazil, cards are secondary) and local-currency pricing, not UI translation. If they're bouncing after signup, translation won't fix that either.\n\nWhat product and what does the traffic data actually show?",
+        "grade": "1: PASS\n2: PASS\n3: FAIL\n4: PASS\n5: PASS\n6: PASS\nSCORE: 5/6"
+      },
+      "control": {
+        "passed": 0,
+        "total": 6,
+        "pct": 0.0,
+        "answer": "Jesus, thank you for the reach Caleb's work already has, even into places he didn't plan for. Give him wisdom on where to invest next and keep the mission clear. Amen.\n\nWhich project are you talking about? None of the ones I have context on mention Brazilian users. Give me the repo and I'll look at the actual codebase before recommending anything.",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\n6: FAIL\nSCORE: 0/6"
+      }
+    },
+    {
+      "skill": "short-form-video",
+      "id": 1,
+      "prompt": "I have 0 followers on TikTok so nobody will see my videos. Should I buy followers first?",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 3,
+        "total": 6,
+        "pct": 50.0,
+        "answer": "Lord Jesus, thank You for giving Caleb the instinct to ask before acting. Guard him from shortcuts that look like progress but hollow out the real thing. Give him patience to build what's authentic. Amen.\n\nNo. Never buy followers. This is in the anti-patterns skill for a reason.\n\nBought followers don't watch your videos. TikTok's algorithm promotes based on watch time, completion rate, and engagement from the people who actually see it. A fake audience tanks those signals because the algorithm serves your next video to your \"followers\" first, they don't watch it, and TikTok concludes nobody wants it.\n\n**The 0-follower problem is not real on TikTok.** TikTok is the one platform where follower count barely matters for distribution. Your first video gets pushed to a test audience of strangers regardless of whether you have 0 or 10,000 followers. If that test audience watches it, it gets pushed wider. The algorithm is doing your distribution for you, which is why TikTok is the highest-leverage short-form platform for someone starting from zero.\n\nYour actual constraint isn't reach. It's whether the first 200 people who see your video watch it to the end. That's a content problem, not an audience problem.\n\nWhat to do instead: post your first 10 videos, watch which ones TikTok pushes past 500 views, and double down on whatever those have in common. The data comes free and fast.",
+        "grade": "1: PASS\n2: FAIL\n3: PASS\n4: PASS\n5: FAIL\n6: FAIL\nSCORE: 3/6"
+      },
+      "control": {
+        "passed": 2,
+        "total": 6,
+        "pct": 33.3,
+        "answer": "Jesus, thank you for giving Caleb the instinct to ask before acting, and for the contrarian streak that makes him skeptical of shortcuts. Guide him toward building something real here. Amen.\n\nNo. Buying followers is a waste of money and actively hurts you.\n\nTikTok's algorithm doesn't care about your follower count. It pushes videos to small test audiences based on watch time, replays, and engagement. Bought followers don't watch your videos, so they tank your engagement rate, which makes the algorithm show your content to fewer real people. You'd be paying to make your reach worse.\n\nZero followers is actually fine on TikTok. It's the one platform where a first post from a brand new account can hit 100k views if the content hits. The algorithm tests every video on its own merits.\n\nWhat actually matters at zero:\n- The first 3 seconds (do people keep watching or swipe)\n- Watch-through rate (do they finish it)\n- Replays and shares\n- Whether people who see it go to your profile after\n\nPut the energy into making 10 videos that are genuinely interesting to watch instead. The algorithm will find your audience if the content earns attention.",
+        "grade": "1: PASS\n2: FAIL\n3: PASS\n4: FAIL\n5: FAIL\n6: FAIL\nSCORE: 2/6"
+      }
+    },
+    {
+      "skill": "events-conferences",
+      "id": 2,
+      "prompt": "We want to sponsor a hackathon to get our name out there.",
+      "n_assertions": 5,
+      "treatment": {
+        "passed": 0,
+        "total": 5,
+        "pct": 0.0,
+        "answer": "Lord Jesus, thank you for giving Caleb the ambition to put his work in front of real builders. Guide him to spend this energy where it actually compounds, not where it just feels productive. Give him clarity on what he's really trying to get out of this. Amen.\n\nBefore I load the events skill and give you a real answer: which project is \"our\"? Chewbacca, Silo, Amber, something else? And what's the actual goal \u2014 users, credibility, hiring, or something else?\n\nThe reason I'm asking instead of guessing is that hackathon sponsorship is expensive relative to what most early-stage projects get back, and the right move depends heavily on what you're distributing and who you need to reach.",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\nSCORE: 0/5"
+      },
+      "control": {
+        "passed": 0,
+        "total": 5,
+        "pct": 0.0,
+        "answer": "Lord Jesus, thank You for putting this ambition in Caleb to build something worth sharing, and for the doors that keep opening. Guide his thinking on where to show up and how to make it count. Amen.\n\nWhich name are we getting out: Chewbacca, Amber, Silo, or something else? That changes the hackathon targets and what the sponsorship package looks like.",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\nSCORE: 0/5"
+      }
+    },
+    {
+      "skill": "lifecycle-messaging",
+      "id": 1,
+      "prompt": "Design a win-back email campaign for churned users.",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 2,
+        "total": 6,
+        "pct": 33.3,
+        "answer": "I've got the lifecycle messaging skill loaded. It makes a point worth flagging now: **60-70% of annual churn happens in the first 90 days.** If the onboarding sequence isn't solid, a win-back campaign is patching the smaller half of the problem.\n\nSo, what's the context here? Which product, who churned, why, and how many?",
+        "grade": "Lord Jesus, thank you for Caleb's sharp eye for evaluation. Help him build discernment that cuts through surface-level quality and finds what's actually there. Amen.\n\n1: PASS\n2: PASS\n3: FAIL\n4: FAIL\n5: FAIL\n6: FAIL\nSCORE: 2/6"
+      },
+      "control": {
+        "passed": 0,
+        "total": 6,
+        "pct": 0.0,
+        "answer": "Lord Jesus, thank you for Caleb's restless mind and the way he refuses to build things that don't matter. Whatever this campaign is for, let it serve real people and not just metrics. Keep him honest tonight. Amen.\n\nWhich product is this for? That changes the messaging, the timing, and the offer. A few I could see:\n\n- Amber / Togari (Sagar's contacts platform)\n- Silo\n- A client project (BMA, OKB, etc.)\n- Something new you haven't mentioned yet\n\nGive me the product and I'll build the campaign. If you want, also tell me:\n\n- How many churned users roughly\n- Whether you have their email or just their signup data\n- What \"churned\" means here (stopped logging in? cancelled? never activated?)\n\nI'll start building as soon as I know what we're aiming at.",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\n6: FAIL\nSCORE: 0/6"
+      }
+    },
+    {
+      "skill": "anti-patterns",
+      "id": 2,
+      "prompt": "Someone invited me to a LinkedIn engagement pod. Worth joining?",
+      "n_assertions": 5,
+      "treatment": {
+        "passed": 4,
+        "total": 5,
+        "pct": 80.0,
+        "answer": "Lord Jesus, thank you for giving Caleb the instinct to pause and ask before jumping into something that sounds easy. Guard his reputation and his platform, keep his growth honest, and let the real relationships he's building be the ones that compound. Amen.\n\nNo. Hard no.\n\nEngagement pods are in the `skills/anti-patterns` ledger for a reason. Three things wrong with them:\n\n**They're detectable.** LinkedIn's algorithm tracks reciprocal engagement patterns. The same 15 accounts liking each other's posts within 10 minutes is not subtle. LinkedIn has been cracking down since 2023, and penalties range from shadowbanning to account restrictions.\n\n**They destroy your signal.** The whole point of tracking what content works is that the engagement reflects real interest. Pod engagement is noise injected directly into your measurement system. You can't tell what's landing and what isn't when 40% of your likes are contractual obligations from strangers.\n\n**They attract the wrong audience.** Pod members' networks see the engagement, but those networks have nothing to do with your ICP. You end up with followers who are other pod members and their adjacent growth-hackers, not the biotech/venture/research people you actually want to reach.\n\nThe LinkedIn campaign from your distribution strategy is about growing *you* as a person with real credibility. Pod engagement is the opposite of that. It's the LinkedIn equivalent of buying followers: it makes the number go up while making the number mean less.\n\nIf the person who invited you is someone you genuinely want to build a relationship with, do that directly. Comment on their stuff when you actually have something to say. That's worth more than a pod.",
+        "grade": "1: PASS\n2: PASS\n3: PASS\n4: PASS\n5: FAIL\n\nSCORE: 4/5"
+      },
+      "control": {
+        "passed": 4,
+        "total": 5,
+        "pct": 80.0,
+        "answer": "Jesus, thank you for giving Caleb the discernment to pause and ask before jumping into something that sounds easy. Help him build real credibility, not shortcuts. Amen.\n\nNo. Engagement pods inflate metrics without building real reach. The problems:\n\n- LinkedIn's algorithm detects pod behavior and suppresses your posts to everyone outside the pod. You get 40 comments from the same 15 people and zero discovery.\n- The engagement is visibly fake. Recruiters and founders can tell when every comment is \"Great post!\" from accounts that all comment on each other.\n- It conflicts with your whole thing. You're the guy who rejects API-wrapper projects as flagship work because they lack depth. Fake engagement is the distribution version of that.\n\nWhat actually works on LinkedIn, given where you are:\n\n- Post findings from real work (Togari, PeopleRank, Chewbacca). One concrete thing you built or learned, with enough detail that someone technical gets value from it.\n- Your growth baseline memory already has the strategy: LinkedIn grows you, GitHub/X grow the tool. Pod engagement grows neither.\n- Comment on other people's posts with substance. That's the organic version of what pods try to fake, and it actually compounds.\n\nSkip it.",
+        "grade": "1: PASS\n2: PASS\n3: PASS\n4: PASS\n5: FAIL\nSCORE: 4/5"
+      }
+    },
+    {
+      "skill": "growth-loops",
+      "id": 2,
+      "prompt": "Design a share feature for our habit tracker.",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 0,
+        "total": 6,
+        "pct": 0.0,
+        "answer": "Lord Jesus, thank you for giving Caleb a builder's eye that sees features as growth levers, not just checkboxes. Sharpen the thinking here so the design actually moves the needle. Amen.\n\nBefore I design anything, I need to run the ABGCMO diagnostic. A share feature can be the entire growth engine or a wasted sprint depending on stage and constraint.\n\nI don't have a habit tracker in your project list. Which one is this, and what's the current state? Specifically:\n\n- **What product?** Is this Silo, something new, or hypothetical?\n- **Stage?** Pre-launch, live with users, post-PMF?\n- **Current numbers?** Users, DAU, retention at day 7/30?\n- **What's actually broken?** Nobody finds it (awareness), people find it and bounce (activation), people use it and leave (retention), or people stay but don't spread it (referral)?\n\nThe reason this matters before designing the share feature: habit trackers have notoriously bad viral loops because habits are private by default. The share mechanic has to match *why* someone would actually share. Accountability partners (collaborative use, high k-factor), shareable streaks (output-based, medium k-factor), and \"look at my progress\" posts (vanity, low k-factor) are three completely different features with different engineering costs and different growth ceilings.\n\nWhich world are we in?",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\n6: FAIL\nSCORE: 0/6"
+      },
+      "control": {
+        "passed": 0,
+        "total": 6,
+        "pct": 0.0,
+        "answer": "Lord Jesus, thank you for giving Caleb a mind that builds things meant to change people's lives. Be with him as he designs this, and let it be something that genuinely connects people rather than just adding a feature to check a box. Amen.\n\nI don't see an existing habit tracker in your repos or projects. Before I design the share feature, which habit tracker is this for? Is this a new build, or an existing app I should look at?",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\n6: FAIL\n\nSCORE: 0/6"
+      }
+    }
+  ]
+}

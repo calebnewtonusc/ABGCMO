@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "generated": "2026-09-04T07:46:01+00:00",
+    "n_evals": 2,
+    "arms": [
+      "treatment"
+    ],
+    "elapsed_min": 1.9,
+    "treatment": {
+      "passed": 6,
+      "total": 12,
+      "pct": 50.0
+    }
+  },
+  "results": [
+    {
+      "skill": "growth-loops",
+      "id": 1,
+      "prompt": "How do I make my invoicing app go viral?",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 4,
+        "total": 6,
+        "pct": 66.7,
+        "answer": "Lord Jesus, thank You for giving Caleb a mind that builds things and then asks the hard questions about whether they'll actually reach people. Sharpen his judgment tonight on what's real and what's noise. Amen.\n\n**Assuming this is a standalone invoicing tool with no collaborative surface, pre-PMF, under 100 users:** it won't go viral, and chasing virality will waste months you don't have.\n\nHere's why. Viral growth requires a K-factor above 1, meaning each user brings in more than one new user through normal use. That only happens when the product has a **multiplayer surface** (Slack, Figma) or **shareable output** (Canva, Loom, Wordle). An invoicing app has neither. Your user sends an invoice, the recipient pays it and leaves. There's no loop.\n\n**The constraint is distribution, not awareness.** Invoicing is a solved, crowded category (FreshBooks, Wave, Zoho, Square). Nobody is searching for \"a new invoicing app.\" They're searching for \"free invoicing app\" or \"invoice template\" and picking from page one.\n\n**What actually works for solo utility tools:**\n\n1. **SEO on the long tail.** \"Free invoice generator for [freelancers/contractors/photographers].\" You win a niche search, not the category. This is how Wave grew before being acquired.\n2. **Registry/marketplace listing.** If you integrate with Stripe, QuickBooks, or Shopify, get into their app directories. obra/superpowers (in the case ledger) inflected on getting into an official registry, not on content. That's where your users already are.\n3. **The invoice itself as distribution.** This is the one structural move available to you. Put a small \"Powered by [YourApp]\" on every invoice sent. The recipient sees it at the moment they're thinking about money. Measured viral coefficient for \"powered by\" footers is low (reported at 0.02-0.05 per touch), but it's free and compounds. PayPal grew partly this way.\n\n**What won't work and why:**\n\n- Content marketing about invoicing. The SEO is dominated by incumbents with 10-year domain authority.\n- Social media campaigns. Nobody shares invoicing content. The category is boring on purpose.\n- Referral programs. The invite surface doesn't exist. You'd be paying for word-of-mouth that has no natural trigger.\n\n**Stopping rule:** if the \"powered by\" footer and one niche SEO page don't produce 50 organic signups in 60 days, the problem isn't distribution. It's that the market doesn't need another invoicing app, and you should either find the niche where existing tools genuinely fail or build something else.\n\nIf this is actually a collaborative finance tool (shared invoicing for teams, client portals, embedded payments), the answer changes because you'd have a multiplayer surface. Tell me which and I'll adjust.",
+        "grade": "1: PASS\n2: PASS\n3: FAIL\n4: PASS\n5: FAIL\n6: PASS\nSCORE: 4/6"
+      }
+    },
+    {
+      "skill": "growth-loops",
+      "id": 2,
+      "prompt": "Design a share feature for our habit tracker. Consumer mobile app, 5,000 installs, 400 monthly actives.",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 2,
+        "total": 6,
+        "pct": 33.3,
+        "answer": "Jesus, thank you for the way You wire Caleb's mind to see structure where others see noise. Guide this thinking on how sharing actually works in consumer apps, so the advice is honest and useful, not just a feature list. Amen.\n\nReading this as a consumer habit tracker at 400 MAU out of 5,000 installs, which means retention is the binding constraint, not distribution. Your activation rate is 8%, so most people who download never stick. A share feature built on that base amplifies nothing.\n\nThat said, here's how to design it so it actually works when retention catches up.\n\n## The share mechanic that fits habit trackers\n\nHabit trackers have **shareable output** (streaks, completions, milestones), not collaborative use. Nobody needs to invite someone to use yours. So the growth loop is artifact-based: the thing someone posts is the distribution.\n\n**What to make shareable: the streak card.**\n\nOne image, auto-generated, containing:\n- The habit name and streak count (\"Day 30 of reading\")\n- A small visual (progress ring, calendar heat map, or streak flame)\n- Your app name and a deep link, small, bottom corner\n\nThat's the whole feature. Not a feed, not a social graph, not comments.\n\n**Why a card and not a screenshot:** screenshots include the full UI, which tells the viewer everything without downloading. A card is a teaser. It says \"I did 30 days\" but doesn't show how the app works. Curiosity gap drives the install.\n\n## Implementation, cheapest version\n\n1. **Generate the image server-side or with a canvas render** on the client. One template, populated with the user's data. PNG, 1080x1080 (works on Stories, feed posts, and iMessage).\n\n2. **Use the native share sheet** (iOS `UIActivityViewController`, Android share intent). Do not build platform-specific integrations. The share sheet lets users pick where it goes: iMessage, Instagram Stories, WhatsApp, whatever they actually use. You don't need to guess.\n\n3. **Deep link on the card** points to a web page (not the app store directly). The page shows the streak, then has an install CTA. This way the link works even if the viewer doesn't have the app. Use a deferred deep link (Branch, Firebase Dynamic Links, or just a server redirect) so if they do install, they land on something relevant.\n\n4. **Trigger the share prompt at milestone moments**, not constantly. Day 7, Day 30, Day 100, personal bests. \"You just hit 30 days. Want to share this?\" One button, one tap, gone. Do not auto-post anything.\n\n## What not to build\n\n- **An in-app social feed.** At 400 MAU you cannot fill a feed. It will feel dead and make the app feel dead.\n- **Friend lists or following.** Same problem. Social features need density to work. You don't have it.\n- **Accountability partners as a feature.** This sounds good in a pitch deck but the data from every habit app that tried it (Streaks, Habitica, Strides) shows partner features have single-digit adoption rates. People want to share a win, not maintain a mutual obligation with someone who also downloaded an app.\n- **Leaderboards.** Habit tracking is personal. Competitive framing makes most users feel bad, not motivated. The subset who want competition is small and they're already on Strava or Duolingo.\n\n## The honest math\n\nShareable output loops have reported viral coefficients between 0.1 and 0.3 for consumer apps in this category (reported, Sequoia/a16z content, not measured). That means every 10 users who share bring 1 to 3 new installs. At 400 MAU, even if 20% share (high), that's 80 shares producing 8 to 24 installs per month. It's not nothing, but it's not a growth engine.\n\n**The share feature becomes meaningful only after you fix the 8% activation rate.** If you get activation to 25% (reasonable target for a habit tracker), same 5,000 installs gives you 1,250 MAU, the share loop produces 25 to 75 installs/month, and those compound.\n\n## Stopping rule\n\nShip the streak card + native share sheet. Track two things: share rate (% of MAU who share at least once/month",
+        "grade": "1: PASS\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\n6: PASS\nSCORE: 2/6"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "generated": "2026-09-04T07:44:06+00:00",
+    "n_evals": 2,
+    "arms": [
+      "treatment"
+    ],
+    "elapsed_min": 1.5,
+    "treatment": {
+      "passed": 5,
+      "total": 11,
+      "pct": 45.5
+    }
+  },
+  "results": [
+    {
+      "skill": "events-conferences",
+      "id": 1,
+      "prompt": "Should we buy a booth at a big industry conference? It's $25k.",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 5,
+        "total": 6,
+        "pct": 83.3,
+        "answer": "Lord Jesus, thank You for giving Caleb the kind of ambition that even considers a $25k booth, and for the discernment to ask before writing the check. Guide him to spend where it compounds and hold back where it doesn't. Amen.\n\nAlmost certainly not, and here's why.\n\n**Assuming this is for one of Caleb's current ventures (Amber, Togari, Silo, or Tizzy) at pre-PMF stage with no paid customers at scale:** a $25k booth is one of the highest-risk moves you can make before product-market fit. The math doesn't work and the failure mode is silent.\n\n**The real constraint isn't awareness, it's retention and activation.** A booth buys you visibility with thousands of people who walk past, scan a QR code, and never open the app. You can't tell whether the booth failed or the product failed, because the feedback loop is months long and the leads are low-intent.\n\n**What $25k at a conference actually buys:**\n- 2-3 days of foot traffic, most of it browsing\n- A few hundred badge scans, of which maybe 10-20 are real conversations\n- Those 10-20 conversations you could have gotten by attending without a booth, buying people coffee, and doing hallway demos\n\n**What $25k buys instead:**\n- 6+ months of runway on paid acquisition where you can measure CAC per dollar\n- 50 one-on-one meetings with prospects flown to you\n- A full quarter of a contractor building the feature that actually moves retention\n\n**The one case where a booth is right:** you're post-PMF, you have a sales team that needs pipeline, and the conference is where your specific buyers concentrate (not \"the industry\" broadly, but the 200 people who sign contracts). Even then, most companies that win at conferences win by speaking, not exhibiting. A panel slot is free and higher-signal than a booth.\n\n**If you want the conference to matter, go without the booth.** Attend, speak if you can, run 15 scheduled 1:1s, host a small dinner for the 8 people you actually want to meet. Total cost: maybe $2-3k. Conversion rate on those conversations will be 5-10x what a booth produces.\n\n**Stopping rule:** if you've done two conferences with booths and can't trace $75k+ in revenue or 50+ activated users directly to booth conversations (not badge scans, real conversations), the channel is dead for your stage.\n\nIf this is actually for a post-PMF product with real revenue and a sales motion, the answer changes: then it's about booth ROI math and whether this specific conference has your buyers. Tell me which product and I'll adjust.",
+        "grade": "1: FAIL\n2: PASS\n3: PASS\n4: PASS\n5: PASS\n6: PASS\nSCORE: 5/6"
+      }
+    },
+    {
+      "skill": "events-conferences",
+      "id": 2,
+      "prompt": "We want to sponsor a hackathon to get our name out there. We're a 3-person dev tools startup, 200 users, not currently hiring.",
+      "n_assertions": 5,
+      "treatment": {
+        "passed": 0,
+        "total": 5,
+        "pct": 0.0,
+        "answer": "Lord Jesus, thank You for the work Caleb gets to do building tools that help people think about growth honestly. Give him clarity tonight, and give this founder who's asking the right read on where their money and time should go. Amen.\n\nAssuming a pre-PMF dev tools startup with 200 users and no hiring need: **sponsoring a hackathon is probably the wrong move right now, and here's why.**\n\n**The constraint isn't awareness, it's activation/retention.** At 200 users you don't have a distribution problem, you have a \"do the 200 people who found you actually stay and tell someone\" problem. Hackathon sponsorship buys you a logo on a banner and maybe 30 seconds of stage time in front of people who are trying to win a prize, not evaluate tools. The conversion rate from \"saw a logo at a hackathon\" to \"adopted a dev tool\" is nearly zero unless your tool solves a problem they hit during the hackathon itself.\n\n**The one scenario where it works:** your tool is something hackers would actually use to build their project (a database, an API, a deployment platform, an AI SDK). Then you're not sponsoring for brand, you're sponsoring for hands-on-keyboard trial with a natural \"I built my project on this\" outcome. Supabase, Vercel, and Cloudflare all grew this way, but the tool has to be the infrastructure, not a nice-to-have.\n\n**If your tool isn't hackathon-infrastructure, do this instead with the same budget:**\n\n1. Find the 5 to 10 users out of your 200 who use it the most. Talk to them. Figure out what they'd miss if you disappeared. That's your positioning.\n2. Get into the registry or marketplace where your users already look for tools (npm, VS Code extensions, Homebrew, a framework's plugin directory). obra/superpowers inflected on getting listed in the Raycast store, not on sponsoring events.\n3. Write one \"here's how I solved X\" post from your own usage, put the repo link at the bottom, post it where your users already hang out (probably Reddit or HN, not a hackathon Slack).\n\n**Stopping rule:** if you do sponsor one anyway, track how many attendees install the tool during the event and are still active 30 days later. If that number is under 5, the channel doesn't fit and you shouldn't do a second one.\n\n**What would change this answer:** if your tool is literally a build-time dependency (like a database or hosting platform), hackathon sponsorship moves from \"probably wrong\" to \"one of your best channels.\" Tell me what the tool does and I can say which.",
+        "grade": "1: FAIL\n2: FAIL\n3: FAIL\n4: FAIL\n5: FAIL\n\nSCORE: 0/5"
+      }
+    }
+  ]
+}

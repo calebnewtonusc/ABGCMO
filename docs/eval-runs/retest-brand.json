@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "generated": "2026-09-04T07:42:36+00:00",
+    "n_evals": 2,
+    "arms": [
+      "treatment"
+    ],
+    "elapsed_min": 1.6,
+    "treatment": {
+      "passed": 9,
+      "total": 12,
+      "pct": 75.0
+    }
+  },
+  "results": [
+    {
+      "skill": "brand",
+      "id": 1,
+      "prompt": "We need a rebrand for our B2B scheduling SaaS. New logo, new colors, new website. We have 400 paying customers and flat growth for 6 months.",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 5,
+        "total": 6,
+        "pct": 83.3,
+        "answer": "Jesus, thank you for Caleb's willingness to dig into hard problems honestly, even when the numbers aren't moving. Give him clarity to see what's actually stuck here and the courage to name it plainly. Amen.\n\nFlat growth for six months with 400 paying customers is not a brand problem. A rebrand will not fix it.\n\n**Assuming this is a B2B scheduling SaaS at post-PMF with real revenue but stalled acquisition:** the constraint is almost certainly not that your logo is wrong. 400 paying customers means the product works. Flat growth means one of three things is broken, and none of them are visual identity:\n\n**1. Your acquisition channel exhausted its natural audience.** Whatever got you to 400 (founder-led sales, a specific community, one integration) has a ceiling. You hit it. A new logo does not open a new channel.\n\n**2. Churn is eating growth.** You might be adding customers and losing them at the same rate. Check your net revenue retention. If NRR is under 100%, you have a retention problem disguised as an acquisition problem. A rebrand makes this worse because it costs money and attention that should go to fixing why people leave.\n\n**3. Your positioning is wrong, not your brand.** \"B2B scheduling SaaS\" is a category with Calendly, Cal.com, SavvyCal, Reclaim, and dozens more. If prospects cannot say in one sentence why yours exists instead of those, no amount of new colors fixes that. This is the Notion lesson from the case ledger: Notion nearly died as \"Xcode for the web,\" then relaunched the identical product as a notes app. The product did not change. The frame did.\n\n**What to do instead of a rebrand:**\n\nRun the diagnosis. Pull your last 6 months of data and answer these:\n- What is your monthly churn rate? (If above 3% monthly for B2B, that is your problem.)\n- Where did your last 20 customers come from? (If you cannot answer this, that is your problem.)\n- What do churned customers say when they leave? (If you do not ask, start.)\n- Can a stranger read your homepage and say what you do differently from Calendly in one sentence?\n\nIf the answer to that last one is no, you need repositioning, not a rebrand. Repositioning is words and strategy. It costs nothing and changes everything downstream. A rebrand is $30-80K in design work that makes the same unclear positioning look prettier.\n\n**The one scenario where a rebrand is correct:** you repositioned, the new frame is working, and the old visual identity actively contradicts the new positioning (e.g., your brand looks enterprise but you are now selling to solopreneurs). That is a real reason. \"We have been flat\" is not.\n\n**Stopping rule:** if you reposition and growth does not move in 90 days, the problem is deeper than messaging. It is product or market.\n\nIf you are actually pre-PMF (400 customers but low engagement, high churn, no clear ICP), the answer changes significantly: stop all growth work and go talk to your best 10 customers about what they actually use. Tell me which and I will adjust.",
+        "grade": "1: PASS\n2: PASS\n3: PASS\n4: PASS\n5: PASS\n6: FAIL\nSCORE: 5/6"
+      }
+    },
+    {
+      "skill": "brand",
+      "id": 2,
+      "prompt": "We want to name our product after a character from our favorite movie.",
+      "n_assertions": 6,
+      "treatment": {
+        "passed": 4,
+        "total": 6,
+        "pct": 66.7,
+        "answer": "The naming section of the brand skill is the relevant piece, specifically lines 42-47.\n\n**Naming a product after a movie character is a trademark minefield.** The skill flags this directly: studios (Lucasfilm is the named example) actively send cease-and-desists, and they target projects that are growing, which is exactly the kind you'd care about naming well.\n\nThree things to check before you commit:\n\n1. **Trademark search.** Run the character name through USPTO TESS in the classes that cover your product category. Movie studios register character names broadly.\n2. **Studio enforcement history.** Some studios (Disney, Lucasfilm, Warner Bros) are aggressive. Others are less so. The movie matters.\n3. **Derivative vs. identical.** Using the exact character name is the highest-risk version. A name *inspired by* or *referencing* the character without being identical gives you more room.\n\n**Assuming you're early stage with no legal budget:** the pragmatic move is to use the character name as an internal codename and ship under something original. You get the team energy and identity from the reference without the legal exposure. Basecamp was internally \"Ta-da\" forever. Slack was an acronym backfilled onto an internal tool name.\n\nIf the movie is obscure enough that the studio is small or defunct, the risk drops. If it's Marvel, Star Wars, or anything from a major studio with an active licensing program, it's almost certainly not worth it.\n\nWhat's the movie? That changes whether this is a real risk or a theoretical one.",
+        "grade": "1: PASS\n2: PASS\n3: PASS\n4: PASS\n5: FAIL\n6: FAIL\nSCORE: 4/6"
+      }
+    }
+  ]
+}
