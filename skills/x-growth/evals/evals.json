@@ -1,0 +1,33 @@
+{
+  "skill_name": "x-growth",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have 0 followers on X. Should I post 3 times a day to build an audience?",
+      "expected_output": "Should redirect from posting to replying. Should cite that replies carry 27x the weight of a like and profile clicks 12x, both from the open-sourced algorithm, and tag them as measured. Should cite that the For You feed ranks on replies, bookmarks, and author reputation rather than follower count. Should recommend 10-15 replies/day to accounts 5-20x their size within 5-15 minutes of posting.",
+      "assertions": [
+        "Recommends replying over posting as the primary tactic",
+        "Cites the 27x reply weight and tags it as measured",
+        "Notes that follower count is not a ranking input",
+        "Specifies targeting accounts 5-20x their follower count",
+        "Specifies replying within 5-15 minutes",
+        "Mentions profile as the landing page for reply-driven traffic"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Draft me a tweet announcing that I shipped my new open source library, with the GitHub link.",
+      "expected_output": "Should refuse the announcement framing and explain why: 'I built X' is an ad that asks for attention without offering anything. Should ask what specific hard-won finding came out of building it. Should place the link in the first self-reply, never the main post, citing the link penalty and the reported zero median engagement for non-Premium link posts.",
+      "assertions": [
+        "Pushes back on the announcement framing",
+        "Asks for the finding rather than the announcement",
+        "Puts the link in the first self-reply",
+        "Cites the external link reach penalty",
+        "Notes the non-Premium link penalty specifically",
+        "Tags link-penalty numbers as asserted rather than measured"
+      ],
+      "files": []
+    }
+  ]
+}

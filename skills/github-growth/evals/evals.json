@@ -1,0 +1,33 @@
+{
+  "skill_name": "github-growth",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "How do I get my repo to 1000 stars?",
+      "expected_output": "Should reframe stars as a lagging popularity snapshot and point at forks, issues, and returning contributors as the real signals. Should audit the free permanent items first: topics, license, description, profile README, pinned repos. Should explain trending ranks velocity relative to the repo's own baseline, so promotion must concentrate on one day. Should give realistic timelines with the survivorship caveat.",
+      "assertions": [
+        "Reframes stars versus forks, issues, and returning contributors",
+        "Checks topics and license before recommending promotion",
+        "Explains star velocity relative to baseline",
+        "Recommends concentrating all promotion on one day",
+        "Gives a realistic timeline (1-3 months with promotion)",
+        "Names the survivorship bias in star case studies"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "My README is 900 lines with a full table of contents. Should I add more documentation to it?",
+      "expected_output": "Should say no and invert the request. The star decision happens in about 15 seconds in the first screenful; a long table of contents where a demo should be is the classic failure. Should prescribe cutting to roughly 120 lines with one category sentence, a demo GIF of 2-5 MB, a quick start in the first 200 words, four badges, and everything else moved to docs/.",
+      "assertions": [
+        "Recommends cutting rather than adding",
+        "Cites the roughly 15-second decision window",
+        "Specifies a demo GIF in the first screenful with a size range",
+        "Specifies quick start within the first 200 words",
+        "Recommends moving detail to docs/",
+        "Limits badges to a small functional set"
+      ],
+      "files": []
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# ABGCMO
+
+> Growth, GTM, and virality strategy for coding agents. Every number tagged by
+> evidence quality (measured / reported / asserted). 60+ case studies indexed by
+> mechanism. Diagnoses the binding constraint before prescribing tactics.
+
+Install: /plugin marketplace add calebnewtonusc/ABGCMO
+
+## Doctrine
+- [CLAUDE.md](CLAUDE.md): Five operating rules and the skill router
+- [AGENTS.md](AGENTS.md): Same doctrine, cross-agent conventions
+
+## Data
+- [data/evidence-tiers.md](data/evidence-tiers.md): Measured / Reported / Asserted
+- [data/algorithm-weights.md](data/algorithm-weights.md): Ranking mechanics for X, LinkedIn, GitHub, TikTok, Instagram, YouTube, Reddit, Product Hunt, app stores
+- [data/benchmarks.md](data/benchmarks.md): Conversion, retention, virality, sales, realistic outcomes
+- [data/channel-economics.md](data/channel-economics.md): Channel returns and channel-product fit
+
+## Cases
+- [cases/README.md](cases/README.md): Index by mechanism
+- marketplaces, developer-tools, open-source, plg-saas, consumer-social, ai-native, creator-media, commerce-brand, movements, category-creation
+
+## Skills
+strategy: growth-diagnosis, positioning, cold-start, growth-loops, metrics, anti-patterns
+platform: github-growth, x-growth, linkedin-growth, short-form-video, reddit-hn, newsletter-growth, seo-geo
+execution: launch-day, content-engine, community-led-growth
+revenue: founder-led-sales, pricing-packaging, activation-retention
+
+## Context
+- [docs/LANDSCAPE.md](docs/LANDSCAPE.md): The competing repos and what ABGCMO does not do
+- [docs/SOURCES.md](docs/SOURCES.md): Sources by evidence tier

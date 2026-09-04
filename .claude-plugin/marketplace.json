@@ -1,0 +1,14 @@
+{
+  "name": "abgcmo",
+  "owner": {
+    "name": "calebnewtonusc",
+    "url": "https://github.com/calebnewtonusc"
+  },
+  "plugins": [
+    {
+      "name": "abgcmo",
+      "source": "./",
+      "description": "Growth, GTM, and virality operator for Claude. Algorithm mechanics for 8 platforms, 0-to-1 playbooks, and 60+ case studies."
+    }
+  ]
+}

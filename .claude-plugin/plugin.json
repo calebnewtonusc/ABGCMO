@@ -1,0 +1,16 @@
+{
+  "name": "abgcmo",
+  "version": "1.0.0",
+  "description": "Turns Claude into a growth and GTM operator. Platform algorithm mechanics, 0-to-1 playbooks, and 60+ case studies, with every number tagged by evidence quality.",
+  "author": {
+    "name": "calebnewtonusc",
+    "url": "https://github.com/calebnewtonusc"
+  },
+  "homepage": "https://github.com/calebnewtonusc/ABGCMO",
+  "repository": "https://github.com/calebnewtonusc/ABGCMO",
+  "license": "MIT",
+  "keywords": [
+    "growth", "gtm", "go-to-market", "marketing", "virality",
+    "product-led-growth", "distribution", "positioning", "claude-code"
+  ]
+}

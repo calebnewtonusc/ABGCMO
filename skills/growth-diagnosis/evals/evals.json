@@ -1,0 +1,47 @@
+{
+  "skill_name": "growth-diagnosis",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I launched my SaaS 3 months ago. 2,000 people have signed up but only 40 are still active. How do I get more signups?",
+      "expected_output": "Should REFUSE to answer the question as asked. 2% retention means the binding constraint is retention, not acquisition, and more signups will make the leak faster. Should place this pre-PMF, recommend the Sean Ellis 40% test, and route to activation-retention. Should cite that 60-70% of annual churn happens in the first 90 days.",
+      "assertions": [
+        "Does not answer the acquisition question as asked",
+        "Identifies retention, not awareness, as the binding constraint",
+        "Explicitly warns that acquisition before retention accelerates churn",
+        "Places the product pre-PMF",
+        "Recommends the Sean Ellis 40% test",
+        "Routes to skills/activation-retention"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "how do i grow my open source CLI tool",
+      "expected_output": "Should ask for the baseline before prescribing: current stars, forks, topics, license, who uses it. Should identify spread mechanism as single-player utility and state plainly that it will not go viral and referral mechanics would be wasted work. Should route to github-growth and name the free permanent items (topics, license, registries, awesome-lists). Should give ONE recommendation, not a channel list.",
+      "assertions": [
+        "Requests the actual baseline rather than guessing",
+        "Classifies spread mechanism as single-player utility",
+        "States directly that the tool will not go viral",
+        "Names free compounding placements: topics, license, registries",
+        "Gives one recommendation rather than a ranked list of channels",
+        "Includes a stopping rule"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "We're building a marketplace connecting freelance video editors with YouTubers. We have 300 editors signed up and 12 creators. What's our growth strategy?",
+      "expected_output": "Should identify that the hard side has been misread: they solved the easy side. For this marketplace the scarce, harder side is paying demand (creators). Should invoke atomic network thinking: pick one narrow niche where liquidity is achievable rather than spreading. Should cite Uber/Airbnb/Tinder supply-first patterns and note the difference. Should recommend unscalable manual matching.",
+      "assertions": [
+        "Names the hard side explicitly",
+        "Identifies that they have oversupplied one side",
+        "Invokes the atomic network concept",
+        "Recommends narrowing to one niche for liquidity",
+        "Cites a relevant marketplace case",
+        "Recommends manual/unscalable matching at this stage"
+      ],
+      "files": []
+    }
+  ]
+}

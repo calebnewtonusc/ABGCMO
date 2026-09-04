@@ -1,0 +1,33 @@
+{
+  "skill_name": "positioning",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "My repo description is 'A powerful, modern toolkit for developers who want to supercharge their workflow.' Is that good?",
+      "expected_output": "Should fail it on the portability test: the sentence could describe thousands of repos unchanged. Should fail the five-second test since no category is named. Should walk the Dunford steps starting with competitive alternatives (what would they do otherwise, including doing nothing). Should produce a concrete alternative that names the category and the unique attribute.",
+      "assertions": [
+        "Applies the portability test and fails the description",
+        "Applies the five-second category test",
+        "Asks what the user would do if this did not exist",
+        "Identifies the missing unique attribute",
+        "Proposes a concrete rewrite naming a category",
+        "Does not simply produce more marketing adjectives"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Should we create a new category for our product? We do AI-powered async standups.",
+      "expected_output": "Should push back on category creation as the default. Should explain it is expensive because you pay to educate a market, and cite the HubSpot/Drift playbook as what it actually costs (manifesto, book, podcast, conference). Should recommend positioning inside an existing category as obviously best for a narrow segment first, citing Notion deliberately entering 'notes app' for comprehension.",
+      "assertions": [
+        "Does not reflexively endorse category creation",
+        "Names the cost: educating a market",
+        "Cites the Drift or HubSpot category-creation playbook",
+        "Offers the cheaper alternative of positioning in an existing category",
+        "Cites Notion as the counter-example",
+        "Gives a condition under which category creation would be correct"
+      ],
+      "files": []
+    }
+  ]
+}

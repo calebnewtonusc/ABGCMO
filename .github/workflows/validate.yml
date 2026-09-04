@@ -1,0 +1,26 @@
+name: validate
+on: [push, pull_request]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate eval JSON
+        run: python3 -c "import json,glob;[json.load(open(f)) for f in glob.glob('skills/*/evals/evals.json')];print('eval json ok')"
+      - name: Validate skill structure
+        run: |
+          fail=0
+          for d in skills/*/; do
+            n=$(basename "$d")
+            [ -f "$d/SKILL.md" ] || { echo "::error::$n missing SKILL.md"; fail=1; }
+            [ -f "$d/evals/evals.json" ] || { echo "::error::$n missing evals"; fail=1; }
+            grep -q "^name: $n$" "$d/SKILL.md" || { echo "::error::$n frontmatter name mismatch"; fail=1; }
+            grep -q "^description:" "$d/SKILL.md" || { echo "::error::$n missing description"; fail=1; }
+            grep -q "version:" "$d/SKILL.md" || { echo "::error::$n missing version"; fail=1; }
+          done
+          exit $fail
+      - name: Registry matches disk
+        run: |
+          a=$(ls -d skills/*/ | wc -l); b=$(($(wc -l < registry/skills.csv) - 1))
+          [ "$a" -eq "$b" ] || { echo "::error::registry has $b rows, disk has $a skills"; exit 1; }
+          echo "registry ok"

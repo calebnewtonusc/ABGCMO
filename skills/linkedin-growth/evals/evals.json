@@ -1,0 +1,32 @@
+{
+  "skill_name": "linkedin-growth",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to write long-form LinkedIn articles like the ones that go viral. Good strategy?",
+      "expected_output": "Should correct the premise with data: articles reach about 0.69x an ordinary post (median 596 people) because they require a click. Should reframe the article as the durable asset rather than the distribution: 3x profile visits per impression, permanent, Google-indexed, more likely to be cited by AI systems. Should recommend a separate feed post as the delivery vehicle and set realistic reaction expectations.",
+      "assertions": [
+        "States that articles underperform posts on reach",
+        "Cites the 0.69x multiplier or the 596 median",
+        "Reframes article as asset and post as distribution",
+        "Cites the 3x profile visits per impression benefit",
+        "Sets realistic engagement expectations rather than promising virality",
+        "Tags the figures as reported"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I'll put the link in the first comment so the post doesn't get penalized.",
+      "expected_output": "Should correct this as outdated: the first-comment workaround is penalized on LinkedIn as of early 2026. Should note this is the exact inverse of X, where the self-reply link remains correct, and warn against carrying habits across platforms. Should suggest alternatives: no link at all, or a newsletter edition which carries no link penalty.",
+      "assertions": [
+        "Identifies the first-comment trick as now penalized on LinkedIn",
+        "Contrasts explicitly with X where it still works",
+        "Warns against carrying platform habits across",
+        "Offers the newsletter as a no-penalty alternative",
+        "Does not repeat outdated advice as current"
+      ],
+      "files": []
+    }
+  ]
+}
