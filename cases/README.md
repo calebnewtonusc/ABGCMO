@@ -1,6 +1,6 @@
 # Case ledger
 
-Sixty-plus companies, organized by the *mechanism* that actually moved them, not
+**59 organizations**, organized by the *mechanism* that actually moved them, not
 by industry. When advising, find the case whose mechanism matches the user's
 situation, then say explicitly what is different about their case.
 
@@ -25,3 +25,74 @@ on a structural decision — how the thing was described, who was let in, what t
 free tier metered, which registry listed it, or who was personally recruited.
 
 Content was downstream in every single case.
+
+## The full roster
+
+Stated exactly rather than as a round number, so the claim is checkable. This repo
+asks others to source their numbers; it has to source its own.
+
+<!-- ROSTER:START -->
+- Airbnb
+- ALS Ice Bucket Challenge
+- Calendly
+- Canva
+- charity: water
+- ChatGPT
+- Clubhouse
+- Confluent
+- Cursor
+- Docker
+- DoorDash
+- Drift
+- Dropbox
+- Duolingo
+- Elastic
+- ElevenLabs
+- Facebook
+- Figma
+- Fortnite
+- GitLab
+- Glossier
+- Gong
+- Gymshark
+- HashiCorp
+- HubSpot
+- Instagram
+- Linear
+- Loom
+- Mercor
+- Midjourney
+- MongoDB
+- Morning Brew
+- MrBeast
+- Next.js
+- Nomad List
+- Notion
+- obra/superpowers
+- OpenClaw
+- PayPal
+- Perplexity
+- Redis
+- Roblox
+- Salesforce
+- shadcn/ui
+- Shopify
+- Slack
+- Spotify Wrapped
+- Stripe
+- Superhuman
+- Supabase
+- The Hustle
+- TikTok
+- Tinder
+- Twilio
+- Uber
+- Vercel
+- Wise
+- Wordle
+- Zapier
+<!-- ROSTER:END -->
+
+**59 organizations across 10 mechanism files.** Sections covering a pattern rather
+than a company (`The meta-finding`, `Where a devtool actually gets found`, `When
+category creation is wrong`) are deliberately not counted.

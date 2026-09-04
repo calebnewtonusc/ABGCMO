@@ -2,7 +2,7 @@
 name: metrics
 description: Choose what to measure and interpret the numbers honestly. Use for questions about KPIs, North Star metrics, dashboards, analytics, attribution, or whether a number is good.
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Metrics

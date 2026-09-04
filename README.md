@@ -4,7 +4,7 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
   <img src="https://img.shields.io/badge/skills-19-6e56cf" alt="Skills">
   <img src="https://img.shields.io/badge/evals-39-2f855a" alt="Evals">
-  <img src="https://img.shields.io/badge/case_studies-60+-b7791f" alt="Cases">
+  <img src="https://img.shields.io/badge/case_studies-59-b7791f" alt="Cases">
 </p>
 
 <p align="center">
@@ -34,23 +34,25 @@ open-sourced code, platform-published), `[R] Reported` (large-sample analysis by
 someone with the data), or `[A] Asserted` (repeated across blogs with no
 traceable origin). Where those conflict, measured wins and it says so.
 
-**It carries worked examples.** 60+ companies in `cases/`, organized by the
+**It carries worked examples.** 59 organizations in `cases/`, organized by the
 mechanism that moved them rather than by industry, so a student launching a dev
 tool on campus gets Tinder's sorority tour, not another dev-tool case.
 
 ## Three things it will tell you that most guides get wrong
 
 - **The "Show HN" tag has no measurable effect.** The only controlled study
-  (arXiv 2511.04453, n=138) found β = −119.2, SE = 138.3, **p = 0.39** once you
+  (arXiv 2511.04453, n=138, single-author preprint) found β = −119.2, SE = 138.3, **p = 0.39** once you
   control for stage selection. Every guide recommends it. What actually predicts
   outcome is posting hour, existing stars, and documentation quality.
 - **LinkedIn long-form articles underperform ordinary posts by ~31% on reach**
   (0.69x, median 596 people). The article is not the distribution — it is the
   asset. It earns 3x profile visits per impression and gets cited by AI systems.
-- **On X, replies carry 27x the weight of a like** and the feed ranks on replies,
-  bookmarks, and author reputation — **not follower count**. This is from the
-  algorithm xAI open-sourced, not from a blog. It is why replying beats posting
-  from zero.
+- **On X, the largest positive ranking weight is a reply the author replies back
+  to — 150x a like** (`reply_engaged_by_author` = 75.0 against a like's 0.5). It is
+  absent from essentially every growth blog, which also get retweets wrong (2x, not
+  1x) and profile clicks wrong (24x, not 12x). Read from
+  [the source](https://github.com/twitter/the-algorithm-ml/blob/main/projects/home/recap/README.md),
+  not a summary. A **report is −738x** a like, so one report cancels ~27 replies.
 
 ## Install
 
@@ -130,6 +132,23 @@ for PM craft use [lenny-skills](https://github.com/RefoundAI/lenny-skills).
 ABGCMO is the layer above those: deciding what to do, and whether the evidence
 supports it. Install it alongside them. Full survey in
 [docs/LANDSCAPE.md](docs/LANDSCAPE.md).
+
+## Audit
+
+This repo was adversarially audited one day after shipping. **187 defects found**,
+including eleven severity-1 errors where it violated its own central rule — the
+flagship `[M] Measured` X data had been taken from a blog summary rather than the
+source code, which made three weights wrong and omitted the largest positive signal
+in the model entirely.
+
+All eleven are fixed. The rest, including the ones **not** fixed, are itemized in
+[AUDIT.md](AUDIT.md). `data/VERIFIED.md` records when each claim class was last
+checked against a primary source and marks five of them **Unverified against
+primary**, which is their honest status.
+
+The rule that came out of it: **a summary of a primary source is not the primary
+source.** CI now enforces it — an `[M]` tag without a nearby primary-source
+citation fails the build.
 
 ## Honesty policy
 

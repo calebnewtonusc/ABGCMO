@@ -4,7 +4,7 @@ What each channel realistically returns, what it costs, and when it is wrong.
 
 | Channel | Realistic return | Cost | Works when | Tag |
 |---|---|---|---|---|
-| Hacker News front page | 500-2,000 stars / 5-15k visitors | One post; needs 30-50 upvotes in hour 1 | Technical, self-evident in one sentence, genuinely novel | [M]/[A] |
+| Hacker News front page | 500-2,000 stars / 5-15k visitors | One post; needs 30-50 upvotes in hour 1 | Technical, self-evident in one sentence, genuinely novel | [P]/[A] |
 | Official registry / marketplace | Step change | One submission | An ecosystem exists with a curated index | [R] |
 | GitHub topics | Permanent discovery baseline | 5 minutes | Always. Free and near-universally skipped | [A] |
 | Awesome-list inclusion | Small, permanent, compounding | One PR each | A relevant list exists | [A] |

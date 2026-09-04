@@ -2,7 +2,7 @@
 name: growth-diagnosis
 description: Diagnose what is actually blocking growth before recommending any tactic. Use FIRST whenever someone asks how to grow, get users, get traction, go viral, or market something, and whenever a growth effort is not working. Routes to the right specialist skill.
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Growth diagnosis

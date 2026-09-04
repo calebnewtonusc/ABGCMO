@@ -6,39 +6,76 @@ Ranking signals per platform. Tags per `evidence-tiers.md`.
 
 ## X (Twitter)
 
-xAI open-sourced the recommendation algorithm in January 2026, updated May 2026.
-This is the only major platform where weights are directly observable.
+**Primary source, verified 2026-09-03:**
+[twitter/the-algorithm-ml `projects/home/recap/README.md`](https://github.com/twitter/the-algorithm-ml/blob/main/projects/home/recap/README.md),
+with the serving config at
+[`ScoredTweetsParam.scala#L84`](https://github.com/twitter/the-algorithm/blob/main/home-mixer/server/src/main/scala/com/twitter/home_mixer/product/scored_tweets/param/ScoredTweetsParam.scala#L84).
 
-| Signal | Weight vs. a like | Tag |
+The Heavy Ranker outputs a probability per engagement type, then takes a weighted
+sum. These are the raw weights published in the repo, **dated April 5, 2023**:
+
+| Engagement | Raw weight | Ratio to a like |
 |---|---|---|
-| Reply | **27x** | [M] |
-| Profile click | **~12x** | [M] |
-| Like | 1x | [M] |
-| Retweet | ~1x | [M] |
-| Bookmark | Heavy, multiplier undisclosed | [M] |
-| Dwell time | Described as outweighing all click-based signals | [M] |
+| `reply_engaged_by_author` — you reply, the author replies back | **75.0** | **150x** |
+| `reply` | 13.5 | **27x** |
+| `good_profile_click` — opens your profile AND likes or replies | 12.0 | **24x** |
+| `good_click` — clicks into the conversation and replies or likes | 11.0 | 22x |
+| `good_click_v2` — clicks in and stays 2+ minutes | 10.0 | 20x |
+| `retweet` | 1.0 | **2x** |
+| `fav` (like) | 0.5 | 1x (baseline) |
+| `video_playback50` — watches half a video | 0.005 | 0.01x |
+| `negative_feedback_v2` — show less often, block, mute | **-74.0** | **-148x** |
+| `report` | **-369.0** | **-738x** |
 
-**Structural fact:** the For You feed pulls ~1,500 candidates per session and
-scores them on replies, bookmarks, and author reputation — **not follower
-count**. This is why a zero-follower account can be surfaced at all. [M]
+Tag: **[M] Measured** — read from the source repository, not from a summary.
 
-| Decay | Value | Tag |
+### Four things almost every secondary source gets wrong
+
+1. **`reply_engaged_by_author` at 150x is the single largest positive signal**, and
+   it is missing from essentially every growth blog. The implication is specific:
+   the goal is not to reply, it is to reply in a way **the original author answers**.
+   A reply that starts a conversation is worth 5.5x a reply that does not.
+2. **Retweets are 2x a like, not 1x.** Blogs quote the raw 1.0 weight as a ratio.
+3. **Profile clicks are 24x, not 12x** — and only "good" profile clicks count, meaning
+   the visitor liked or replied after arriving. A bare profile visit scores nothing.
+4. **The negative weights dwarf the positive ones.** A report is -738x a like; one
+   report cancels roughly 27 replies. Negative feedback is -148x. Posting anything
+   that gets muted or blocked is far more costly than any engagement is valuable.
+
+### Caveats the source itself states
+
+- "The exact weights in the file can be adjusted at any time." These are from
+  April 2023 and the live production values are almost certainly different now.
+- "There may be small differences from the production model," since the released
+  code runs independently of Twitter's internal codebase.
+- The repository was last pushed **2025-09-08**. Claims circulating that X
+  open-sourced or updated its algorithm in January or May 2026 do not match the
+  repository history and should be treated as false.
+
+### What is NOT in the source
+
+The following are widely repeated and are **not** in the published code. They are
+`[A] Asserted` and are given as ranges, not facts:
+
+| Claim | Reported value | Tag |
 |---|---|---|
 | Share of eventual reach set in first 30 min | ~70% | [A] |
 | Share of lifetime impressions within 2 h | ~80% | [A] |
-| Reach remaining at hour 6 | <20% | [A] |
-
-| Format vs. single text post | Effect | Tag |
-|---|---|---|
-| Thread (5-9 posts) | ~3x | [A] |
+| External link penalty, main post | -30 to -70% | [A] |
+| Non-Premium link posts, median engagement | reported near zero | [A] |
+| X Premium reach multiplier | 2-4x | [A] |
+| Thread (5-9 posts) vs single post | ~3x | [A] |
 | Native video | +40-60% | [A] |
 | Image | +15-25% | [A] |
-| Poll | 2-3x or -50% | [A] |
-| **External link in main post** | **-30 to -70%** | [A] |
-| External link, non-Premium acct (since Mar 2026) | reported median engagement of zero | [A] |
-| X Premium reach multiplier | 2-4x | [A] |
+| Bookmark weight | claimed heavy; **no bookmark weight exists in the published config** | [A] |
+| "Feed pulls ~1,500 candidates" | widely repeated | [A] |
 
-**Operating rule:** link goes in the first self-reply, never the main post.
+**Operating rules that survive the correction:**
+- Replies are the highest-leverage action, and a reply that earns an author response
+  is worth far more than one that does not.
+- Never post anything likely to draw a report or a mute. The downside is asymmetric.
+- Put links in a self-reply rather than the main post. The penalty is asserted, not
+  measured, but the downside of being wrong is small.
 
 ---
 
@@ -94,14 +131,14 @@ Hacker News effect, from the only controlled study (arXiv 2511.04453, n=138 AI/L
 
 | Window | Mean stars gained | Tag |
 |---|---|---|
-| 24 h | +121 | [M] |
-| 48 h | +189 | [M] |
-| 7 days | +289 | [M] |
+| 24 h | +121 | [P] |
+| 48 h | +189 | [P] |
+| 7 days | +289 | [P] |
 
-- Posting in the **12:00-17:00 UTC** window: ~+200 stars vs. poor timing. [M]
-- **"Show HN" tag: no significant effect** (beta = -119.2, SE = 138.3, p = 0.39). [M]
-- Predictors in order: HN score, baseline stars, posting hour, docs quality. [M]
-- Model fit predicting 7-day stars from pre-launch data: R² = 0.48. [M]
+- Posting in the **12:00-17:00 UTC** window: ~+200 stars vs. poor timing. [P]
+- **"Show HN" tag: no significant effect** (beta = -119.2, SE = 138.3, p = 0.39). [P]
+- Predictors in order: HN score, baseline stars, posting hour, docs quality. [P]
+- Model fit predicting 7-day stars from pre-launch data: R² = 0.48. [P]
 - **Medians run far below these means.** Most repos see modest gains; a few go
   vertical. The mean is not your expectation.
 - Front page needs ~30-50 upvotes in hour one. Traffic half-life ~24 h. [A]

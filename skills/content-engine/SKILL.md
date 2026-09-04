@@ -2,7 +2,7 @@
 name: content-engine
 description: Decide what to actually write and how to write it so it spreads. Use for questions about hooks, threads, headlines, content strategy, what to post, repurposing, or building an audience through writing.
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Content engine

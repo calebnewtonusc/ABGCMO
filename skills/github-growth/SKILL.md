@@ -2,7 +2,7 @@
 name: github-growth
 description: Grow an open source repository. Use for questions about GitHub stars, trending, READMEs, repo discovery, awesome-lists, marketplaces and registries, contributors, or making a project look credible.
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # GitHub growth

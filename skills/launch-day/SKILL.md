@@ -2,7 +2,7 @@
 name: launch-day
 description: Plan and execute a concentrated launch across Hacker News, Reddit, Product Hunt, X, and LinkedIn. Use when someone is about to launch a product, repo, or feature, or asks how and when to announce something.
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Launch day
@@ -22,7 +22,7 @@ no timing component. Do those whenever; just do them.
 
 ## Before you launch — this is where the measured effect lives
 
-The controlled study on HN launches (arXiv 2511.04453, n=138) found the predictors
+The controlled study on HN launches (arXiv 2511.04453, n=138, single-author preprint) found the predictors
 in order: **HN score, existing star count, posting hour, documentation quality.**
 Three of those four are fixed before you post.
 

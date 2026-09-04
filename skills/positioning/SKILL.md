@@ -2,7 +2,7 @@
 name: positioning
 description: Fix how a product is described so people instantly understand what it is and why it is for them. Use when traffic bounces, when the pitch needs work, when choosing a market category, when a product is in a crowded space, or when someone asks how to explain what they built.
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Positioning

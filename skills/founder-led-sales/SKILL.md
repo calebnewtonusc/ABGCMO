@@ -2,7 +2,7 @@
 name: founder-led-sales
 description: Get the first customers and close deals without a sales team. Use for questions about outbound, cold email, first customers, closing, pipeline, or when to hire salespeople.
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Founder-led sales

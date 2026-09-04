@@ -2,34 +2,58 @@
 name: x-growth
 description: Grow on X (Twitter), including from zero followers. Use for questions about Twitter/X strategy, threads, replies, the algorithm, posting cadence, or building a technical audience there.
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # X growth
 
-X open-sourced its recommendation algorithm in January 2026 (updated May). This is
-the only major platform where the weights are directly observable rather than
-inferred, so reason from them.
+X publishes its Heavy Ranker weights in [twitter/the-algorithm-ml](https://github.com/twitter/the-algorithm-ml).
+This is the only major platform where ranking weights are directly readable rather
+than inferred, so reason from them rather than from blog summaries, which get them
+wrong in at least four specific ways documented in `data/algorithm-weights.md`.
 
-## The weights [Measured]
+## The weights [Measured — read from the source repo, not a summary]
 
-| Signal | Weight vs. a like |
+Primary source: [`the-algorithm-ml/projects/home/recap/README.md`](https://github.com/twitter/the-algorithm-ml/blob/main/projects/home/recap/README.md),
+weights dated **April 5, 2023**. Full table and caveats in `data/algorithm-weights.md`.
+
+| Engagement | Ratio to a like |
 |---|---|
-| **Reply** | **27x** |
-| **Profile click** | **~12x** |
+| **You reply and the author replies back** (`reply_engaged_by_author`) | **150x** |
+| Reply | **27x** |
+| Good profile click (they visit AND like or reply) | 24x |
+| Click into the conversation and engage | 22x |
+| Retweet | 2x |
 | Like | 1x |
-| Retweet | ~1x |
-| Bookmark | Heavy, multiplier undisclosed |
-| Dwell time | Stated to outweigh all click-based signals |
+| **Negative feedback** (show less, block, mute) | **-148x** |
+| **Report** | **-738x** |
 
-**The structural fact that matters most:** the For You feed pulls ~1,500 candidates
-per session and ranks on replies, bookmarks, and author reputation — **not
-follower count**. This is why a zero-follower account can be surfaced at all.
+**Read those last two rows again.** One report costs roughly 27 replies. The
+downside is wildly asymmetric, which means the highest-value strategy is not
+maximizing engagement, it is producing engagement without producing irritation.
+
+**The signal almost nobody knows about:** `reply_engaged_by_author` at 150x is the
+largest positive weight in the model, and it is absent from essentially every
+growth blog. The implication is precise: **the goal is not to reply, it is to
+reply in a way the original author answers.** A reply that starts a conversation
+is worth about 5.5x one that does not.
+
+That single fact should reshape how you write replies. A reply that merely adds
+information gets 27x. A reply that asks the author something they want to answer,
+or offers a correction they will want to respond to, gets 150x.
+
+**Also note:** a bare profile visit scores nothing. Only a "good" profile click —
+where the visitor then likes or replies — counts.
+
+**Caveats the source states outright:** the weights can be adjusted at any time,
+these are from April 2023, and the released code may differ from production. The
+repo was last pushed 2025-09-08; claims that X open-sourced or updated its
+algorithm in 2026 do not match the repository history.
 
 ## Growing from zero: reply, do not post
 
 Of 300 accounts that grew from under 1k to 10k+ followers in Q1 2026, **84% used
-replying as the primary tactic** [Asserted]. This is at least coherent with the
+replying as the primary tactic** [A]. This is at least coherent with the
 published weights, which is more than most growth advice manages.
 
 The method:
@@ -37,6 +61,10 @@ The method:
 - Target accounts with **5-20x your follower count**. Bigger buries you.
 - Add a data point, a counterexample, or a specific mechanism. Agreement is
   invisible. Long replies beat short ones.
+- **Write for an author response.** `reply_engaged_by_author` is 150x a like, the
+  largest positive weight in the model. Ask something the author would want to
+  answer, or offer a correction worth responding to. This is the highest-leverage
+  single move available on the platform and almost nobody does it deliberately.
 - Reported yield: 100-200 profile visits/day from replies alone.
 - Profile clicks are weighted 12x, so a reply that makes someone check your
   profile is worth far more than a like on your own post.
@@ -56,7 +84,7 @@ exact inverse of LinkedIn, where the first-comment workaround is now penalized.
 ## Timing and decay
 
 Roughly 70% of eventual reach is set in the first 30 minutes and ~80% of lifetime
-impressions land within 2 hours [Asserted]. The breakout window is about 60
+impressions land within 2 hours [A]. The breakout window is about 60
 minutes. Be present to reply to replies immediately after posting — replies to
 your replies are the highest-weighted thing available.
 

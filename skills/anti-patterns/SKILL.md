@@ -2,17 +2,26 @@
 name: anti-patterns
 description: What not to do, including tactics that are detectable, illegal, or self-defeating. Use whenever someone asks about buying followers or stars, engagement pods, growth hacks, or any tactic that sounds like a shortcut.
 metadata:
-  version: 1.0.0
+  version: 1.0.1
 ---
 
 # Anti-patterns
 
 ## Never: buying engagement
 
-**Fake GitHub stars are a measured industry, not a rumor.** An ICSE 2026 study
-identified approximately **6 million suspected fake stars across 18,617
-repositories**, involving ~301,000 accounts. Public marketplaces sell stars at
-$0.03-0.90 each.
+**Fake GitHub stars are a measured industry, not a rumor.** [M] Peer-reviewed.
+
+> He, Yang, Burckhardt, Kapravelos, Vasilescu, Kästner. *Six Million (Suspected)
+> Fake Stars on GitHub: A Growing Spiral of Popularity Contests, Spam, and Malware.*
+> ICSE 2026 (IEEE/ACM 48th International Conference on Software Engineering).
+> [Paper](https://cmustrudel.github.io/papers/icse2026fakestars.pdf) ·
+> [preprint](https://arxiv.org/html/2412.13459v2) ·
+> [StarScout tool](https://github.com/hehao98/StarScout)
+
+Their tool scanned **20 TB of GitHub metadata — 6.7 billion events and 326 million
+stars from 2019 to 2024** — and identified approximately **6 million suspected fake
+stars across 18,617 repositories** from roughly **301,000 accounts**. Public
+marketplaces sell stars at $0.03-0.90 each. [A]
 
 Why not, in order of seriousness:
 

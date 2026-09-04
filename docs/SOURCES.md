@@ -5,14 +5,19 @@ it was consulted, not because it was trusted.
 
 ## Measured
 
-- [Launch-Day Diffusion: Hacker News Impact on GitHub Stars for AI Tools](https://arxiv.org/html/2511.04453v1) — arXiv, n=138
-- [Inside GitHub's Fake Star Economy](https://peerlist.io/saxenashikhil/articles/inside-githubs-fake-star-economy) — ICSE 2026 study, ~6M fake stars across 18,617 repos
-- [X's open-sourced ranking algorithm, analyzed](https://opentweet.io/blog/x-algorithm-open-source-github-2026)
+
+- He et al., [*Six Million (Suspected) Fake Stars on GitHub*](https://cmustrudel.github.io/papers/icse2026fakestars.pdf) — ICSE 2026, peer-reviewed. 20 TB of metadata, 6.7B events. [StarScout](https://github.com/hehao98/StarScout)
+- [twitter/the-algorithm-ml — Heavy Ranker README](https://github.com/twitter/the-algorithm-ml/blob/main/projects/home/recap/README.md) — the actual published weights, dated 2023-04-05. Read directly, not via summary.
+- [twitter/the-algorithm](https://github.com/twitter/the-algorithm) — serving stack; last pushed 2025-09-08
 - [anthropics/claude-plugins-community](https://github.com/anthropics/claude-plugins-community) — submission pipeline
 - [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official)
 - [Claude Code plugin marketplace docs](https://code.claude.com/docs/en/discover-plugins)
 - [GitHub community discussion on trending calculation](https://github.com/orgs/community/discussions/163970)
 - FTC Consumer Review Rule, effective 21 Oct 2024 — $53,088 per violation
+
+## Preprint (exists and is checkable, not peer reviewed)
+
+- Obada Kraishan, [*Launch-Day Diffusion: Tracking Hacker News Impact on GitHub Stars for AI Tools*](https://arxiv.org/abs/2511.04453) — arXiv, submitted 2025-11-06, n=138 repository launches, single author. **The best available evidence on HN launch effects, and still a preprint.** Every figure drawn from it is tagged `[P]`.
 
 ## Reported
 
@@ -45,7 +50,7 @@ it was consulted, not because it was trusted.
 
 ## Case-study sources
 
-- [Notion's growth story](https://www.lennysnewsletter.com/p/how-notion-built-a-100b-company) and First 1000, Forbes, Sequoia, EO coverage
+- Notion's growth story — [Lenny's Newsletter interview with Ivan Zhao](https://www.lennysnewsletter.com/p/inside-notion-ivan-zhao), plus First 1000, Forbes, Sequoia, and EO coverage
 - [Mercor / 20VC and Fortune coverage](https://research.contrary.com/company/cursor)
 - [Dropbox referral program case study](https://growsurf.com/blog/dropbox-referral-program/)
 - [Morning Brew referral program breakdown](https://medium.com/the-mission/how-morning-brews-referral-program-built-an-audience-of-1-5-million-subscribers-3315482c1aa5)

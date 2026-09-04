@@ -2,7 +2,7 @@
 name: linkedin-growth
 description: Grow on LinkedIn. Use for questions about LinkedIn strategy, posts, articles, newsletters, carousels, the algorithm, personal brand, or reaching a professional or recruiting audience.
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # LinkedIn growth
@@ -73,7 +73,7 @@ auto-invite is worth more when your connection base is already there.
 ## Commenting outperforms posting
 
 Of 500 accounts that grew from under 5k to 25k+ followers in Q1 2026, **76% named
-strategic commenting as the primary tactic** [Asserted].
+strategic commenting as the primary tactic** [A].
 
 - 10-15 substantive comments a day on accounts 2-10x your size
 - Reported yield: 50-100 profile visits/day

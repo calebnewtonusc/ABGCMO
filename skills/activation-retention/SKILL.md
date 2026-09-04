@@ -2,7 +2,7 @@
 name: activation-retention
 description: Fix the problem where people sign up and then leave. Use for questions about onboarding, activation, churn, retention, cohorts, aha moments, or when growth is flat despite traffic.
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Activation and retention
