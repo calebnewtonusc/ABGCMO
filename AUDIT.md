@@ -4,9 +4,9 @@ An adversarial audit of this repo, run 2026-09-03, one day after it shipped.
 Every defect found is listed. Fixed items say what changed; unfixed items stay on
 the list rather than quietly disappearing.
 
-**On the count.** The brief was "1000 reasons this repo sucks." I found **187 real
-defects**. Padding to 1000 would mean inventing 813 fake ones, which is exactly
-the behavior this repo exists to argue against. 187 is the honest number, and the
+**On the count.** The brief was "1000 reasons this repo sucks." I found **189 real
+defects**. Padding to 1000 would mean inventing 811 fake ones, which is exactly
+the behavior this repo exists to argue against. 189 is the honest number, and the
 first eleven are severe enough that the count is not the point.
 
 ---
@@ -210,3 +210,26 @@ The uncomfortable part is that the corrected X data makes the repo's advice
 *materially better* — the 150x `reply_engaged_by_author` signal and the −738x
 report penalty change what you should actually do. The original version was
 confidently wrong in a way that cost the reader real value.
+
+---
+
+## Post-audit: two more defects, found by the CI the audit produced
+
+The evidence checker written during this audit immediately failed on the repo
+that wrote it. Both hits were real:
+
+**188. `skills/launch-day` still tagged the HN timing figure `[M]`** after the
+study was retagged `[P]` everywhere else. A partial retag is arguably worse than
+none, because the inconsistency hides which tier is current.
+→ Fixed, with an inline citation to the preprint.
+
+**189. `data/evidence-tiers.md` defined only three tiers** after `[P] Preprint`
+had been added and used across the repo. The file defining the tag system was out
+of sync with the tag system.
+→ Fixed. The definition table now carries all four tiers and states the rule that
+came out of this audit directly: **a summary of a primary source is not the
+primary source.**
+
+Final count: **189 defects.** The CI in `tools/` now enforces the three classes
+that produced the severe ones — untagged numeric tables, `[M]` tags without a
+primary-source citation nearby, and README counts that disagree with the repo.

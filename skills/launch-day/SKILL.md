@@ -41,7 +41,7 @@ Three of those four are fixed before you post.
 
 | Channel | Window | Source |
 |---|---|---|
-| Hacker News | **12:00-17:00 UTC**, Tue-Thu | [M] ~+200 stars vs. poor timing |
+| Hacker News | **12:00-17:00 UTC**, Tue-Thu | [P] ~+200 stars vs. poor timing ([arXiv 2511.04453](https://arxiv.org/abs/2511.04453), n=138 preprint) |
 | Product Hunt | 12:01 AM PT (list reset) | [A] |
 | LinkedIn | Tue-Thu, 10am-12pm local, or Wed 4pm | [R] |
 | X | When your audience is awake; first 30 min sets ~70% of reach | [A] |

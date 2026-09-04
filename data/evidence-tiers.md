@@ -5,9 +5,14 @@ the number.
 
 | Tag | Definition | Trust |
 |---|---|---|
-| **[M] Measured** | Peer-reviewed paper, open-sourced code, or a figure the platform itself published | Cite as fact |
-| **[R] Reported** | Large-sample analysis by an organization with real access to the data (Buffer's 4.8M posts, AuthoredUp's 3M posts, GitHub's own research) | Cite with the source and sample |
+| **[M] Measured** | Read directly from a primary artifact: published source code, a platform's own published figure, or a peer-reviewed paper. **Someone opened the actual thing.** | Cite as fact, with the source |
+| **[P] Preprint** | A paper that exists and is checkable but has not cleared peer review | Cite with the caveat stated out loud |
+| **[R] Reported** | Large-sample analysis by an organization with real access to the data (Buffer's 4.8M posts, AuthoredUp's 3M posts, GitHub's own research) | Cite with the source and the sample size |
 | **[A] Asserted** | Repeated across marketing blogs with no traceable origin | Cite as "reported at roughly X," never as fact |
+
+**A summary of a primary source is not the primary source.** A blog describing
+open-sourced code is `[A]`, not `[M]`, no matter how confident it sounds. This
+repo learned that the hard way; see the section at the bottom of this file.
 
 ## Why this matters more than it sounds
 

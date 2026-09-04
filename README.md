@@ -135,7 +135,7 @@ supports it. Install it alongside them. Full survey in
 
 ## Audit
 
-This repo was adversarially audited one day after shipping. **187 defects found**,
+This repo was adversarially audited one day after shipping. **189 defects found**,
 including eleven severity-1 errors where it violated its own central rule — the
 flagship `[M] Measured` X data had been taken from a blog summary rather than the
 source code, which made three weights wrong and omitted the largest positive signal

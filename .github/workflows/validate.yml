@@ -1,104 +1,22 @@
 name: validate
+
 on:
   push:
   pull_request:
   schedule:
-    - cron: '0 9 1 * *'   # monthly: catch link rot and stale claims
+    - cron: '0 9 1 * *'
 
 jobs:
-  structure:
+  checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Eval JSON parses
-        run: python3 -c "import json,glob;[json.load(open(f)) for f in glob.glob('skills/*/evals/evals.json')];print('ok')"
       - name: Skill structure and frontmatter
-        run: |
-          fail=0
-          for d in skills/*/; do
-            n=$(basename "$d")
-            [ -f "$d/SKILL.md" ] || { echo "::error::$n missing SKILL.md"; fail=1; }
-            [ -f "$d/evals/evals.json" ] || { echo "::error::$n missing evals"; fail=1; }
-            grep -q "^name: $n$" "$d/SKILL.md" || { echo "::error::$n frontmatter name mismatch"; fail=1; }
-            grep -q "^  version:" "$d/SKILL.md" || { echo "::error::$n missing metadata.version"; fail=1; }
-            len=$(grep -m1 '^description:' "$d/SKILL.md" | wc -c)
-            [ "$len" -le 1024 ] || { echo "::error::$n description exceeds 1024 chars"; fail=1; }
-            [ "$len" -ge 40 ] || { echo "::error::$n description too short to trigger reliably"; fail=1; }
-          done
-          exit $fail
-
-  self-claims:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Counts in README match reality
-        run: |
-          fail=0
-          s=$(ls -d skills/*/ | wc -l | tr -d ' ')
-          e=$(python3 -c "import json,glob;print(sum(len(json.load(open(f))['evals']) for f in glob.glob('skills/*/evals/evals.json')))")
-          c=$(python3 -c "
-import re
-t=open('cases/README.md').read()
-b=re.search(r'<!-- ROSTER:START -->(.*?)<!-- ROSTER:END -->', t, re.S).group(1)
-print(len([l for l in b.strip().split(chr(10)) if l.startswith('- ')]))")
-          grep -q "badge/skills-$s-" README.md || { echo \"::error::README skills badge != $s\"; fail=1; }
-          grep -q "badge/evals-$e-" README.md || { echo \"::error::README evals badge != $e\"; fail=1; }
-          grep -q "badge/case_studies-$c-" README.md || { echo \"::error::README cases badge != $c (roster count)\"; fail=1; }
-          echo "skills=$s evals=$e cases=$c"
-          exit $fail
-      - name: Registry matches disk
-        run: |
-          a=$(ls -d skills/*/ | wc -l); b=$(($(wc -l < registry/skills.csv) - 1))
-          [ "$a" -eq "$b" ] || { echo "::error::registry $b rows vs $a skills"; exit 1; }
-
-  evidence:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: No untagged numeric tables in data/
-        run: |
-          python3 - <<'PY'
-          import glob,re,sys
-          bad=[]
-          for f in glob.glob('data/*.md'):
-              lines=open(f).read().split('\n')
-              i=0
-              while i < len(lines):
-                  if lines[i].startswith('|') and i+1<len(lines) and set(lines[i+1].replace('|','').strip()) <= set('-: '):
-                      # found a table header at i; collect the block
-                      start=i; j=i+2
-                      while j<len(lines) and lines[j].startswith('|'): j+=1
-                      block='\n'.join(lines[start:j])
-                      ctx='\n'.join(lines[max(0,start-6):start])
-                      has_numbers=re.search(r'[0-9]+(\.[0-9]+)?\s*(%|x)\b', block)
-                      tagged = ('Tag' in lines[start]) or re.search(r'\[(M|P|R|A)\]', block+ctx) \
-                               or re.search(r'Measured|Ratio to a like|Raw weight', block+ctx)
-                      if has_numbers and not tagged:
-                          bad.append(f'{f}:{start+1}: untagged numeric table -> {lines[start][:70]}')
-                      i=j
-                  else:
-                      i+=1
-          if bad:
-              print('::error::untagged numeric tables:'); print('\n'.join(bad)); sys.exit(1)
-          print('all numeric tables carry evidence tags')
-          PY
-      - name: Measured tags cite a primary artifact
-        run: |
-          # [M] must appear near a github.com, arxiv, .pdf, or an explicit primary-source note
-          python3 - <<'PY'
-import glob,re,sys
-bad=[]
-for f in glob.glob('data/*.md')+glob.glob('skills/*/SKILL.md'):
-    t=open(f).read()
-    for i,l in enumerate(t.split('\n'),1):
-        if '[M]' in l or 'Measured — read' in l:
-            ctx='\n'.join(t.split('\n')[max(0,i-12):i+12])
-            if not re.search(r'github\.com|arxiv|\.pdf|primary source|source repo', ctx, re.I):
-                bad.append(f'{f}:{i}: {l.strip()[:80]}')
-if bad:
-    print('::error::[M] tag without a primary-source citation nearby:'); print('\n'.join(bad)); sys.exit(1)
-print('all [M] tags cite a primary artifact')
-PY
+        run: python3 tools/check_structure.py
+      - name: Self-claims match reality
+        run: python3 tools/check_claims.py
+      - name: Evidence tags and primary sources
+        run: python3 tools/check_evidence.py
 
   links:
     runs-on: ubuntu-latest
@@ -110,8 +28,11 @@ PY
           grep -ohE 'https?://[^ )>"]+' $(git ls-files '*.md') | sed 's/[.,)]*$//' | sort -u > links.txt
           echo "checking $(wc -l < links.txt) links"
           bad=0
-          while read u; do
+          while read -r u; do
             c=$(curl -s -o /dev/null -w "%{http_code}" -L --max-time 10 -A "Mozilla/5.0" "$u" || echo 000)
-            case "$c" in 2*|3*|401|403|429) ;; *) echo "::warning::$c $u"; bad=$((bad+1));; esac
+            case "$c" in
+              2*|3*|401|403|429) ;;
+              *) echo "::warning::$c $u"; bad=$((bad+1));;
+            esac
           done < links.txt
           echo "$bad dead links"
