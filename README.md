@@ -58,7 +58,7 @@ python3 tools/verify_sources.py
 
 It re-fetches the live primary artifacts and checks the numbers still hold. Only
 `[M] Measured` claims are checkable this way, because only those come from
-artifacts that can be re-fetched — which is exactly why `[R]` and `[A]` carry
+artifacts that can be re-fetched, which is exactly why `[R]` and `[A]` carry
 weaker tags. It runs in CI monthly, so drift surfaces without anyone remembering
 to look.
 
@@ -69,10 +69,10 @@ to look.
   control for stage selection. Every guide recommends it. What actually predicts
   outcome is posting hour, existing stars, and documentation quality.
 - **LinkedIn long-form articles underperform ordinary posts by ~31% on reach**
-  (0.69x, median 596 people). The article is not the distribution — it is the
+  (0.69x, median 596 people). The article is not the distribution, it is the
   asset. It earns 3x profile visits per impression and gets cited by AI systems.
 - **On X, the largest positive ranking weight is a reply the author replies back
-  to — 150x a like** (`reply_engaged_by_author` = 75.0 against a like's 0.5). It is
+  to, 150x a like** (`reply_engaged_by_author` = 75.0 against a like's 0.5). It is
   absent from essentially every growth blog, which also get retweets wrong (2x, not
   1x) and profile clicks wrong (24x, not 12x). Read from
   [the source](https://github.com/twitter/the-algorithm-ml/blob/main/projects/home/recap/README.md),
@@ -110,14 +110,14 @@ $ claude
   faster than you can replace it.
 
   Binding constraint: retention, not awareness. Traffic converts, people sign
-  up, people reach the product — they leave after.
+  up, people reach the product, they leave after.
 
   Highest-leverage action this week: interview 10 of the 40 who stayed and 10
   who left. Not a survey. You're looking for the one thing the 40 did in their
   first session that the 1,960 didn't. At n=40 analytics won't find it.
 
   Stopping rule: if 20 interviews surface no separating action, the problem is
-  PMF, not onboarding — narrow to the segment the 40 belong to and rebuild for
+  PMF, not onboarding, narrow to the segment the 40 belong to and rebuild for
   them. Superhuman went 22% → 33% on segmentation alone.
 
   Worksheet: skills/activation-retention/references/aha-moment-worksheet.md
@@ -191,7 +191,7 @@ AI-native · creators and media · commerce · movements and nonprofits · categ
 creation · **failures**
 
 That last one is the correction to everything else. [`cases/failures.md`](cases/failures.md)
-documents ten cases where a real mechanic did not work — Notion's near-bankruptcy
+documents ten cases where a real mechanic did not work, Notion's near-bankruptcy
 under bad positioning, Figma publicly regretting its closed beta, Glossier's
 community ceiling, OpenClaw's security collapse, Midjourney being absorbed,
 airdrops buying mercenaries, and this repo's own audit.
@@ -201,7 +201,7 @@ airdrops buying mercenaries, and this repo's own audit.
 It is not a marketing execution pack. For ad creative, landing page copy, SEO
 audits, or paid media, use
 **[coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills)**
-(46.8k stars, 49 skills) — it is better at that than this will ever be. For cold
+(46.8k stars, 49 skills), it is better at that than this will ever be. For cold
 email infrastructure use [ColdIQ](https://github.com/Cold-IQ/ColdIQ-s-GTM-Skills);
 for GTM ops automation use [Zapier's](https://github.com/zapier/gtm-cheat-codes);
 for PM craft use [lenny-skills](https://github.com/RefoundAI/lenny-skills).
@@ -227,7 +227,7 @@ Full survey of 20 repos in [docs/LANDSCAPE.md](docs/LANDSCAPE.md).
 ## Audit
 
 This repo was adversarially audited one day after shipping. **190 defects found**,
-including eleven severity-1 errors where it violated its own central rule — the
+including eleven severity-1 errors where it violated its own central rule, the
 flagship `[M] Measured` X data had been taken from a blog summary rather than the
 source code, which made three weights wrong and omitted the largest positive signal
 in the model entirely.
@@ -235,19 +235,19 @@ in the model entirely.
 **All 190 are now resolved or explicitly accepted**, with the accepted ones listed
 rather than quietly dropped. That work took the repo from 19 skills to 33, added
 `cases/failures.md` as the survivorship correction, and produced the first
-[eval baseline](docs/eval-runs/2026-09-04-baseline.md) — which immediately found
+[eval baseline](docs/eval-runs/2026-09-04-baseline.md), which immediately found
 defect 190: the refusal behavior transfers reliably, the citations do not. Full
 itemization in [AUDIT.md](AUDIT.md).
 
 **Still open and stated plainly:** claim-level footnoting in `cases/` is
 incomplete, 65 of 67 evals are unrun with no control arm, and this repo has not
-submitted itself to a single registry — which means it is currently ignoring its
+submitted itself to a single registry, which means it is currently ignoring its
 own `launch-day` advice. `data/VERIFIED.md` records when each claim class was last
 checked against a primary source and marks five of them **Unverified against
 primary**, which is their honest status.
 
 The rule that came out of it: **a summary of a primary source is not the primary
-source.** CI now enforces it — an `[M]` tag without a nearby primary-source
+source.** CI now enforces it, an `[M]` tag without a nearby primary-source
 citation fails the build.
 
 ## Honesty policy
